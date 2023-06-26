@@ -5,6 +5,7 @@ import Signup from './Signup';
 import Navbar from './Navbar';
 import SidePanel from './SidePanel';
 import StudentData from './StudentData';
+import UserSettingsPage from './pages/UserSettingsPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <SidePanel />
         <Routes>
         <Route path="/candidates" element={<StudentData />} />
+        <Route path="/account-settings" element={<UserSettingsPage/>} />
         </Routes>
         <div className="main-content">
         
