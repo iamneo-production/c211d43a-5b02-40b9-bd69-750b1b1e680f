@@ -1,6 +1,6 @@
 .student-data-container {
-  display:inline-block;
-  width: 78%;
+  display: inline-block;
+  width: 75%;
   background-color: #f2f2f2;
   padding: 20px;
   margin-left: auto;
@@ -24,6 +24,12 @@
   font-weight: bold;
 }
 
-.custom-table button {
+.custom-table td {
+  vertical-align: middle;
+}
+
+.custom-table .btn-primary,
+.custom-table .btn-danger {
   margin: 5px;
+  padding: 3px ;
 }

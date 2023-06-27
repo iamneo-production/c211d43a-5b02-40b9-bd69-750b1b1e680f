@@ -46,3 +46,266 @@
   margin-left: 25%;
   margin-top: 50%;
 }
+
+
+/* UserSettingsPage.css */
+
+.user-settings-page {
+  display: inline-block;
+  width: 75%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ribbon {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.nav-tabs {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #343a40;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid #343a40;
+}
+
+
+/* UserManagement.css */
+
+.user-management {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.user-management h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Enrollment.css */
+
+.enrollment {
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  margin-top: 0;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+/* PaymentInformation.css */
+
+.payment-information {
+  display: inline-block;
+  width: 75%;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.payment-methods {
+  margin-bottom: 20px;
+}
+
+.payment-method {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+
+/* Preferences.css */
+
+.preferences {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  display: inline-block;
+  width: 75%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: auto;
+  position:absolute;
+  top:30%;
+  left:25%;
+  margin-top:-50px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxes div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkboxes input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+.checkboxes input[type='checkbox']:disabled + label {
+  color: gray;
+}
+
+
+/* Account deletion.css */
+
+.account-deletion {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.password-validation {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.password-validation input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.password-validation .tick-mark {
+  color: green;
+  margin-left: 10px;
+}
+
+.password-validation .cross-mark {
+  color: red;
+  margin-left: 10px;
+}
+
+.delete-account {
+  display: flex;
+  justify-content: center;
+}
+
+.delete-button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  color: #fff;
+  background-color: gray;
+}
+
+.delete-button.enabled {
+  background-color: red;
+}
+
+.confirmation-popup {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.confirmation-popup p {
+  margin-bottom: 10px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.popup-buttons button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+
