@@ -1,0 +1,131 @@
+/* CSS for CourseList component */
+
+
+
+
+
+body{
+  background-color: #f9f5f5c1;
+  overflow-x: hidden;
+
+}
+
+.course-list-container {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .sortcontain{
+       border-radius: 4px;
+       padding: 10px 8px;
+       width: 100px;
+  }
+
+  .course-list-search {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+  }
+  
+  .Dis{
+       font-size: 45px;
+       font-family: 'Times New Roman', Times, serif;
+       color: rgb(214, 92, 55);
+  }
+  
+ 
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 220px;
+    right: 100px;
+    border: 1px solid #f9f7f7;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px; 
+    width: 190px; 
+    box-shadow:0px 0px 5px black;
+    
+    background-color: #efeded;
+  }
+
+ .cardLists
+ {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1000px;
+  
+ }
+  
+  .card img {
+    object-fit: cover;
+    margin-bottom: 10px;
+   border-radius:2px ;
+  }
+  
+  .card h1 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     position: relative;
+    margin-left: 0px;
+    margin-right: 65px;
+    align-items: center;
+  }
+
+  .courseLearn{
+    color: green;
+    font-weight: bold;
+    font: size 10px;
+  }
+  
+  .courseLang
+  {
+    background-color: #9b830c;
+    color: #f9f7f7;
+    position: absolute;
+    top: 114px;
+    font-size: medium;
+    font-family: sans-serif;
+  }
+  
+  
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+ 
+  
+@media screen and (max-width:974px)
+{
+  .cardLists
+  {
+    width: 700px;
+  }
+}
+  
+
+@media screen and (max-width:730px)
+{
+  .cardLists
+  {
+    width: 500px;
+  }
+}
+  
+ 
+  
