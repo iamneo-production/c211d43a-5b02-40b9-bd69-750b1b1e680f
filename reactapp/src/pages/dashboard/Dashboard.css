@@ -1,0 +1,11 @@
+
+
+.landingpage {
+  /* margin: 0 auto; */
+  padding: 80px 10px 80px;
+  width: 100%;
+   position: relative;
+   left: 40px;
+   max-width: 1100px;
+   background-color: aquamarine;
+}
