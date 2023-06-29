@@ -1,0 +1,474 @@
+body{
+    width: 100%;
+    overflow-x: hidden;
+    color: #707070;
+    font-family: "open sans";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: block;
+}
+/*===comman css===*/
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+ul,
+li{
+    list-style-type: none;
+}
+
+.page_wrape{
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+/*--side bar css---*/
+.side-bar{
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to left,#FEB683, #6aa5e3 ,#b576f6);
+    box-shadow: 0 0 8px rgb(230,230,230);
+    overflow: hidden;
+    overflow-y: auto;
+    position: fixed;
+    padding: 15px;
+    
+}
+
+.side-bar .logo{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.side-bar .logo a img{
+    width: 60px;
+}
+
+.side-bar .logo a h1{
+    font-size: 40px;
+    color: black;
+    font-family: "Righteous";
+}
+
+.side-bar .logo a h1:hover{
+    color: #B576F6;
+}
+.side-bar .logo a:last-child{
+    display: none;
+}
+
+.side-bar .avtar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.side-bar .avtar .avtar-img{
+    margin-right: 10px;
+}
+
+.side-bar .avtar .name-pos h2{
+    color: black;
+}
+
+.side-bar .side-bar-nav ul li a{
+    display:flex;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 10px 0;
+    width: 100%;
+    transition: .4s;
+}
+
+.side-bar .side-bar-nav ul li a:hover{
+    background-color: #B576F6;
+    color: #fff;
+}
+
+.side-bar .side-bar-nav ul li a .nav-link{
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+
+
+header{
+    margin-left: 250px;
+    padding: 15px;
+    box-shadow: 0 0 8px rgb(230,230,230);
+    min-height: 80px;
+    background: linear-gradient(to left,#FEB683, #6aa5e3 ,#b576f6);
+}
+
+header .head_inner{
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+}
+
+header .head_inner .right-part form{
+    width: 300px;
+    height: 45px;
+    position: relative;
+}
+
+header .head_inner .right-part form input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: 0 0 8px rgb(223, 223, 223);
+    padding: 10px 15px;
+}
+
+header .head_inner .right-part form input:focus{
+    box-shadow: 0 0 8px #ccc;
+}
+
+header .head_inner .right-part form button{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background-color: #B576F6;
+    border: none;
+    cursor: pointer;
+}
+
+header .head_inner .left-part ul{
+    display: flex;
+    align-items: center;
+}
+
+header .head_inner .left-part ul li{
+   margin-left: 30px;
+}
+
+header .head_inner .left-part ul li .profile{
+    display: flex;
+    align-items: center;
+}
+
+header .head_inner .left-part ul li .profile .avtar-img{
+    margin-right: 15px;
+}
+
+header .head_inner .left-part ul li span{
+    cursor: pointer;
+}
+
+header .head_inner .left-part ul li span i{
+    font-size: 22px;
+
+}
+
+header .head_inner .left-part ul li span:hover{
+    color: #B576F6;
+}
+
+header .head_inner .left-part ul li.have_dots span{
+    position: relative;
+}
+
+header .head_inner .left-part ul li.have_dots span::before{
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 8px;
+    height: 8px;
+    background-color: #B576F6;
+    border-radius: 50px;
+}
+
+
+
+
+
+/*--main content----*/
+
+.leaderboard-card {
+	background: #fff;
+	margin-bottom: 30px;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.leaderboard-card.leaderboard-card--first {
+	transform: scale(1.05);
+}
+
+.leaderboard-card__top {
+	background: #f9f6ff;
+	padding: 20px 0 30px 0;
+}
+.leaderboard-card__body {
+	padding: 15px;
+	margin-top: -40px;
+}
+
+img.circle-img {
+	height: 70px;
+	width: 70px;
+	border-radius: 70px;
+	border: 3px solid #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+img.circle-img.circle-img--small {
+	height: 55px;
+	width: 55px;
+	border-radius: 55px;
+}
+
+.main-content{
+    margin: 15px;
+    margin-left: 275px;
+    padding: 15px;
+    box-shadow: 0 0 8px rgb(230, 230, 230);
+}
+
+.main-content .info-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.main-content .info-card .card{
+    width: 31%;
+    min-height: 220px;
+    padding: 20px;
+    background: linear-gradient(to left, #B576F6, #9a4fe9);
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+}
+
+.main-content .info-card .card:nth-child(2){
+    background: linear-gradient(to left, #6AA5E3, #6866E9);
+}
+
+.main-content .info-card .card:nth-child(3){
+    background: linear-gradient(to left, #FEB683, #FF8993);
+}
+
+.main-content .info-card .card::before ,
+.main-content .info-card .card::after{
+    content: "";
+    position: absolute;
+    top: -5%;
+    right: -15%;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+}
+
+.main-content .info-card .card::after{
+    top: auto;
+    bottom: -5%;
+    right: -5%;
+}
+
+.main-content .info-card .card .card-icon {
+    margin-bottom: 15px;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 8px #fff;
+
+} 
+
+.main-content .info-card .card .card-icon span  i{
+    font-size: 50px;
+    color: gold;
+}
+
+.main-content .info-card .card .card-detail{
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.main-content .info-card .card .card-detail h2{
+   text-align: center;
+   font-size: 40px;
+}
+
+.main-content .info-card .card .card-detail h4 {
+    color: #000;
+    font-size: 20px;
+}
+
+.main-content .main-table .title{
+    margin: 15px 0;
+}
+
+.main-content .user_table{
+    display: grid;
+}
+
+.main-content .user_table table thead tr td{
+    padding: 20px 0;
+    font-weight: bold;
+    color: #000;
+    font-size: 25px;
+}
+
+.main-content .user_table table tbody tr td{
+    padding: 15px 0;
+    font-size: 20px;
+    color: #2e2c2c;
+}
+
+.main-content .user_table tbody tr .btn{
+    padding: 7px 25px;
+    background: linear-gradient(to left, #B576F6, #9a4fe9);
+    border-radius: 3px;
+    display: inline-block;
+    color: #fff;
+}
+
+/*--jquery-hide-show-class---*/
+.side-bar.hide{
+    width: 100px;
+    overflow: hidden;
+}
+
+.side-bar.hide .logo a:last-child{
+    display: block;
+}
+
+.side-bar.hide .logo a:first-child ,
+.side-bar.hide .name-pos ,
+.side-bar.hide .side-bar-nav .nav-link{
+    display: none;
+}
+
+.side-bar.hide .side-bar-nav span:not(.nav-link){
+    font-size: 24px;
+    padding-left: 8px;
+}
+
+.side-left{
+    margin-left: 100px;
+}
+
+header , .main-content{
+    transition: .2s;
+}
+
+/*-respomsive media query---*/
+@media screen and (max-width:992px){
+    .side-bar{
+        left: -250px;
+        z-index: 10000;
+        transition: 0.5s;
+    }
+
+    .side-bar.hide{
+        width: 250px;
+        left: 0;
+    }
+
+    header, .main-content{
+        margin: 0;
+    }
+
+    .side-left{
+        margin-left: 0;
+    }
+
+    .side-bar.hide .logo a:first-child ,
+    .side-bar.hide .name-pos ,
+    .side-bar.hide .side-bar-nav .nav-link{
+        display: block;
+    }
+
+    .side-bar.hide .logo a:first-child{
+        display: none;
+    }
+
+}
+
+
+/*-responsive media query-*/
+@media screen and (max-width:767px){
+
+    .main-content .info-card .card{
+        width: 48%;
+        margin-bottom: 15px;
+    }
+
+    header .head_inner .right-part form{
+        width: 200px;
+        height: 40px;
+    }
+
+    .main-content .user_table {
+        overflow-x: auto;
+    }
+
+    .main-content .user_table table{
+        width: 700px;
+    }
+}
+/*-responsive media query-*/
+
+@media screen and (max-width:576px){
+    header .head_inner{
+        flex-direction: column-reverse;
+    }
+
+    header .head_inner .right-part form {
+        width: 100%;
+        height: 40px;
+    }
+
+    header .head_inner .left-part ,
+    header .head_inner .right-part {
+        width: 100%;
+        margin: 15px;
+    }
+
+    header .head_inner .left-part ul{
+        justify-content: space-between;
+    }
+
+    header .head_inner .left-part ul li:first-child {
+        margin-left: 0;
+    }
+
+    .main-content .info-card .card{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:425px){
+
+    header .head_inner .left-part ul li{
+        margin-left: 15px;
+    }
+
+    header .head_inner .avtar-name h3{
+        font-size: 16px;
+    }
+}
