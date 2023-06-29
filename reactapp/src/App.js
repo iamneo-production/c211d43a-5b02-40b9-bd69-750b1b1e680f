@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./Components/Admin/Admin";
-import AddAdmin from "./Components/Admin/AddAdmin";
-import EditAdmin from "./Components/Admin/EditAdmin";
+import Admin from "./Components/Admins/Admin";
+import AddAdmin from "./Components/Admins/AddAdmin";
+import EditAdmin from "./Components/Admins/EditAdmin";
 
 function App() {
   return (
@@ -9,8 +9,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Admin />} />
-          <Route path="/admin/add" element={<AddAdmin />} />
-          <Route path="/admin/edit/:adminid" element={<EditAdmin />} />
+          <Route path="/Admins/add" element={<AddAdmin />} />
+          <Route path="/Admins/edit/:adminid" element={<EditAdmin />} />
         </Routes>
       </BrowserRouter>
     </div>

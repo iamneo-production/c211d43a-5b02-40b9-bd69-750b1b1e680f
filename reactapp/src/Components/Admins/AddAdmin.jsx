@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import Form from "./Form";
 import { Link, useNavigate } from "react-router-dom";
-import './create.css';
+import './Create.css';
 
 export default function AddAdmin() {
 
