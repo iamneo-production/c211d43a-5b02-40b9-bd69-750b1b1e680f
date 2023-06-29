@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import "./main.css";
 import { Link } from "react-router-dom";
-import data from "./Data";
+// import data from "./Data";
 
 export default function Admin() {
   const [admindata, admindatachange] = useState(null);
@@ -24,7 +24,7 @@ export default function Admin() {
   const [bId, setBId] = useState(null);
 
   const btnClick = (id) => {
-    // console.log("clicked on button");
+
     if (text === "false") {
       setBId(id);
       setText("true");
@@ -44,8 +44,8 @@ export default function Admin() {
         <div className="container flow-content">
           <h2 className="section-title">Admin Details</h2>
           <ul role="list" className="grid" data-columns="3">
-            {data &&
-              data.map((e, index) => {
+            {admindata &&
+              admindata.map((e, index) => {
                 return (
                   <div key={index}>
                     <Card
