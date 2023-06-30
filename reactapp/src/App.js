@@ -31,13 +31,6 @@ function App() {
         <Route path="/account-settings/preferences" element={<Preferences/>} />
         <Route path="/account-settings/account-deletion" element={<AccountDeletion/>} />
         </Routes>
-        <div className="main-content">
-        
-          <Routes>
-            <Route path="/" element={<div>Welcome!</div>} />
-            {/* Add more routes for other pages */}
-          </Routes>
-        </div>
       </div>
     </Router>
   );

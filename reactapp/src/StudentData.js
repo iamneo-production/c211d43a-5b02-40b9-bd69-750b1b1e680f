@@ -1,6 +1,5 @@
 import React from 'react';
 import './StudentData.css';
-import './Styles.css';
 
 function StudentData() {
   const studentData = [
