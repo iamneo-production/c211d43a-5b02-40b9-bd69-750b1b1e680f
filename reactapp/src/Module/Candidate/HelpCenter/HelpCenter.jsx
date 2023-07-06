@@ -1,14 +1,10 @@
 import React from 'react'
 import "./HelpCenter.css"
 
-function Helpcenter() {
-    return (
-        <div className="start">
-
-            write your code here
-
-        </div>
-    )
+function HelpCenter() {
+  return (
+    <div className='start'>HelpCenter</div>
+  )
 }
 
-export default Helpcenter
+export default HelpCenter

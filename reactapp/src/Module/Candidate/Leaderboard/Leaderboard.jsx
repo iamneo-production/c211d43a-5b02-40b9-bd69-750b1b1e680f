@@ -3,13 +3,7 @@ import "./Leaderboard.css"
 
 function Leaderboard() {
   return (
-    <div className="start">
-
-            
-    write your code here
-    
-    
-    </div>
+    <div className='start'>Leaderboard</div>
   )
 }
 
