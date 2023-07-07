@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import './Settings.css';
 
@@ -137,15 +136,3 @@ const Settings = () => {
 };
 
 export default Settings;
-=======
-import React from 'react'
-import "./Settings.css"
-
-function Settings() {
-  return (
-    <div className='start'>Settings</div>
-  )
-}
-
-export default Settings
->>>>>>> 0ad0163416b5ce70618be56befa403f7ea1dd1c0

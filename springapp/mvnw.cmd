@@ -18,27 +18,12 @@
 @REM ----------------------------------------------------------------------------
 
 @REM ----------------------------------------------------------------------------
-<<<<<<< HEAD
-<<<<<<< HEAD
-@REM Maven Start Up Batch script
-=======
 @REM Apache Maven Wrapper startup batch script, version 3.2.0
->>>>>>> c56cf66 (final commit)
-=======
-@REM Apache Maven Wrapper startup batch script, version 3.2.0
->>>>>>> c01a4919226be0b5533cafacde20bd066d24b36c
 @REM
 @REM Required ENV vars:
 @REM JAVA_HOME - location of a JDK home dir
 @REM
 @REM Optional ENV vars
-<<<<<<< HEAD
-<<<<<<< HEAD
-@REM M2_HOME - location of maven2's installed home dir
-=======
->>>>>>> c56cf66 (final commit)
-=======
->>>>>>> c01a4919226be0b5533cafacde20bd066d24b36c
 @REM MAVEN_BATCH_ECHO - set to 'on' to enable the echoing of the batch commands
 @REM MAVEN_BATCH_PAUSE - set to 'on' to wait for a keystroke before ending
 @REM MAVEN_OPTS - parameters passed to the Java VM when running Maven
@@ -134,23 +119,10 @@ SET MAVEN_JAVA_EXE="%JAVA_HOME%\bin\java.exe"
 set WRAPPER_JAR="%MAVEN_PROJECTBASEDIR%\.mvn\wrapper\maven-wrapper.jar"
 set WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-set DOWNLOAD_URL="https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.1.0/maven-wrapper-3.1.0.jar"
-
-FOR /F "usebackq tokens=1,2 delims==" %%A IN ("%MAVEN_PROJECTBASEDIR%\.mvn\wrapper\maven-wrapper.properties") DO (
-    IF "%%A"=="wrapperUrl" SET DOWNLOAD_URL=%%B
-=======
-=======
->>>>>>> c01a4919226be0b5533cafacde20bd066d24b36c
 set WRAPPER_URL="https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.2.0/maven-wrapper-3.2.0.jar"
 
 FOR /F "usebackq tokens=1,2 delims==" %%A IN ("%MAVEN_PROJECTBASEDIR%\.mvn\wrapper\maven-wrapper.properties") DO (
     IF "%%A"=="wrapperUrl" SET WRAPPER_URL=%%B
-<<<<<<< HEAD
->>>>>>> c56cf66 (final commit)
-=======
->>>>>>> c01a4919226be0b5533cafacde20bd066d24b36c
 )
 
 @REM Extension to allow automatically downloading the maven-wrapper.jar from Maven-central
@@ -161,25 +133,11 @@ if exist %WRAPPER_JAR% (
     )
 ) else (
     if not "%MVNW_REPOURL%" == "" (
-<<<<<<< HEAD
-<<<<<<< HEAD
-        SET DOWNLOAD_URL="%MVNW_REPOURL%/org/apache/maven/wrapper/maven-wrapper/3.1.0/maven-wrapper-3.1.0.jar"
-    )
-    if "%MVNW_VERBOSE%" == "true" (
-        echo Couldn't find %WRAPPER_JAR%, downloading it ...
-        echo Downloading from: %DOWNLOAD_URL%
-=======
-=======
->>>>>>> c01a4919226be0b5533cafacde20bd066d24b36c
         SET WRAPPER_URL="%MVNW_REPOURL%/org/apache/maven/wrapper/maven-wrapper/3.2.0/maven-wrapper-3.2.0.jar"
     )
     if "%MVNW_VERBOSE%" == "true" (
         echo Couldn't find %WRAPPER_JAR%, downloading it ...
         echo Downloading from: %WRAPPER_URL%
-<<<<<<< HEAD
->>>>>>> c56cf66 (final commit)
-=======
->>>>>>> c01a4919226be0b5533cafacde20bd066d24b36c
     )
 
     powershell -Command "&{"^
@@ -187,15 +145,7 @@ if exist %WRAPPER_JAR% (
 		"if (-not ([string]::IsNullOrEmpty('%MVNW_USERNAME%') -and [string]::IsNullOrEmpty('%MVNW_PASSWORD%'))) {"^
 		"$webclient.Credentials = new-object System.Net.NetworkCredential('%MVNW_USERNAME%', '%MVNW_PASSWORD%');"^
 		"}"^
-<<<<<<< HEAD
-<<<<<<< HEAD
-		"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $webclient.DownloadFile('%DOWNLOAD_URL%', '%WRAPPER_JAR%')"^
-=======
 		"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $webclient.DownloadFile('%WRAPPER_URL%', '%WRAPPER_JAR%')"^
->>>>>>> c56cf66 (final commit)
-=======
-		"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $webclient.DownloadFile('%WRAPPER_URL%', '%WRAPPER_JAR%')"^
->>>>>>> c01a4919226be0b5533cafacde20bd066d24b36c
 		"}"
     if "%MVNW_VERBOSE%" == "true" (
         echo Finished downloading %WRAPPER_JAR%
@@ -203,11 +153,6 @@ if exist %WRAPPER_JAR% (
 )
 @REM End of extension
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c01a4919226be0b5533cafacde20bd066d24b36c
 @REM If specified, validate the SHA-256 sum of the Maven wrapper jar file
 SET WRAPPER_SHA_256_SUM=""
 FOR /F "usebackq tokens=1,2 delims==" %%A IN ("%MAVEN_PROJECTBASEDIR%\.mvn\wrapper\maven-wrapper.properties") DO (
@@ -226,10 +171,6 @@ IF NOT %WRAPPER_SHA_256_SUM%=="" (
     if ERRORLEVEL 1 goto error
 )
 
-<<<<<<< HEAD
->>>>>>> c56cf66 (final commit)
-=======
->>>>>>> c01a4919226be0b5533cafacde20bd066d24b36c
 @REM Provide a "standardized" way to retrieve the CLI args that will
 @REM work with both Windows and non-Windows executions.
 set MAVEN_CMD_LINE_ARGS=%*
