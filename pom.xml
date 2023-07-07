@@ -20,7 +20,6 @@
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
-<<<<<<< HEAD
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -43,10 +42,7 @@
             <artifactId>poi-ooxml-schemas</artifactId>
             <version>4.1.2</version>
         </dependency>
-        </dependencies>
-=======
     </dependencies>
->>>>>>> c56cf66 (final commit)
     <build>
         <pluginManagement>
             <plugins>
