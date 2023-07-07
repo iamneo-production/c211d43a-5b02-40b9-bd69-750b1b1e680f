@@ -1,3 +1,4 @@
-// public class Course {
+package com.example.springapp.model;
+public class Course {
     
-// }
+}

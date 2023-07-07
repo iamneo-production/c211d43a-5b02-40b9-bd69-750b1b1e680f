@@ -1,3 +1,4 @@
-// public class CourseService {
+package com.example.springapp.service;
+public class CourseService {
     
-// }
+}

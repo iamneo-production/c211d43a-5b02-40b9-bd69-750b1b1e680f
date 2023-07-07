@@ -1,3 +1,4 @@
-// public class CourseController {
+package com.example.springapp.controller;
+public class CourseController {
     
-// }
+}

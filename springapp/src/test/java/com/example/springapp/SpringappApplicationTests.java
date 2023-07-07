@@ -49,7 +49,7 @@ class SpringappApplicationTests {
      
      
      @Test
-     public void testGetCourseAll() throws Exception {
+     void testGetCourseAll() throws Exception {
      	
          mockMvc.perform(get("/course"))
          .andExpect(MockMvcResultMatchers.status().isOk())
@@ -61,7 +61,7 @@ class SpringappApplicationTests {
      
      
      @Test
-     public void testGetCourseById() throws Exception {
+     void testGetCourseById() throws Exception {
      	
          mockMvc.perform(get("/course").param("id", "1"))
          .andExpect(MockMvcResultMatchers.status().isOk())
@@ -73,7 +73,7 @@ class SpringappApplicationTests {
      
      
      @Test
-	    public void testCreateCourse() throws Exception {
+	    void testCreateCourse() throws Exception {
 	    
 	        mockMvc.perform(MockMvcRequestBuilders.post("/course")
 	                .contentType(MediaType.APPLICATION_JSON)
@@ -84,7 +84,7 @@ class SpringappApplicationTests {
      
      
      @Test
-     public void testGetLessonAll() throws Exception {
+     void testGetLessonAll() throws Exception {
      	
          mockMvc.perform(get("/lesson"))
          .andExpect(MockMvcResultMatchers.status().isOk())
@@ -96,7 +96,7 @@ class SpringappApplicationTests {
      
      
      @Test
-     public void testGetLessonById() throws Exception {
+     void testGetLessonById() throws Exception {
      	
          mockMvc.perform(get("/lesson").param("id", "1"))
          .andExpect(MockMvcResultMatchers.status().isOk())
@@ -108,7 +108,7 @@ class SpringappApplicationTests {
 
      
      @Test
-     public void testGetEnrollmentAll() throws Exception {
+     void testGetEnrollmentAll() throws Exception {
      	
          mockMvc.perform(get("/enrollment"))
          .andExpect(MockMvcResultMatchers.status().isOk())
@@ -120,7 +120,7 @@ class SpringappApplicationTests {
      
      
      @Test
-     public void testGetEnrollmentById() throws Exception {
+     void testGetEnrollmentById() throws Exception {
      	
          mockMvc.perform(get("/enrollment").param("id", "1"))
          .andExpect(MockMvcResultMatchers.status().isOk())
@@ -131,7 +131,7 @@ class SpringappApplicationTests {
      }
      
      @Test
-	    public void testCreateEnrollment() throws Exception {
+	    void testCreateEnrollment() throws Exception {
 	    
 	        mockMvc.perform(MockMvcRequestBuilders.post("/enrollment")
 	                .contentType(MediaType.APPLICATION_JSON)
@@ -142,7 +142,7 @@ class SpringappApplicationTests {
 
      
      @Test
-     public void test_case1() {
+     void test_case1() {
      String directoryPath = "src/main/java/com/example/springapp/controller";
       File directory = new File(directoryPath);
       assertTrue(directory.exists() && directory.isDirectory());;
@@ -150,7 +150,7 @@ class SpringappApplicationTests {
 
 
      @Test
-     public void test_case2() {
+     void test_case2() {
      String filePath = "src/main/java/com/example/springapp/controller/CourseController.java";
       File file = new File(filePath);
       assertTrue(file.exists() && file.isFile());;
