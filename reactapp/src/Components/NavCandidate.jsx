@@ -12,12 +12,12 @@ const NavCandidate = ({ children }) => {
   return (
     <>
 
-      <body>
+    
         <main>
-        <header class="navbar">
-    <a href="/Dashboard" class="navlogo">ACADEMIA</a>
-    <div class="navlinkwrap">
-      <span class="navlink">
+        <header className="navbar">
+    <a href="/Dashboard" className="navlogo">ACADEMIA</a>
+    <div className="navlinkwrap">
+      <span className="navlink">
       
       <Group position="right" className="profile">
       <HoverCard width={320} shadow="md" withArrow openDelay={200} closeDelay={400}>
@@ -68,7 +68,7 @@ const NavCandidate = ({ children }) => {
                 <li className="menu-item">
                   <NavLink
                     to="/Dashboard"
-                    activeClassName="active-menu-item"
+                    activeclassname="active-menu-item"
                     className="menu-item"
                   >
                     <span className="icon"><MdSpaceDashboard/></span>
@@ -79,7 +79,7 @@ const NavCandidate = ({ children }) => {
                 <li className="menu-item">
                   <NavLink
                     to="/Courses"
-                    activeClassName="active-menu-item"
+                    activeclassname="active-menu-item"
                     className="menu-item"
                   >
                     <span className="icon"><MdOutlineMenuBook/></span>
@@ -90,7 +90,7 @@ const NavCandidate = ({ children }) => {
                 <li className="menu-item">
                   <NavLink
                     to="/Courses"
-                    activeClassName="active-menu-item"
+                    activeclassname="active-menu-item"
                     className="menu-item"
                   >
                     <span className="icon"><MdCollectionsBookmark/></span>
@@ -101,7 +101,7 @@ const NavCandidate = ({ children }) => {
                 <li className="menu-item">
                   <NavLink
                     to="/Leaderboard"
-                    activeClassName="active-menu-item"
+                    activeclassname="active-menu-item"
                     className="menu-item"
                   >
                     <span className="icon"><MdLeaderboard/></span>
@@ -112,7 +112,7 @@ const NavCandidate = ({ children }) => {
                 <li className="menu-item">
                   <NavLink
                     to="/Settings"
-                    activeClassName="active-menu-item"
+                    activeclassname="active-menu-item"
                     className="menu-item"
                   >
                     <span className="icon"><MdSettings/></span>
@@ -122,7 +122,7 @@ const NavCandidate = ({ children }) => {
                 <li className="menu-item">
                   <NavLink
                     to="/HelpCenter"
-                    activeClassName="active-menu-item"
+                    activeclassname="active-menu-item"
                     className="menu-item"
                   >
                     <span className="icon"><MdHelp/></span>
@@ -138,7 +138,6 @@ const NavCandidate = ({ children }) => {
           </aside>
           <main>{children}</main>
         </main>
-      </body>
     </>
   );
 };

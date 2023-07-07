@@ -16,6 +16,18 @@
     --c-card-side: #b1d0e040;
 }
 
+.start{
+    margin: 0 auto;
+    padding: 0 45px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    position: relative;
+    color:black;
+    margin-top:90px ;
+}
+
 body {
     background-color: #ffffff;
 }

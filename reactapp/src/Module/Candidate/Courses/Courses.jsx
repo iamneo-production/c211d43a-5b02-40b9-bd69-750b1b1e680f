@@ -3,13 +3,7 @@ import "./Courses.css"
 
 function Courses() {
   return (
-    <div className="start">
-
-            
-    write your code here
-    
-    
-    </div>
+    <div className='start'>Courses</div>
   )
 }
 
