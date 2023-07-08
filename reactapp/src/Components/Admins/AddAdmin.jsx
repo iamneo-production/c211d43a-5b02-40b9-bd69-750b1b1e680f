@@ -1,61 +1,74 @@
-import React, { useState } from "react";
-// import Form from "./Form";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './Create.css';
+import base_url from "./api";
+import axios from "axios";
+
 
 export default function AddAdmin() {
 
+  useEffect(()=>{
+    document.title = "Add Instructor";
+  },[]);
 
-    const[id,idchange]=useState("");
-    const[name,namechange]=useState("");
-    const[designation,designationchange]=useState("");
-    const[description,descriptionchange]=useState("");
-    const[src,srcchange]=useState("");
+    const [admin, setAdmin] =useState({});
 
 
     const navigate=useNavigate();
 
     const handleSubmit=(e)=>{
-        e.preventDefault();
-        const data = {name,designation,description,src};
-        // console.log({id,name,designation,description,src});
-
-        fetch("http://localhost:8000/admins",{
-            method:"POST",
-            headers:{"content-type":"application/json"},
-
-            body:JSON.stringify(data)
-        }).then((res)=>{
-            alert('Admin Created Successfully.')
-            navigate('/');
-            
-        }).catch((err)=>{
-            console.log(err.message)
-        })
-
+      e.preventDefault();
+      postDataToServer(admin);
+      console.log(admin);
     }
+
+    const postDataToServer=(data)=>{
+      axios.post(`${base_url}/admins`,data).then(
+        (response)=>{
+          console.log(response);
+          console.log("Success");
+          alert('Admin Created Successfully.')
+          navigate('/');
+        },(error)=>{
+          console.log(error);
+          console.log("Error")
+          alert('Something Went Wrong.')
+        }
+      );
+    }
+
   return (
     <div className="login-box">
-    <h2>Create Admin</h2>
+    <h2>Create Instructor</h2>
     <form onSubmit={handleSubmit}>
       <div className="user-box">
-        <input type="number" value={id} disabled="disabled" name="" required="" />
+        <input type="number" onChange={(e)=>{
+          setAdmin({...admin,id:e.target.value})
+        }}  />
         <label>ID</label>
       </div>
       <div className="user-box">
-        <input type="text" value={name}  onChange={e=>namechange(e.target.value)} required />
+        <input type="text"  onChange={(e)=>{
+          setAdmin({...admin,name:e.target.value})
+        }} required />
         <label>Name</label>
       </div>
       <div className="user-box">
-        <input type="text" value={designation}  onChange={e=>designationchange(e.target.value)} required />
+        <input type="text"   onChange={(e)=>{
+          setAdmin({...admin,designation:e.target.value})
+        }} required />
         <label>Designation</label>
       </div>
       <div className="user-box">
-        <input type="text" value={description} onChange={e=>descriptionchange(e.target.value)} required />
+        <input type="text" onChange={(e)=>{
+          setAdmin({...admin,description:e.target.value})
+        }} required />
         <label>Description</label>
       </div>
       <div className="user-box">
-        <input type="text" value={src}  onChange={e=>srcchange(e.target.value)} required />
+        <input type="text" onChange={(e)=>{
+          setAdmin({...admin,src:e.target.value})
+        }} required />
         <label>Image src : </label>
       </div>
        <button type="submit" className="create_admin" >

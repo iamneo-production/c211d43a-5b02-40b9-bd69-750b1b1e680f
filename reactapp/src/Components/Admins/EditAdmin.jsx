@@ -1,65 +1,68 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-// import Form from './Form'
 import { Link, useNavigate, useParams } from "react-router-dom";
+import base_url from "./api";
 
 export default function EditAdmin() {
   const { adminid } = useParams();
 
-  const [id, idchange] = useState("");
-  const [name, namechange] = useState("");
-  const [designation, designationchange] = useState("");
-  const [description, descriptionchange] = useState("");
-  const [src, srcchange] = useState("");
+
+  const [adminData, setAdminData] = useState({
+    id: "",
+    name: "",
+    designation: "",
+    description: "",
+    src: "",
+  });
 
   useEffect(() => {
-    fetch("http://localhost:8000/admins/" + adminid)
-      .then((res) => {
-        return res.json();
-      })
-      .then((resp) => {
-        idchange(resp.id);
-        namechange(resp.name);
-        designationchange(resp.designation);
-        descriptionchange(resp.description);
-        srcchange(resp.src);
-      }).catch((err)=>{
-        console.log(err.message);
-      })
+    document.title = "Update Instructor";
+    fetchAdminData();
   }, []);
+
+  const fetchAdminData = () => {
+    axios
+      .get(`${base_url}/admins/${adminid}`)
+      .then((response) => {
+        const { id, name, designation, description, src } = response.data;
+        setAdminData({ id, name, designation, description, src });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = { id, name, designation, description, src };
+    const data = { ...adminData };
 
-    fetch("http://localhost:8000/admins/" + adminid, {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-
-      body: JSON.stringify(data),
-    })
-      .then((res) => {
-        alert("Admin Details Updated Successfully.");
+    axios
+      .put(`${base_url}/admins/${adminid}`, data)
+      .then((response) => {
+        alert("Instructor Details Updated Successfully.");
         navigate("/");
       })
-      .catch((err) => {
-        console.log(err.message);
+      .catch((error) => {
+        console.log(error);
       });
   };
+
   return (
     <div className="login-box">
-      <h2>Update Admin details</h2>
+      <h2>Update Instructor</h2>
       <form onSubmit={handleSubmit}>
         <div className="user-box">
-          <input type="number" defaultValue={id} />
+          <input type="number" defaultValue={adminData.id} />
           <label>ID</label>
         </div>
         <div className="user-box">
           <input
             type="text"
-            value={name}
-            onChange={(e) => namechange(e.target.value)}
+            value={adminData.name}
+            onChange={(e) =>
+              setAdminData({ ...adminData, name: e.target.value })}
             required
           />
           <label>Name</label>
@@ -67,8 +70,9 @@ export default function EditAdmin() {
         <div className="user-box">
           <input
             type="text"
-            value={designation}
-            onChange={(e) => designationchange(e.target.value)}
+            value={adminData.designation}
+            onChange={(e) =>
+              setAdminData({ ...adminData, designation: e.target.value })}
             required
           />
           <label>Designation</label>
@@ -76,8 +80,9 @@ export default function EditAdmin() {
         <div className="user-box">
           <input
             type="text"
-            value={description}
-            onChange={(e) => descriptionchange(e.target.value)}
+            value={adminData.description}
+            onChange={(e) =>
+              setAdminData({ ...adminData, description: e.target.value })}
             required
           />
           <label>Description</label>
@@ -85,8 +90,9 @@ export default function EditAdmin() {
         <div className="user-box">
           <input
             type="text"
-            value={src}
-            onChange={(e) => srcchange(e.target.value)}
+            value={adminData.src}
+            onChange={(e) =>
+              setAdminData({ ...adminData, src: e.target.value })}
             required
           />
           <label>Image src : </label>

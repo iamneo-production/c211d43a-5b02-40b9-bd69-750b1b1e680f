@@ -1,6 +1,8 @@
 import React from "react";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import base_url from "./api";
 
 export default function Card(props) {
 
@@ -11,18 +13,18 @@ const navigate = useNavigate();
   }
 
   const handledelete=(id)=>{
-    if(window.confirm('Are you sure you want to remove this admin?')){
-      fetch("http://localhost:8000/admins/"+id,{
-            method:"DELETE"
-        }).then((res)=>{
-            alert('Admin Deleted Successfully.')
-            window.location.reload();
-            
-        }).catch((err)=>{
-            console.log(err.message)
-        })
+    if(window.confirm('Are you sure you want to remove this Instructor?')){
+      axios.delete(`${base_url}/admins/${id}`).then(
+        (response)=>{
+          alert('Instructor Deleted Successfully.')
+          props.update(id);
+        },(error)=>{
+          console.log(error);
+          alert('OPS! Something went wrong | Internal server error.')
+        }
+      )
     }
-  }
+  };
   
   return (
     <React.Fragment>
@@ -66,7 +68,7 @@ const navigate = useNavigate();
               }}
             >
               <li>
-                  <button className="Custom_change" id="Edit" onClick={e=>LoadEdit(props.id)}>Edit</button>
+                  <button className="Custom_change" id="Edit" onClick={e=>LoadEdit(props.id)}>Update</button>
               </li>
               <li>
                 <button onClick={e=>handledelete(props.id)}

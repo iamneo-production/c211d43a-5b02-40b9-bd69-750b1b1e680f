@@ -2,29 +2,40 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import "./main.css";
 import { Link } from "react-router-dom";
-// import data from "./Data";
+import base_url from "./api"
+import axios from "axios";
+
 
 export default function Admin() {
   const [admindata, admindatachange] = useState(null);
 
+  const getAllAdmins = () => {
+    axios.get(`${base_url}/admins`).then(
+      (response) => {
+        //succcess
+        console.log(response);
+        admindatachange(response.data);
+      },
+      (error) => {
+        //for error
+        console.log(error);
+      }
+    )
+  };
+
   useEffect(() => {
-    fetch("http://localhost:8000/admins")
-      .then((res) => {
-        return res.json();
-      })
-      .then((resp) => {
-        admindatachange(resp);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
+    getAllAdmins();
+    document.title="Instructor Dashboard";
   }, []);
+
+  const updateAdmin = (id) => {
+    admindatachange(admindata.filter((c) => c.id !== id))
+  };
 
   const [text, setText] = useState("false");
   const [bId, setBId] = useState(null);
 
   const btnClick = (id) => {
-
     if (text === "false") {
       setBId(id);
       setText("true");
@@ -42,7 +53,7 @@ export default function Admin() {
     <div>
       <section>
         <div className="container flow-content">
-          <h2 className="section-title">Admin Details</h2>
+          <h2 className="section-title">Instructor Details</h2>
           <ul role="list" className="grid" data-columns="3">
             {admindata &&
               admindata.map((e, index) => {
@@ -54,6 +65,7 @@ export default function Admin() {
                       text={text}
                       id={e.id}
                       btnClick={btnClick}
+                      update={updateAdmin}
                     />
                   </div>
                 );
@@ -67,7 +79,7 @@ export default function Admin() {
                 </button>
               </Link>
               <p className="card__name" style={{ marginTop: "4rem" }}>
-                Add Admin
+                Add Instructor
               </p>
             </div>
           </div>
