@@ -11,13 +11,14 @@
   }
   
   
-  .sidebar {
+  .sidebar-content{
     width: 250px;
     height: 600px;
     background-color: #ffff;
     padding: 20px;
     position: fixed;
     border: 1px solid black;
+    margin-top: 15px;
   }
   
   .image-holder {

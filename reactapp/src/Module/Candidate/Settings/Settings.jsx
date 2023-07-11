@@ -116,7 +116,7 @@ const Settings = () => {
 
   return (
     <div className="settings-container">
-      <div className="sidebar">
+      <div className="sidebar-content">
         <div className="image-holder">
           <div className="circle-image" />
         </div>
