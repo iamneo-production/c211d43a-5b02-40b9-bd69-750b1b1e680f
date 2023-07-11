@@ -1,18 +1,5 @@
 import React from 'react';
 import './App.css';
-import Navbar from './Navbar';
-import About from './pages/About';
-import Coursedisplay from './pages/Coursedisplay';
-import Topcourse from './pages/Topcourse';
-import Teacher from './pages/Teacher';
-import Testimonial from './pages/Testimonial';
-import Ctc from './pages/Ctc';
-import Footer from './pages/Footer';
-import Video from './pages/Video';
-import Aboutus from './pages/Aboutus';
-import Courses from './pages/Courses';
-import Home from './pages/Home';
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Select from "./Components/Landing/Select";
@@ -27,10 +14,25 @@ import Settings from "./Module/Candidate/Settings/Settings";
 import Helpcenter from "./Module/Candidate/HelpCenter/HelpCenter";
 
 import InstructorDashboard from "./Module/Instructor/InstructorDashboard/InstructorDashboard";
-import InstructorCourses from "./Module/Instructor/InstructorCourses/InstructorCourses"
-import Instructors from "./Module/Instructor/Instructors/Instructors"
-import InstructorSettings from "./Module/Instructor/InstructorSettings/InstructorSettings"
-import Trainee from "./Module/Instructor/Trainee/Trainee"
+import InstructorCourses from "./Module/Instructor/InstructorCourses/InstructorCourses";
+import Instructors from "./Module/Instructor/Instructors/Instructors";
+import InstructorSettings from "./Module/Instructor/InstructorSettings/InstructorSettings";
+import Trainee from "./Module/Instructor/Trainee/Trainee";
+
+import Navbar from './Navbar';
+import About from './pages/About';
+import Coursedisplay from './pages/Coursedisplay';
+import Topcourse from './pages/Topcourse';
+import Teacher from './pages/Teacher';
+import Testimonial from './pages/Testimonial';
+import Ctc from './pages/Ctc';
+import Footer from './pages/Footer';
+import Video from './pages/Video';
+import Aboutus from './pages/Aboutus';
+import Courses from './pages/Courses';
+import Home from './pages/Home';
+import Contact from './pages/Contact'; // Make sure to import the Contact component
+import Instructor from './pages/Instructor'; // Make sure to import the Instructor component
 
 function App() {
   return (
