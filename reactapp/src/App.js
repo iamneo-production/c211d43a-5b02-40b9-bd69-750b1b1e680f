@@ -31,8 +31,12 @@ import Video from './pages/Video';
 import Aboutus from './pages/Aboutus';
 import Courses from './pages/Courses';
 import Home from './pages/Home';
-import Contact from './pages/Contact'; // Make sure to import the Contact component
-import Instructor from './pages/Instructor'; // Make sure to import the Instructor component
+import Contact from './pages/Contact';
+import Instructor from './pages/Instructor';
+
+import Admin from "./Components/Admins/Admin";
+import AddAdmin from "./Components/Admins/AddAdmin";
+import EditAdmin from "./Components/Admins/EditAdmin";
 
 function App() {
   return (
@@ -72,29 +76,13 @@ function App() {
           <Route path='/Video' element={<Video/>}/> 
           <Route path='/Home' element={<Home/>}/>
           <Route path='/Instructor' element={<Instructor/>}/>
-        </Routes>
-      </Router>
-    </>
-  );
-}
 
-export default App;
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./Components/Admins/Admin";
-import AddAdmin from "./Components/Admins/AddAdmin";
-import EditAdmin from "./Components/Admins/EditAdmin";
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
           <Route path="/" element={<Admin />} />
           <Route path="/admin/add" element={<AddAdmin />} />
           <Route path="/admin/edit/:adminid" element={<EditAdmin />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </Router>
+    </>
   );
 }
 
