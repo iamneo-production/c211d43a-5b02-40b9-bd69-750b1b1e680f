@@ -3,19 +3,21 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Select from "./Components/Landing/Select";
-import SignUp from "./Components/Authentication/SignUp";
-import SignIn from "./Components/Authentication/SignIn";
+import Auth from "./Components/Authentication/Auth"
+import InstructorAuth from './Components/Authentication/InstructorAuth';
+
 import NavCandidate from "./Components/NavCandidate";
 import NavAdmin from "./Components/NavAdmin";
 
-import Dashboard from "./Module/Candidate/Dashboard/Dashboard";
-import Leaderboard from "./Module/Candidate/Leaderboard/Leaderboard";
-import Settings from "./Module/Candidate/Settings/Settings";
-import Helpcenter from "./Module/Candidate/HelpCenter/HelpCenter";
+import UserDashboard from "./Module/Candidate/UserDashboard/UserDashboard";
+import UserCourses from "./Module/Candidate/UserCourses/UserCourses"
+import UserLeaderboard from "./Module/Candidate/UserLeaderboard/UserLeaderboard";
+import UserSettings from "./Module/Candidate/UserSettings/UserSettings";
+import UserHelpcenter from "./Module/Candidate/UserHelpCenter/UserHelpCenter";
 
 import InstructorDashboard from "./Module/Instructor/InstructorDashboard/InstructorDashboard";
 import InstructorCourses from "./Module/Instructor/InstructorCourses/InstructorCourses";
-import Instructors from "./Module/Instructor/Instructors/Instructors";
+import InstructorDetails from "./Module/Instructor/InstructorDetails/InstructorDetails";
 import InstructorSettings from "./Module/Instructor/InstructorSettings/InstructorSettings";
 import Trainee from "./Module/Instructor/Trainee/Trainee";
 
@@ -40,20 +42,20 @@ function App() {
       <Router>
         <Routes>
           <Route path="/Select" element={<Select />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/SignIn" element={<SignIn />} />
-
+          
+          <Route path="/Auth" element={<Auth/>}/>
+          <Route path="/InstructorAuth" element={<InstructorAuth/>}/>
           <Route path="/NavCandidate" element={<NavCandidate />} />
-          <Route path="/Dashboard" element={<NavCandidate><Dashboard /></NavCandidate>} />
-          <Route path="/Courses" element={<NavCandidate><Courses /></NavCandidate>} />
-          <Route path="/Leaderboard" element={<NavCandidate><Leaderboard /></NavCandidate>} />
-          <Route path="/Settings" element={<NavCandidate><Settings /></NavCandidate>} />
-          <Route path="/Helpcenter" element={<NavCandidate><Helpcenter /></NavCandidate>} />
+          <Route path="/UserDashboard" element={<NavCandidate><UserDashboard /></NavCandidate>} />
+          <Route path="/UserCourses" element={<NavCandidate><UserCourses /></NavCandidate>} />
+          <Route path="/UserLeaderboard" element={<NavCandidate><UserLeaderboard /></NavCandidate>} />
+          <Route path="/UserSettings" element={<NavCandidate><UserSettings /></NavCandidate>} />
+          <Route path="/UserHelpcenter" element={<NavCandidate><UserHelpcenter /></NavCandidate>} />
 
           <Route path="/NavAdmin" element={<NavAdmin/>} />
           <Route path="/InstructorDashboard" element={<NavAdmin><InstructorDashboard/></NavAdmin>}/>
           <Route path="/InstructorCourses" element={<NavAdmin><InstructorCourses/></NavAdmin>}/>
-          <Route path="/Instructors" element={<NavAdmin><Instructors/></NavAdmin>}/>
+          <Route path="/InstructorDetails" element={<NavAdmin><InstructorDetails/></NavAdmin>}/>
           <Route path="/InstructorSettings" element={<NavAdmin><InstructorSettings/></NavAdmin>}/>
           <Route path="/Trainee" element={<NavAdmin><Trainee/></NavAdmin>}/>
 

@@ -3,7 +3,11 @@ import "./NavCandidate.css";
 import {   NavLink } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
 import { MdSpaceDashboard,MdOutlineMenuBook,MdCollectionsBookmark,MdLeaderboard,MdSettings,MdHelp } from "react-icons/md";
-import { HoverCard, Avatar, Text, Group, Anchor, Stack } from '@mantine/core';
+// import { HoverCard, Avatar, Text, Group, Anchor, Stack } from '@mantine/core';
+import { Menu, Text } from '@mantine/core';
+import { UnstyledButton, Group, Avatar } from '@mantine/core';
+// import { IconSettings, IconSearch, IconPhoto, IconMessageCircle, IconTrash, IconArrowsLeftRight } from '@tabler/icons-react';
+
 
 
 
@@ -11,63 +15,44 @@ const NavCandidate = ({ children }) => {
 
   return (
     <>
-
-    
-        <main>
-        <header className="navbar">
-    <a href="/Dashboard" className="navlogo">ACADEMIA</a>
+        
+        <header className="can-navbar">
+    <a href="/UserDashboard" className="navlogo">ACADEMIA</a>
     <div className="navlinkwrap">
       <span className="navlink">
       
-      <Group position="right" className="profile">
-      <HoverCard width={320} shadow="md" withArrow openDelay={200} closeDelay={400}>
-        <HoverCard.Target>
-          <Avatar src={BsPersonCircle} alt="img" radius="xl" />
-        </HoverCard.Target>
-        <HoverCard.Dropdown>
-          <Group>
-            <Avatar src={BsPersonCircle} radius="xl" />
-            <Stack spacing={5}>
-              <Text size="sm" weight={700} sx={{ lineHeight: 1 }}>
-                Mantine
-              </Text>
-              <Anchor
-                href="#"
-                color="dimmed"
-                size="xs"
-                sx={{ lineHeight: 1 }}
-              >
-                @mantinedev
-              </Anchor>
-            </Stack>
-          </Group>
 
-          <Text size="sm" mt="md">
-            Customizable React components and hooks library with focus on usability, accessibility
-            and developer experience
-          </Text>
+      <Menu shadow="md" width={200}>
+      <Menu.Target>
+      <UnstyledButton className="unStyledbtn">
+      <Group>
+        <Avatar size={40} color="blue">BH</Avatar>
+        <div>
+          <Text>Bob Handsome</Text>
+          <Text size="xs" color="dimmed">bob@handsome.inc</Text>
+        </div>
+      </Group>
+    </UnstyledButton>
+      </Menu.Target>
 
-          <Group mt="md" spacing="xl">
-            <Text size="sm">
-              <b>0</b> Following
-            </Text>
-            <Text size="sm">
-              <b>1,174</b> Followers
-            </Text>
-          </Group>
-        </HoverCard.Dropdown>
-      </HoverCard>
-    </Group>
+      <Menu.Dropdown>
+        {/* <Menu.Label>Application</Menu.Label> */}
+        <Menu.Item  >Profile</Menu.Item>
+        <Menu.Item  >Logout</Menu.Item>
+      </Menu.Dropdown>
+    </Menu>
 
       </span>
     </div>
   </header>
+  <main>
+  <div style={{display:"flex"}}>
           <aside className="menu">
             <nav className="primary">
               <ul>
                 <li className="menu-item">
                   <NavLink
-                    to="/Dashboard"
+                    to="/UserDashboard"
                     activeclassname="active-menu-item"
                     className="menu-item"
                   >
@@ -78,7 +63,7 @@ const NavCandidate = ({ children }) => {
 
                 <li className="menu-item">
                   <NavLink
-                    to="/Courses"
+                    to="/UserCourses"
                     activeclassname="active-menu-item"
                     className="menu-item"
                   >
@@ -89,7 +74,7 @@ const NavCandidate = ({ children }) => {
 
                 <li className="menu-item">
                   <NavLink
-                    to="/Courses"
+                    to="/UserCourses"
                     activeclassname="active-menu-item"
                     className="menu-item"
                   >
@@ -100,7 +85,7 @@ const NavCandidate = ({ children }) => {
 
                 <li className="menu-item">
                   <NavLink
-                    to="/Leaderboard"
+                    to="/UserLeaderboard"
                     activeclassname="active-menu-item"
                     className="menu-item"
                   >
@@ -111,7 +96,7 @@ const NavCandidate = ({ children }) => {
 
                 <li className="menu-item">
                   <NavLink
-                    to="/Settings"
+                    to="/UserSettings"
                     activeclassname="active-menu-item"
                     className="menu-item"
                   >
@@ -121,7 +106,7 @@ const NavCandidate = ({ children }) => {
                 </li>
                 <li className="menu-item">
                   <NavLink
-                    to="/HelpCenter"
+                    to="/UserHelpCenter"
                     activeclassname="active-menu-item"
                     className="menu-item"
                   >
@@ -137,6 +122,7 @@ const NavCandidate = ({ children }) => {
             <span className="expander iconoir-arrow-right"></span>
           </aside>
           <main>{children}</main>
+          </div>
         </main>
     </>
   );
