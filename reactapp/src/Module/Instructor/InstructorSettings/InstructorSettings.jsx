@@ -3,7 +3,7 @@ import "./InstructorSettings.css"
 
 function InstructorSettings() {
   return (
-    <div className='start'>InstructorSettingsssssssssssssssssssssssssssssssssssssssssss</div>
+    <div>Settings</div>
   )
 }
 
