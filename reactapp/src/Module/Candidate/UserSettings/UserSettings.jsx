@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './UserSettings.css';
 
 const Settings = () => {
@@ -11,50 +11,65 @@ const Settings = () => {
   const renderMainContent = () => {
     if (selectedNavItem === 'Close Account') {
       return (
-        <div className="main-content">
-          <h2>Close Account</h2>
+        <div className="main-content-settings">
+          <div className='Head-tag-settings'>
+            <h2>Close Account</h2>
+          </div>
+          
           <p className='tagline'>Close your account permanently</p>
           <div className="warning-container">
             <p>
               <strong>Warning:</strong> If you close your account, you will be unsubscribed from all your courses and will lose access forever.
             </p>
             <button className='delete-btn'>Close Account</button>
+            
           </div>
         </div>
       );
     } else if (selectedNavItem === 'Photo') {
       return (
-        <div className="main-content">
+        <div className="main-content-settings">
+          <div className='Head-tag-settings'>
           <h2>Photo</h2>
+          </div>
           <p className='tagline'>Add a nice photo of yourself for your profile</p>
           <div className='image-preview-tag'>Image preview:</div>
-          <div className="image-preview"></div>
+          <div className="image-preview" style={{ backgroundImage: 'url(https://png.pngtree.com/png-clipart/20210915/ourmid/pngtree-user-avatar-placeholder-black-png-image_3918427.jpg)' }}></div>
           <div className="upload-container">
-            <div className="horizontal-rectangle">
+            <div className="horizontal-rectangle" >
               <p>Click to upload image</p>
-              <button className='stable-btn'>Upload</button>
+              <button className="stable-btn">Upload</button>
             </div>
-            <button className="stable-btn">Save</button>
+            <div className="button-container">
+              <button className="stable-btn">Save changes</button>
+              <button className="stable-btn">Cancel</button>
+            </div>
           </div>
         </div>
       );
     } else if (selectedNavItem === 'Account Security') {
       return (
-        <div className="main-content">
-          <h2>Account Settings</h2>
+        <div className="main-content-settings">
+          <div className='Head-tag-settings'>
+            <h2>Account Settings</h2>
+          </div>
           <p className='tagline'>Edit your account settings and change your password here</p>
           <div className="account-settings">
             <input type="text" placeholder="Email" />
             <input type="password" placeholder="New Password" />
             <input type="password" placeholder="Retype New Password" />
+          </div>
+          <div className="button-container">
             <button className='stable-btn'>Change Password</button>
           </div>
         </div>
       );
     } else if (selectedNavItem === 'Payment methods') {
       return (
-        <div className="main-content">
-          <h2>Your saved payments</h2>
+        <div className="main-content-settings">
+          <div className='Head-tag-settings'>
+            <h2>Your saved payments</h2>
+          </div>
           <p className='tagline'>Add new payment method & saved payment methods</p>
           <div className='saved-payment'>Your saved payment methods:</div>
           <div className='saved-payment-container'></div>
@@ -63,8 +78,10 @@ const Settings = () => {
       );
     } else if (selectedNavItem === 'Notifications') {
       return (
-        <div className="main-content">
-          <h2>Notifications</h2>
+        <div className="main-content-settings">
+          <div className='Head-tag-settings'>
+            <h2>Notifications</h2>
+          </div>
           <p className='tagline'>Turn email notifications on or off</p>
           <div className="notifications-container">
             <h4>I want to receive:</h4>
@@ -87,8 +104,10 @@ const Settings = () => {
       );
     } else if (selectedNavItem === 'Profile') {
       return (
-        <div className="main-content">
-          <h2>Public Profile</h2>
+        <div className="main-content-settings">
+          <div className='Head-tag-settings'>
+            <h2>Public Profile</h2>
+          </div>
           <p className='tagline'>Add information about yourself</p>
           <div className="profile-details">
             <div className="form-group">
@@ -108,17 +127,24 @@ const Settings = () => {
               <input type="text" id="mobile-number" />
             </div>
           </div>
-            <button className='stable-btn'>Save</button>
+          <div className="button-container">
+              <button className="stable-btn">Save changes</button>
+              <button className="stable-btn">Cancel</button>
+          </div>
         </div>
       );
     }
   };
 
+  useEffect(() => {
+    setSelectedNavItem('Profile');
+  }, []);
+
   return (
     <div className="settings-container">
       <div className="sidebar-content">
         <div className="image-holder">
-          <div className="circle-image" />
+          <div className="circle-image" style={{ backgroundImage: 'url(https://png.pngtree.com/png-clipart/20210915/ourmid/pngtree-user-avatar-placeholder-black-png-image_3918427.jpg)' }} />
         </div>
         <h4 className="user-name">User Name</h4>
         <ul className="nav-items">
