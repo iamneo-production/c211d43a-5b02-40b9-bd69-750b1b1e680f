@@ -11,6 +11,7 @@ com/example/springapp/model/Enrollment.class
 com/example/springapp/config/UserInfoUserDetails.class
 com/example/springapp/controller/UserController.class
 com/example/springapp/config/CorsConfigurationSimple.class
+com/example/springapp/SpringappApplication.class
 com/example/springapp/service/LessonService.class
 com/example/springapp/model/Auth.class
 com/example/springapp/model/UserInfo.class
