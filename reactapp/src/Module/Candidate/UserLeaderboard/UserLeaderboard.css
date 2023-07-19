@@ -77,7 +77,6 @@ border-radius: 55px;
   margin-left: 250px;
   background-color: white;
   margin: 15px;
-  margin-left: 275px;
   padding: 15px;
   box-shadow: 0 0 8px rgb(230, 230, 230);
 }
@@ -94,18 +93,18 @@ border-radius: 55px;
   width: 31%;
   min-height: 220px;
   padding: 20px;
-  background: linear-gradient(to left, #B576F6, #9a4fe9);
+  background: linear-gradient(#060f61 , #00ffff);
   border-radius: 10px;
   color: #fff;
   position: relative;
 }
 
 .lmain-content .info-card .card:nth-child(2){
-  background: linear-gradient(to left, #6AA5E3, #6866E9);
+  background: linear-gradient(#060f61 , #00ffff);
 }
 
 .lmain-content .info-card .card:nth-child(3){
-  background: linear-gradient(to left, #FEB683, #FF8993);
+  background: linear-gradient(#060f61 , #00ffff);
 }
 
 .lmain-content .info-card .card::before ,
@@ -182,7 +181,7 @@ border-radius: 55px;
 
 .lmain-content .user_table tbody tr .btn{
   padding: 7px 25px;
-  background: linear-gradient(to left, #B576F6, #9a4fe9);
+  background: #060f61;
   border-radius: 3px;
   display: inline-block;
   color: #fff;
