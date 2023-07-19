@@ -1,14 +1,15 @@
 import './Leaderboard.css';
 import React from 'react';
 
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"></link>
 function Leaderboard() {
     return (
-    <div className="App">
+    <div className="lApp">
     <div className="page_wrape">
         {/*  <!---main content--> */}
 
-        <div className="main-content">
+        <div className="lmain-content">
             <div className="info-card">
                 <div className="card">
                     <div className="card-icon">
@@ -44,7 +45,7 @@ function Leaderboard() {
                     <p>Chennai</p>
                 </div>
             </div>
-            <div className="main-table">
+            <div className="lmain-table">
                 <div className="title">
                     <h2>All Users</h2>
                     <div className="user_table">
