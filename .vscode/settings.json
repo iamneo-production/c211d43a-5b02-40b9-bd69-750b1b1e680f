@@ -4,4 +4,6 @@
 =======
     "java.compile.nullAnalysis.mode": "automatic"
 >>>>>>> 0ad0163416b5ce70618be56befa403f7ea1dd1c0
+}{
+    "java.compile.nullAnalysis.mode": "automatic"
 }

@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import Video from './Video';
 import About from './About';
 import Coursedisplay from './Coursedisplay';
+import "./landing.css"
 
  import Testimonial from './Testimonial';
  import Ctc from './Ctc';
