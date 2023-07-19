@@ -46,6 +46,7 @@ export default function Nav(props) {
           >
             <NavLink label="Dashboard" onClick={() => navigate('/InstructorDashboard')} style={navLinkStyle} />
             <NavLink label="Course" onClick={() => navigate('/InstructorCourses')} style={navLinkStyle} />
+            <NavLink label="Lesson" onClick={() => navigate('/InstructorLesson')} style={navLinkStyle} />
               <NavLink label="Instructor" onClick={() => navigate('/InstructorDetails')} style={navLinkStyle} />
               <NavLink label="Candidate" onClick={() => navigate('/Trainee')} style={navLinkStyle} />
               <NavLink label="Settings" onClick={() => navigate('/InstructorSettings')} style={navLinkStyle} />

@@ -1,6 +1,9 @@
 package com.example.springapp.model;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,9 +17,13 @@ public class Lesson {
     private String title;
 
     private String description;
+    
+    @Column(name="course_id")
+    private long courseid;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "course_id")
+    @JoinColumn(name = "courseid")
     private Course course;
 
     // Constructors
@@ -24,7 +31,15 @@ public class Lesson {
     public Lesson() {
     }
 
-    public Lesson(int id, String title, String description) {
+    public long getCourseid() {
+		return courseid;
+	}
+
+	public void setCourseid(long courseid) {
+		this.courseid = courseid;
+	}
+
+	public Lesson(int id, String title, String description) {
         this.id = id;
         this.title = title;
         this.description = description;

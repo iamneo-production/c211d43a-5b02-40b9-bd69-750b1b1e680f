@@ -1,9 +1,14 @@
 import React from 'react'
 import "./UserCourses.css"
+import NavCandidate from '../../../Components/NavCandidate'
 
 function Courses() {
   return (
-    <div>Courses</div>
+    <div>
+      <NavCandidate/>
+      Courses
+      
+      </div>
   )
 }
 

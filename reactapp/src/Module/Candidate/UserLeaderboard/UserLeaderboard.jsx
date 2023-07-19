@@ -1,9 +1,14 @@
+import NavCandidate from '../../../Components/NavCandidate';
 import './UserLeaderboard.css';
 import React from 'react';
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"></link>
 function Leaderboard() {
     return (
+
+        <div>
+            <NavCandidate/>
+
     <div className="App">
     <div className="page_wrape">
         {/*  <!---main content--> */}
@@ -97,6 +102,8 @@ function Leaderboard() {
     </div>
 
       
+    </div>
+
     </div>
   );
 }

@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.springapp.service.LessonService;
+import com.example.springapp.model.Course;
 import com.example.springapp.model.Lesson;
 
 import java.util.List;
@@ -28,10 +29,16 @@ public class LessonController {
         return new ResponseEntity<>(createdLesson, HttpStatus.CREATED);
     }
 
-    @GetMapping("")
-    public ResponseEntity<List<Lesson>> getLessonAll(@RequestBody Lesson lesson) {
-        List<Lesson> lessons = lessonService.getLessonAll(lesson);
-        return new ResponseEntity<>(lessons, HttpStatus.OK);
+//    @GetMapping
+//    public ResponseEntity<List<Lesson>> getLessonAll(@RequestBody Lesson lesson) {
+//        List<Lesson> lessons = lessonService.getLessonAll(lesson);
+//        return new ResponseEntity<>(lessons, HttpStatus.OK);
+//    }
+    
+    @GetMapping("/getlesson")
+    public List<Lesson> getLesson() {
+    	List<Lesson> les=lessonService.getLessonAll();
+        return les;
     }
 
     @GetMapping("/{id}")
