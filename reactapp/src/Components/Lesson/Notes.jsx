@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import base_url from "./api"
 
 export default function Notes(props) {
   const [inputValue, setInputValue] = useState("");
@@ -9,7 +10,7 @@ export default function Notes(props) {
 
   // Get Functions 
   const getAllNotes = () => {
-    axios.get("http://localhost:8080/notes").then(
+    axios.get(`${base_url}/notes`).then(
       (response) => {
         console.log(response);
         setNotes(response.data);
@@ -34,7 +35,7 @@ export default function Notes(props) {
   };
 
   const postDataToServer = () => {
-    axios.post("http://localhost:8080/notes", { notes: inputValue }).then(
+    axios.post(`${base_url}/notes`, { notes: inputValue }).then(
       (response) => {
         console.log(response);
         console.log("Success");
@@ -55,7 +56,7 @@ export default function Notes(props) {
   };
 
   const handledelete=(id)=>{
-      axios.delete(`http://localhost:8080/notes/${id}`).then(
+      axios.delete(`${base_url}/notes/${id}`).then(
         (response)=>{
           updateNotes(id);
         },(error)=>{
