@@ -7,6 +7,7 @@ export default function EditAdmin() {
   const { adminid } = useParams();
 
 
+
   const [adminData, setAdminData] = useState({
     id: "",
     name: "",
@@ -42,22 +43,21 @@ export default function EditAdmin() {
       .put(`${base_url}/admins/${adminid}`, data)
       .then((response) => {
         alert("Instructor Details Updated Successfully.");
-        navigate("/");
+        navigate("/instructor");
       })
       .catch((error) => {
         console.log(error);
       });
   };
-
   return (
-    <div className="login-box">
+    <div className="instructor_login-box">
       <h2>Update Instructor</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="user-box">
+      <form onSubmit={handleSubmit} id="instructor_form">
+        <div className="instructor_user-box">
           <input type="number" defaultValue={adminData.id} />
           <label>ID</label>
         </div>
-        <div className="user-box">
+        <div className="instructor_user-box">
           <input
             type="text"
             value={adminData.name}
@@ -67,7 +67,7 @@ export default function EditAdmin() {
           />
           <label>Name</label>
         </div>
-        <div className="user-box">
+        <div className="instructor_user-box">
           <input
             type="text"
             value={adminData.designation}
@@ -77,7 +77,7 @@ export default function EditAdmin() {
           />
           <label>Designation</label>
         </div>
-        <div className="user-box">
+        <div className="instructor_user-box">
           <input
             type="text"
             value={adminData.description}
@@ -87,7 +87,7 @@ export default function EditAdmin() {
           />
           <label>Description</label>
         </div>
-        <div className="user-box">
+        <div className="instructor_user-box">
           <input
             type="text"
             value={adminData.src}
@@ -97,15 +97,16 @@ export default function EditAdmin() {
           />
           <label>Image src : </label>
         </div>
-        <button type="submit" className="create_admin">
+        <div id="instructor_action-button">
+        <button type="submit" className="instructor_create_admin">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Update
         </button>
-        <Link to="/">
-          <button className="mx-4 create_admin">
+        <Link to="/instructor">
+          <button className="instructor_create_admin">
             <span></span>
             <span></span>
             <span></span>
@@ -113,6 +114,7 @@ export default function EditAdmin() {
             Back
           </button>
         </Link>
+        </div>
       </form>
     </div>
   );

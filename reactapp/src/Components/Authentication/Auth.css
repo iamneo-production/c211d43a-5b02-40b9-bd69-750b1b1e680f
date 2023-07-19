@@ -35,7 +35,7 @@
   z-index: 5;
 }
 
-form {
+#Auth-form {
   display: flex;
   align-items: center;
   justify-content: center;

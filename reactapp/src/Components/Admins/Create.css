@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  height: 100vh;
 }
 body {
   margin:0;
@@ -8,7 +8,7 @@ body {
   /* background: linear-gradient(#141e30, #243b55); */
 }
 
-.login-box {
+.instructor_login-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -21,18 +21,18 @@ body {
   border-radius: 10px;
 }
 
-.login-box h2 {
+.instructor_login-box h2 {
   margin: 0 0 30px;
   padding: 0;
   color: #fff;
   text-align: center;
 }
 
-.login-box .user-box {
+.instructor_login-box .instructor_user-box {
   position: relative;
 }
 
-.login-box .user-box input {
+.instructor_login-box .instructor_user-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -43,7 +43,7 @@ body {
   outline: none;
   background: transparent;
 }
-.login-box .user-box label {
+.instructor_login-box .instructor_user-box label {
   position: absolute;
   top:0;
   left: 0;
@@ -54,29 +54,19 @@ body {
   transition: .5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+#instructor_action-button{
+  display: flex;
+  margin-top: 40px;
+}
+
+.instructor_login-box .instructor_user-box input:focus ~ label,
+.instructor_login-box .instructor_user-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: #03e9f4;
   font-size: 12px;
 }
-
-/* .login-box form a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
-} */
-
-.login-box form .create_admin{
+.instructor_login-box #instructor_form .instructor_create_admin{
   background: none;
   border: none;
   position: relative;
@@ -88,27 +78,25 @@ body {
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
+  margin-right: 35px;
   letter-spacing: 4px
 }
 
 
-.login-box .create_admin:hover {
+.instructor_login-box #instructor_action-button .instructor_create_admin:hover {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+              0 0 25px #03e9f4;
 }
 
-.login-box button span {
+.instructor_login-box button span {
   position: absolute;
   display: block;
 }
 
-.login-box button span:nth-child(1) {
+.instructor_login-box button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -126,7 +114,7 @@ body {
   }
 }
 
-.login-box button span:nth-child(2) {
+.instructor_login-box button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -145,7 +133,7 @@ body {
   }
 }
 
-.login-box button span:nth-child(3) {
+.instructor_login-box button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -164,7 +152,7 @@ body {
   }
 }
 
-.login-box button span:nth-child(4) {
+.instructor_login-box button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;

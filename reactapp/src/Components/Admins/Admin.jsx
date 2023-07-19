@@ -9,26 +9,25 @@ import axios from "axios";
 export default function Admin() {
   const [admindata, admindatachange] = useState(null);
 
-  const getAllAdmins = () => {
+  const getAllAdmins=()=>{
     axios.get(`${base_url}/admins`).then(
-      (response) => {
+      (response)=>{
         //succcess
         console.log(response);
         admindatachange(response.data);
       },
-      (error) => {
+      (error)=>{
         //for error
         console.log(error);
       }
     )
   };
 
-  useEffect(() => {
+  useEffect(()=>{
     getAllAdmins();
-    document.title="Instructor Dashboard";
-  }, []);
+  },[]);
 
-  const updateAdmin = (id) => {
+  const updateAdmin=(id)=>{
     admindatachange(admindata.filter((c) => c.id !== id))
   };
 
@@ -71,9 +70,9 @@ export default function Admin() {
                 );
               })}
           </ul>
-          <div className="card" style={{}}>
+          <div className="card" >
             <div data-card="front" className="card__front flow-content">
-              <Link to="admin/add">
+              <Link to="/instructor/add">
                 <button className="Custom_add_button">
                   <i className="fa-solid fa-plus card__toggle-icon"></i>
                 </button>

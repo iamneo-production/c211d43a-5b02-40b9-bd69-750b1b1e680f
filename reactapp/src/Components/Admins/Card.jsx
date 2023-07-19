@@ -9,7 +9,7 @@ export default function Card(props) {
 const navigate = useNavigate();
 
   const LoadEdit =(id) => {
-    navigate("/admin/edit/"+id);
+    navigate("/instructor/update/"+id);
   }
 
   const handledelete=(id)=>{
@@ -68,11 +68,11 @@ const navigate = useNavigate();
               }}
             >
               <li>
-                  <button className="Custom_change" id="Edit" onClick={e=>LoadEdit(props.id)}>Update</button>
+                  <button className="instructor_Custom_change" id="Edit" onClick={e=>LoadEdit(props.id)}>Update</button>
               </li>
               <li>
                 <button onClick={e=>handledelete(props.id)}
-                  className="Custom_change"
+                  className="instructor_Custom_change"
                   id="Delete"
                   style={{ background: "#ce1c1c" }}
                 >

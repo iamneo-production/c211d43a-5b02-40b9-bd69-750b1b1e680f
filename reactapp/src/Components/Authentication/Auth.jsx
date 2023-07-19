@@ -3,7 +3,7 @@ import './Auth.css';
 import { MdSpaceDashboard, MdOutlineMenuBook, MdCollectionsBookmark, MdLeaderboard } from "react-icons/md";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 
 
 
@@ -142,7 +142,7 @@ function App() {
 
 
 
-          <form className="sign-up-form" onSubmit={handleSignUpSubmit}>
+          <form id='Auth-form' className="sign-up-form" onSubmit={handleSignUpSubmit}>
             <h2 className="title">Sign up</h2>
             <div className="input-field">
               <i className="fas fa-user"></i>

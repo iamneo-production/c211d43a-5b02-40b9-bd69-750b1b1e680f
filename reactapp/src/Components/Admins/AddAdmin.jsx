@@ -25,10 +25,8 @@ export default function AddAdmin() {
     const postDataToServer=(data)=>{
       axios.post(`${base_url}/admins`,data).then(
         (response)=>{
-          console.log(response);
-          console.log("Success");
-          alert('Admin Created Successfully.')
-          navigate('/');
+          alert('Instructor Created Successfully.')
+          navigate('/instructor');
         },(error)=>{
           console.log(error);
           console.log("Error")
@@ -36,49 +34,49 @@ export default function AddAdmin() {
         }
       );
     }
-
   return (
-    <div className="login-box">
-    <h2>Create Instructor</h2>
-    <form onSubmit={handleSubmit}>
-      <div className="user-box">
+    <div className="instructor_login-box">
+    <h2>Create Admin</h2>
+    <form onSubmit={handleSubmit} id="instructor_form">
+      <div className="instructor_user-box">
         <input type="number" onChange={(e)=>{
           setAdmin({...admin,id:e.target.value})
         }}  />
         <label>ID</label>
       </div>
-      <div className="user-box">
+      <div className="instructor_user-box">
         <input type="text"  onChange={(e)=>{
           setAdmin({...admin,name:e.target.value})
         }} required />
         <label>Name</label>
       </div>
-      <div className="user-box">
+      <div className="instructor_user-box">
         <input type="text"   onChange={(e)=>{
           setAdmin({...admin,designation:e.target.value})
         }} required />
         <label>Designation</label>
       </div>
-      <div className="user-box">
+      <div className="instructor_user-box">
         <input type="text" onChange={(e)=>{
           setAdmin({...admin,description:e.target.value})
         }} required />
         <label>Description</label>
       </div>
-      <div className="user-box">
+      <div className="instructor_user-box">
         <input type="text" onChange={(e)=>{
           setAdmin({...admin,src:e.target.value})
         }} required />
         <label>Image src : </label>
       </div>
-       <button type="submit" className="create_admin" >
+      <div id="instructor_action-button">
+       <button type="submit" className="instructor_create_admin" >
        <span></span>
         <span></span>
         <span></span>
         <span></span>
         Submit</button>
-        <Link to="/">
-      <button className="mx-4 create_admin">
+        <Link to="/instructor">
+      <button className="mx-4 instructor_create_admin">
         <span></span>
         <span></span>
         <span></span>
@@ -86,6 +84,7 @@ export default function AddAdmin() {
         Back
       </button>
       </Link>
+      </div>
     </form>
   </div> 
   );
