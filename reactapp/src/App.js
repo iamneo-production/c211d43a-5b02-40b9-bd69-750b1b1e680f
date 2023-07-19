@@ -43,6 +43,7 @@ import Instructor from './pages/Instructor';
 import Admin from "./Components/Instructors/Admin";
 import AddAdmin from "./Components/Instructors/AddAdmin";
 import EditAdmin from "./Components/Instructors/EditAdmin";
+import Main from "./Components/Lesson/Main"
 
 function App() {
   return (
@@ -91,6 +92,7 @@ function App() {
           <Route path="/instructor" element={<Admin/>} />
           <Route path="/instructor/add" element={<AddAdmin />} />
           <Route path="/instructor/update/:adminid" element={<EditAdmin />} />
+          <Route path='/lesson' element={<Main/>}/>
         </Routes>
       </Router>
     </>
