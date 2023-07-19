@@ -40,9 +40,9 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Instructor from './pages/Instructor';
 
-import Admin from "./Components/Admins/Admin";
-import AddAdmin from "./Components/Admins/AddAdmin";
-import EditAdmin from "./Components/Admins/EditAdmin";
+import Admin from "./Components/Instructors/Admin";
+import AddAdmin from "./Components/Instructors/AddAdmin";
+import EditAdmin from "./Components/Instructors/EditAdmin";
 
 function App() {
   return (
