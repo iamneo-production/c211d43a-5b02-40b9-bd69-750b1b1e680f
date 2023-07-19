@@ -4,6 +4,7 @@ import Topcourse from "./Topcourse";
 import Coursedisplay from "./Coursedisplay";
 import Ctc from "./Ctc";
 import Footer from "./Footer";
+import "./landing.css"
 function Courses(){
     return(
         <>
