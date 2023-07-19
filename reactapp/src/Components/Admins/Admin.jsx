@@ -24,6 +24,7 @@ export default function Admin() {
   };
 
   useEffect(()=>{
+    document.title = "Instructor Dashboard"
     getAllAdmins();
   },[]);
 
