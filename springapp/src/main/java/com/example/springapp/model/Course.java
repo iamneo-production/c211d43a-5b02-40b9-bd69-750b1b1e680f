@@ -1,7 +1,11 @@
 package com.example.springapp.model;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -16,14 +20,16 @@ public class Course {
     private String description;
 
     private int instructorId;
+    
+    
+//    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<Enrollment> enrollment;
 
+   
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Lesson> lessons = new HashSet<>();
 
-    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Enrollment> enrollments = new HashSet<>();
 
-    // Constructors
 
     public Course() {
     }
@@ -77,11 +83,15 @@ public class Course {
         this.lessons = lessons;
     }
 
-    public Set<Enrollment> getEnrollments() {
-        return enrollments;
-    }
+//    
+//    
+//	public List<Enrollment> getEnrollment() {
+//		return enrollment;
+//	}
+//
+//	public void setEnrollment(List<Enrollment> enrollment) {
+//		this.enrollment = enrollment;
+//	}
 
-    public void setEnrollments(Set<Enrollment> enrollments) {
-        this.enrollments = enrollments;
-    }
+    
 }

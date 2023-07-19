@@ -1,19 +1,31 @@
 package com.example.springapp.service;
 
 import org.springframework.stereotype.Component;
+
+import com.example.springapp.dto.Token;
+import com.example.springapp.config.UserInfoUserDetailsService;
+import com.example.springapp.model.UserInfo;
+import com.example.springapp.repository.UserInfoRepository;
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoder;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
 import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 
 @Component
@@ -22,7 +34,12 @@ public class JwtService {
 
     public static final String SECRET = "5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437";
 
-
+    @Autowired
+    private UserInfoUserDetailsService userInfoUserDetailsService;
+    
+    @Autowired
+    private UserInfoRepository userInfoRepository;
+    
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
@@ -50,23 +67,31 @@ public class JwtService {
     }
 
     public Boolean validateToken(String token, UserDetails userDetails) {
-        final String username = extractUsername(token);
-        return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+        final String email = extractUsername(token);
+        return (email.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
 
-    public String generateToken(String userName){
+    public Map<Object,Object> generateToken(String email){
         Map<String,Object> claims=new HashMap<>();
-        return createToken(claims,userName);
+        return createToken(claims,email);
     }
 
-    private String createToken(Map<String, Object> claims, String userName) {
-        return Jwts.builder()
+    private Map<Object,Object> createToken(Map<String, Object> claims, String email) {
+    	UserDetails userDetails=userInfoUserDetailsService.loadUserByUsername(email);
+    	UserInfo ui = userInfoRepository.findByEmail(email);
+    	Token tokenObject=new Token();
+    	tokenObject.setToken( Jwts.builder()
                 .setClaims(claims)
-                .setSubject(userName)
+                .setSubject(email)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis()+1000*60*30))
-                .signWith(getSignKey(), SignatureAlgorithm.HS256).compact();
+                .signWith(getSignKey(), SignatureAlgorithm.HS256).compact());
+    	 tokenObject.setRole((List<GrantedAuthority>) userDetails.getAuthorities());
+    	 Map returnMap = new LinkedHashMap<>();
+    	 returnMap.put("token", tokenObject);
+    	 returnMap.put("userId", ui.getId());
+    	 return returnMap;
     }
 
     private Key getSignKey() {

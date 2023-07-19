@@ -220,6 +220,7 @@ form.sign-in-form {
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .right-auth-panel .auth-image,

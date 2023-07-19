@@ -1,9 +1,15 @@
 import React from 'react'
 import "./UserHelpCenter.css"
+import NavCandidate from '../../../Components/NavCandidate'
 
 function HelpCenter() {
   return (
-    <div>HelpCenter</div>
+    <div>
+      <NavCandidate/>
+
+      HelpCenter
+      
+      </div>
   )
 }
 

@@ -1,5 +1,6 @@
 package com.example.springapp.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,8 @@ public class UserInfo {
     private String name;
     private String email;
 	private String password;
+	
+    @Column(name = "roles")
     private String roles;
 	public int getId() {
 		return id;
@@ -42,7 +45,7 @@ public class UserInfo {
 		return roles;
 	}
 	public void setRoles(String roles) {
-		this.roles = roles;
+		this.roles = "ROLE_USER";
 	}
     
     
