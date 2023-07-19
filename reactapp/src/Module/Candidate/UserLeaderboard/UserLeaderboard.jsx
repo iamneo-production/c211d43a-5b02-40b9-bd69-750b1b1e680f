@@ -6,15 +6,11 @@ import React from 'react';
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"></link>
 function Leaderboard() {
     return (
-<<<<<<< HEAD:reactapp/src/Module/Candidate/Leaderboard/Leaderboard.jsx
-    <div className="lApp">
-=======
 
         <div>
             <NavCandidate/>
 
     <div className="App">
->>>>>>> 73167f18428581eefa84eb747d78c6beed5531f9:reactapp/src/Module/Candidate/UserLeaderboard/UserLeaderboard.jsx
     <div className="page_wrape">
         {/*  <!---main content--> */}
 
