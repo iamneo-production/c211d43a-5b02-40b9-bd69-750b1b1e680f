@@ -1,0 +1,9 @@
+.select{
+    padding: 8%;
+    padding-left: 2%;
+}
+.select-btn{
+    display: flex;
+    gap: 20px;
+    
+}
