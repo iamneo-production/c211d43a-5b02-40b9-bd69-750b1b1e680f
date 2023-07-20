@@ -43,7 +43,7 @@ export default function EditAdmin() {
       .put(`${base_url}/admins/${adminid}`, data)
       .then((response) => {
         alert("Instructor Details Updated Successfully.");
-        navigate("/instructor");
+        navigate("/instructordetails");
       })
       .catch((error) => {
         console.log(error);
@@ -105,7 +105,7 @@ export default function EditAdmin() {
           <span></span>
           Update
         </button>
-        <Link to="/instructor">
+        <Link to="/instructordetails">
           <button className="instructor_create_admin">
             <span></span>
             <span></span>

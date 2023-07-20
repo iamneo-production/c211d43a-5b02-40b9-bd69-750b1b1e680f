@@ -21,7 +21,7 @@ import EnrolledCourse from "./Module/Candidate/EnrolledCourse/EnrolledCourse"
 import InstructorDashboard from "./Module/Instructor/InstructorDashboard/InstructorDashboard";
 import InstructorCourses from "./Module/Instructor/InstructorCourses/InstructorCourses";
 import InstructorLesson from './Module/Instructor/InstructorCourses/InstructorLesson';
-import InstructorDetails from "./Module/Instructor/InstructorDetails/InstructorDetails";
+// import InstructorDetails from "./Module/Instructor/InstructorDetails/InstructorDetails";
 import InstructorSettings from "./Module/Instructor/InstructorSettings/InstructorSettings";
 import Trainee from "./Module/Instructor/Trainee/Trainee";
 
@@ -40,10 +40,10 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Instructor from './pages/Instructor';
 
-import Admin from "./Components/Instructors/Admin";
-import AddAdmin from "./Components/Instructors/AddAdmin";
-import EditAdmin from "./Components/Instructors/EditAdmin";
-import Main from "./Components/Lesson/Main"
+import Admin from "./Module/Instructor/InstructorsDetails/Admin";
+import AddAdmin from "./Module/Instructor/InstructorsDetails/AddAdmin";
+import EditAdmin from "./Module/Instructor/InstructorsDetails/EditAdmin";
+import Main from "./Components/LessonDetails/Main"
 
 function App() {
   return (
@@ -68,7 +68,7 @@ function App() {
           <Route path="/InstructorDashboard" element={<NavAdmin><InstructorDashboard/></NavAdmin>}/>
           <Route path="/InstructorCourses" element={<NavAdmin><InstructorCourses/></NavAdmin>}/>
           <Route path="/InstructorLesson" element={<NavAdmin><InstructorLesson/></NavAdmin>}/>
-          <Route path="/InstructorDetails" element={<NavAdmin><InstructorDetails/></NavAdmin>}/>
+          <Route path="/InstructorDetails" element={<NavAdmin><Admin/></NavAdmin>}/>
           <Route path="/InstructorSettings" element={<NavAdmin><InstructorSettings/></NavAdmin>}/>
           <Route path="/Trainee" element={<NavAdmin><Trainee/></NavAdmin>}/>
 
@@ -87,9 +87,9 @@ function App() {
           <Route path='/Footer' element={<Footer/>}/>  
           <Route path='/Video' element={<Video/>}/> 
           <Route path='/Home' element={<Home/>}/>
-          {/* <Route path='/Instructor' element={<Instructor/>}/> */}
+          <Route path='/Instructor' element={<Instructor/>}/>
 
-          <Route path="/instructor" element={<Admin/>} />
+          {/* <Route path="/instructordetails" element={<Admin/>} /> */}
           <Route path="/instructor/add" element={<AddAdmin />} />
           <Route path="/instructor/update/:adminid" element={<EditAdmin />} />
           <Route path='/lesson' element={<Main/>}/>

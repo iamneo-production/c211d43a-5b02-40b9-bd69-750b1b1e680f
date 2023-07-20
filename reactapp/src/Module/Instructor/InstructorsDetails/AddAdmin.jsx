@@ -26,7 +26,7 @@ export default function AddAdmin() {
       axios.post(`${base_url}/admins`,data).then(
         (response)=>{
           alert('Instructor Created Successfully.')
-          navigate('/instructor');
+          navigate('/instructordetails');
         },(error)=>{
           console.log(error);
           console.log("Error")
@@ -75,7 +75,7 @@ export default function AddAdmin() {
         <span></span>
         <span></span>
         Submit</button>
-        <Link to="/instructor">
+        <Link to="/instructordetails">
       <button className="mx-4 instructor_create_admin">
         <span></span>
         <span></span>
