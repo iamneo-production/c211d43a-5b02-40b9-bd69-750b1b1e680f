@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springapp.model.Notes;
-import com.example.springapp.services.NotesService;
+import com.example.springapp.service.NotesService;
 
 @RestController
 // @CrossOrigin(origins = "http://localhost:3000")

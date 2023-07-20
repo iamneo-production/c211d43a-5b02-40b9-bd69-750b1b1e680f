@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springapp.model.Admin;
-import com.example.springapp.services.InstructorService;
+import com.example.springapp.service.InstructorService;
 
 @RestController
 public class InstructorController {
