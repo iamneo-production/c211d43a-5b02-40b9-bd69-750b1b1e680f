@@ -4,6 +4,7 @@ import About from "./About";
 import Ctc from "./Ctc";
 import Footer from "./Footer";
 import Testimonial from "./Testimonial";
+import "./landing.css"
 function Aboutus(){
     return(
         <>
