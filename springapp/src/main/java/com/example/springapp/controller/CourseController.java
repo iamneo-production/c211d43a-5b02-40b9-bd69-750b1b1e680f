@@ -9,7 +9,6 @@ import com.example.springapp.model.Course;
 import com.example.springapp.service.CourseService;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/course")
@@ -17,10 +16,6 @@ public class CourseController {
 	@Autowired
     private  CourseService courseService;
 
-    
-//    public CourseController(CourseService courseService) {
-//        this.courseService = courseService;
-//    }
 
 	@CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/add")
