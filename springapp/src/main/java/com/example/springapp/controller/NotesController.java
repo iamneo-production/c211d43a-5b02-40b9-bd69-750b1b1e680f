@@ -24,11 +24,6 @@ public class NotesController {
     @Autowired
     private NotesService notesService;
 
-    @GetMapping("/home")
-    public String home() {
-        return "this is home";
-    }
-
     @GetMapping("/notes")
     public List<Notes> getNotes() {
         return this.notesService.getNotes();

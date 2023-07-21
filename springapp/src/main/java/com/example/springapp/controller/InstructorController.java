@@ -22,12 +22,7 @@ public class InstructorController {
 
     @Autowired
     private InstructorService instructorService;
-
-    @GetMapping("/home")
-    public String home() {
-        return "this is home page";
-    }
-
+    
     @GetMapping("/admins")
     public List<Admin> getAdmins() {
         return this.instructorService.getAdmins();
