@@ -50,7 +50,7 @@ export default function Admin() {
   };
 
   return (
-    <div>
+    <div id="instructor">
       <section>
         <div className="container flow-content">
           <h2 className="section-title">Instructor Details</h2>

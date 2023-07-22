@@ -27,7 +27,7 @@ html {
   color-scheme: dark;
 }
 
-body {
+#instructor {
   font-family: system-ui, sans-serif;
   min-height: 100vh;
   background-color: var(--bg-primary);
