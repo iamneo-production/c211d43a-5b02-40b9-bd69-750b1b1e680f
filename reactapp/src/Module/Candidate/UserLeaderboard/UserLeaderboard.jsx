@@ -2,6 +2,7 @@ import NavCandidate from '../../../Components/NavCandidate';
 import './UserLeaderboard.css';
 import React from 'react';
 
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"></link>
 function Leaderboard() {
     return (
@@ -13,7 +14,7 @@ function Leaderboard() {
     <div className="page_wrape">
         {/*  <!---main content--> */}
 
-        <div className="main-content">
+        <div className="lmain-content">
             <div className="info-card">
                 <div className="card">
                     <div className="card-icon">
@@ -31,7 +32,7 @@ function Leaderboard() {
                       <span><i className="fa fa-trophy"></i></span>
                     </div>
                     <div className="card-detail">
-                        <h2>98,785</h2>
+                        <h2>84,785</h2>
                         <h4>Swatha R</h4>
 
                     </div>
@@ -49,7 +50,7 @@ function Leaderboard() {
                     <p>Chennai</p>
                 </div>
             </div>
-            <div className="main-table">
+            <div className="lmain-table">
                 <div className="title">
                     <h2>All Users</h2>
                     <div className="user_table">
