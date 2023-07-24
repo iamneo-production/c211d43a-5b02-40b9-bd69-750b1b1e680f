@@ -18,24 +18,24 @@ import com.example.springapp.model.Admin;
 import com.example.springapp.service.InstructorService;
 
 @RestController
-@CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
+@CrossOrigin(origins = "https://8081-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io")
 public class InstructorController {
 
     @Autowired
     private InstructorService instructorService;
     
-    @CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
+
     @GetMapping("/admins")
     public List<Admin> getAdmins() {
         return this.instructorService.getAdmins();
     }
-    @CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
+    // @CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
     @GetMapping("/admins/{adminId}")
     public Admin getAdmin(@PathVariable String adminId) {
         return this.instructorService.getAdmin(Long.parseLong(adminId));
     }
 
-    @CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
+    // @CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
     @PostMapping("/admins")
     public Admin addAdmin(@RequestBody Admin admin) {
         return this.instructorService.addAdmin(admin);
