@@ -62,7 +62,7 @@
 
 
 
-/* 
+
 /*-----------------------------------*\
  * #RESET
 \*-----------------------------------*/
@@ -80,8 +80,8 @@ a { text-decoration: none; }
 a,
 img,
 span,
-/* button, */
-ion-icon { display: block; } 
+button,
+ion-icon { display: block; }
 
 button {
   background: none;
@@ -277,11 +277,11 @@ body { background: var(--white); }
   display: flex;
   align-items: center;
   position: relative;
-  
   justify-content: center;
 }
 .video-content{
   text-align: center;
+  padding-top: 55px;
 }
 .video-content h1{
   font-size: 65px;
@@ -300,7 +300,7 @@ body { background: var(--white); }
    color: #fff;
    font-size: 24px;
    border: 2px solid #fff;
-   padding: 14px 70px;
+   padding: 14p 70px;
    border-radius:50px ;
    margin-top: 20px;
 }
@@ -316,47 +316,14 @@ video.back-video{
   
 }
 
-
-
-
-
 /*-----------------------------------*\
  * #HERO
 \*-----------------------------------*/
 
 
-
-
 .hero {
   background: #9DAAF2;
   padding: 150px 0 var(--section-padding);
-}
-
-.hero-banner { margin-bottom: 30px; }
-
-.hero-banner img { width: 100%; }
-
-.hero-title { margin-bottom: 20px;
-  color:#252669;
-text-align: center ;
-justify-content: center; }
-
-.hero .hero-content{
-  color: #0F2557;
-  text-align: center;
-  padding-inline: auto;
-}
-
-.hero .section-text { 
-  text-align: justify;
-  margin-bottom: 45px; }
-
-.hero .btn-primary{
-  margin-inline: auto;
-  align-items:center ;
-}
-.hero .header{
-  background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
 }
 
 .about-banner { margin-bottom: 30px; }
@@ -387,11 +354,40 @@ justify-content: center; }
 .about .header{
   background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
 }
-
+/*********************************************/
 .about {
   background: #FECD45;
   padding: 150px 0 var(--section-padding);
 }
+
+.hero-banner { margin-bottom: 30px; }
+
+.hero-banner img { width: 100%; }
+
+.hero-title { margin-bottom: 20px;
+  color:#252669;
+text-align: center ;
+justify-content: center; }
+
+.hero .hero-content{
+  color: #0F2557;
+  text-align: center;
+  padding-inline: auto;
+}
+
+.hero .section-text { 
+  text-align: justify;
+  margin-bottom: 45px; }
+
+.hero .btn-primary{
+  margin-inline: auto;
+  align-items:center ;
+}
+.hero .header{
+  background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
+}
+/*-----------------------------------*\
+ * #ABOUT
 \*-----------------------------------*/
 .top-courses {
   background: #EBEBFB;
@@ -875,11 +871,11 @@ flex-direction: row;}
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
-  padding: 35px;
+  padding:35px;
   margin-bottom: 30px;
  
   font-size: 44px;
- 
+  padding: 10px;
  
 }
 /****************************************/
@@ -990,14 +986,14 @@ figure.Student .profile {
   width: 100%;
   position: relative;
   height: auto;
-  
+ 
   display: flex;
   align-items: center;
   justify-content: center;
 
  
 }
-/* form{
+form{
   margin-top: 75px;
   margin-bottom: 95px;
   position: relative;
@@ -1037,7 +1033,7 @@ form button{
 }
 /*-----------------------------------*\
  * #CTA
-\*-----------------------------------*/ */
+\*-----------------------------------*/
 
 .cta {
   background: var(--raisin-black);
@@ -1352,7 +1348,7 @@ form button{
 
   .cta-banner {
     display: block;
-    background: url("https://lh3.googleusercontent.com/pw/AIL4fc_DdsCToY1L_3AMHB0FZvgQlakJS5EFJ6QWjQqDpgQjjo650DROXj1R5V8lAkjyHyADZiE9ZiSG70oz-xb9K0KhCeOSL86S7uXut5frgQvjsLz4L9EZqahIvncwBWUSNNTFe_xqySzLv0BejiQQPsquVsEXrQsfuu9T0K3NFkymuOgzD6GVsr1iNNnWN11lLBak6J-qsoX4W0go3mB_73_-SRDz_dBNtIpZGeOjX9YLlgL5lM271JZfXwFbjgPsb-3v0ZqyGcJ0lonrI5UMOlWggw87MtbbZiP8BFrVFRbvrjdil3ECO_iOOqlA0klw4Ev1A-zxWbDwegcqVMR8yQQ5l7DC-dmrQNfKIKuOoLkTlEJd2PT9RxRgOeq0ejnEaB0kE1qCuzkoiLwtjcB_GixexBJD8R_HJhVknEzoXQWU1ICyqIdBF5JQm5CJtp6wzR-cOvwxWSoILG4qOJiF74xUYgmIVT2w80ZAsEshqB9Bxr9ILKpIq6fsodF9aihuOemu7VF-9-XzveMZAiujyVu9Pkx-aknk-JWNf70AnG2nh1O95UsC1kebvRL3ejQhnH1lM0sFOrB5llnk0ZZ0dtE60mD1W89s0toGxxdBAE9K58bJ8ULEDVvKKR-hhOE1BJlRc7247mbo69aiaY-CbPC8aXvIUIuJWIewwa_RBUu7d0CgUPaQ0f7wnPxt3UigO5OFjB67VWIfbcBwpmEoZzK3p--A7ofa0zEtWJoVd5tJcMybZ52IXCaaDnPXbHLPm1iFv8BZhRn2K1RaIRE0xulpMVbnTY9_PWJ0LeQFE_PmGcQoL8PHEr6WLObdvBXw6h8WuTCoJTUAQPWJuVXrLPklavF8Q7eqVxebhg1dLQAUAtD8QBV2IhK4XLyI3hUy5xnc9_ewkfFowd5VewRiy4Mb=w1281-h854-s-no?authuser=0") no-repeat;
+    background: url("https://lh3.googleusercontent.com/pw/AIL4fc-EN-wrIjQ-FZ2A3h_uPx684c5BnM0f4q4AsZmC3SYSOfJM8ihiuevwZjz4YdTRNXXWMOLjDJJEOuaaGS1i2EZeHvh-2rbNG-SmmhzCoShAB_tH3XSiGykltlvvng6q1r90uvWuqDewE6FpbhA-2uZhLXw9f8C_4xmJIY8J5nbNKyVj7wOVdARQLJGqFAXffXOgdX8yF7X-90XEeylwTUrQScfzozpC4q2OloyUfSsBuQSxPwee1k4i1SgOK-Qovn-0qPqLcEelO3YJw3AJ9QzhPavaetCmFj2Rmswzql3t36z9BWBuPjAVkAW77EuhxYw-d4pRIRu3M0szm_ZohBSQv4VSkYULbe4wR3Tg9L44Wrd93DdTgd3f8wvDXT6CgO2PvJn2KoZkOnQt65S-ec_alTV9lqS2x2k7eOvhe-maAKplZ02B_5nTs0byajMlkWlgfvKwZwhdiRl9h_IAz1-03Yf9FkZZTWedHFdhrTxyo-MZ2jGyMkoo0KBmDLi7PyEm9q4hq377EIYvG4ekchUB4-sHlp0aSYIJG8TEnLW-2yDHLUv5L1fXsw2kOcImoXxInCc1dctS8z1f-zsvzphAfBsOR76xUJDL-o-gpaGle2mdt5ZEKGqqJR8HxCZ88JpTRBSSN4zXr_w21RnCfjHmR0ntEq16Qh7pFOOgbbTpjzyFFsUYvOcxRlO09ng5jJU2MYQM3EqgsDsHThuVRMyd7mqqw2MVHYVabfvMD9psdCJcELHsK6IF048B93Y-iTbs409DuD0xmKM79BcvJcrAakRwlMiDykAPLXwSL7NyU6WTkSWZmAp7dAl-cL4SOyVWMgKKqhUVeTM5VfnJkiL8dT9uS9fVGNf_ZTX262BCnX9I8Nl3-Bp1WqZDaDZtz3zpVSDRbNUEmAfApQvmFhjm=w318-h212-no?authuser=0") no-repeat;
     background-size: contain;
     background-position:left;
     width: 350px;
@@ -1583,7 +1579,9 @@ form button{
 
 
 
-  
+  /**
+   * CTA
+   */
 
   .cta .title-wrapper {
     display: flex;
@@ -1611,6 +1609,9 @@ form button{
 
 
 
+  /**
+   * FOOTER
+   */
 
   .footer-link-box { grid-template-columns: repeat(4, 1fr); }
 
@@ -1620,42 +1621,43 @@ form button{
 
 
 
+/**
+ * responsive for larger than 1200px screen
+ */
 
 @media (min-width: 1200px) {
 
-  
+  /**
+   * REUSED STYLE
+   */
 
   .container { max-width: 1150px; }
 
 
+
+  /**
+   * DEPARTMENTS
+   */
 
   .departments-title { max-width: 550px; }
 
 
 
 
+  /**
+   * INSTRUCTOR
+   */
+
   .instructor { padding-bottom: 150px; }
 
 
 
+  /**
+   * CTA 
+   */
 
   .cta .title-wrapper { max-width: 64%; }
 
   .cta-banner { left: 68%; }
 
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 80px;
-  width: 100%;
 }
