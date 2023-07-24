@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NavCandidate from '../../../Components/NavCandidate';
 import './UserSettings.css';
 
 const Settings = () => {
@@ -11,6 +12,8 @@ const Settings = () => {
   const renderMainContent = () => {
     if (selectedNavItem === 'Close Account') {
       return (
+        <>
+        <div><NavCandidate/></div>
         <div className="main-content-settings">
           <div className='Head-tag-settings'>
             <h2>Close Account</h2>
@@ -25,6 +28,7 @@ const Settings = () => {
             
           </div>
         </div>
+        </>
       );
     } else if (selectedNavItem === 'Photo') {
       return (
