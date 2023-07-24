@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./main.css";
 import Notes from "./Notes";
 import Video from "./Video";
@@ -10,6 +10,10 @@ export default function Main() {
   const [showSummaryLine, setShowSummaryLine] = useState(false);
   const [showNotes, setSHowNotes] = useState(true);
 
+  useEffect(()=>{
+  document.body.style.backgroundColor="#0d1a2d";
+  document.body.style.color="white";
+  },[])
   const handleNotesClick = () => {
     setShowNotesLine(true);
     setShowSummaryLine(false);
