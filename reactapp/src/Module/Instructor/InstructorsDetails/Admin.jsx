@@ -15,7 +15,11 @@ export default function Admin() {
     console.log(token,"hi");
 
   const getAllAdmins=()=>{
-    axios.get(`${base_url}/admins`).then(
+    axios.get(`${base_url}/admins`,{
+       headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  }).then(
       (response)=>{
         //succcess
         console.log(response);
