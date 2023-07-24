@@ -49,7 +49,7 @@ function HelpCenter() {
   );
   return (
     <div className='hApp'>
-      <h1>FAQ</h1>
+      <h1 id="help">FAQ</h1>
       <div className="hsearch-bar">
         <input
           type="text"

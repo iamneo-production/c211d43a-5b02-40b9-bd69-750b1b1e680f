@@ -32,7 +32,7 @@ function Leaderboard() {
                       <span><i className="fa fa-trophy"></i></span>
                     </div>
                     <div className="card-detail">
-                        <h2>98,785</h2>
+                        <h2>84,785</h2>
                         <h4>Swatha R</h4>
 
                     </div>
