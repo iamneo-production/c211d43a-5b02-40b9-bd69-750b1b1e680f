@@ -19,7 +19,7 @@ import com.example.springapp.service.TraineeService;
 
 @RestController
 // @CrossOrigin(origins = "http://localhost:3000")
-//@CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
+@CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
 public class TraineeController {
 
 	@Autowired

@@ -11,6 +11,8 @@ import axios from "axios";
 
 export default function Admin() {
   const [admindata, admindatachange] = useState(null);
+  const token = localStorage.getItem('token');
+    console.log(token,"hi");
 
   const getAllAdmins=()=>{
     axios.get(`${base_url}/admins`).then(
