@@ -18,6 +18,7 @@ export default function EditAdmin() {
 
   useEffect(() => {
     document.title = "Update Instructor";
+    document.body.style.backgroundColor ="#0d1a2d";
     fetchAdminData();
   }, []);
 

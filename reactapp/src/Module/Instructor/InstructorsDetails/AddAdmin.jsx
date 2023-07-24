@@ -9,6 +9,7 @@ export default function AddAdmin() {
 
   useEffect(()=>{
     document.title = "Add Instructor";
+    document.body.style.backgroundColor ="#0d1a2d";
   },[]);
 
     const [admin, setAdmin] =useState({});
