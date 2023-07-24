@@ -13,6 +13,8 @@ export default function AddAdmin() {
   },[]);
 
     const [admin, setAdmin] =useState({});
+    const token = localStorage.getItem('token');
+    console.log(token,"hi");
 
 
     const navigate=useNavigate();
@@ -24,7 +26,10 @@ export default function AddAdmin() {
     }
 
     const postDataToServer=(data)=>{
-      axios.post(`${base_url}/admins`,data).then(
+      axios.post(`${base_url}/admins`,{
+        headers: {
+       'Authorization': `Bearer ${token}`
+     }},data).then(
         (response)=>{
           alert('Instructor Created Successfully.')
           navigate('/instructordetails');

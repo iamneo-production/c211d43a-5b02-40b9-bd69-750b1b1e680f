@@ -24,18 +24,16 @@ public class InstructorController {
     @Autowired
     private InstructorService instructorService;
     
-
     @GetMapping("/admins")
     public List<Admin> getAdmins() {
         return this.instructorService.getAdmins();
     }
-    // @CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
+
     @GetMapping("/admins/{adminId}")
     public Admin getAdmin(@PathVariable String adminId) {
         return this.instructorService.getAdmin(Long.parseLong(adminId));
     }
 
-    // @CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
     @PostMapping("/admins")
     public Admin addAdmin(@RequestBody Admin admin) {
         return this.instructorService.addAdmin(admin);

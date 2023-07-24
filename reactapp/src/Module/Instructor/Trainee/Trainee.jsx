@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Trainee.css";
 import Card from "./Card";
-import trainee from "./data";
+// import trainee from "./data";
 import base_url from "./api";
 import axios from "axios";
 
@@ -21,6 +21,7 @@ export default function Trainee() {
   }
 
   useEffect(()=>{
+    document.titile ="Candidate Dashboard";
     getAllTrainee();
   },[]);
 
@@ -28,7 +29,7 @@ export default function Trainee() {
   return (
     <div id="Trainee-Body">
       <div id="Trainee">
-        {trainee && trainee.map((e,index)=>{
+        {traineeData && traineeData.map((e,index)=>{
           return (
             <div key={index}>
                 <Card 

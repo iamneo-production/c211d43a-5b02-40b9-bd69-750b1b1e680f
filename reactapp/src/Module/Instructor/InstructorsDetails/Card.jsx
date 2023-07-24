@@ -7,6 +7,8 @@ import base_url from "./api";
 export default function Card(props) {
 
 const navigate = useNavigate();
+const token = localStorage.getItem('token');
+    console.log(token,"hi");
 
   const LoadEdit =(id) => {
     navigate("/instructor/update/"+id);
@@ -14,7 +16,10 @@ const navigate = useNavigate();
 
   const handledelete=(id)=>{
     if(window.confirm('Are you sure you want to remove this Instructor?')){
-      axios.delete(`${base_url}/admins/${id}`).then(
+      axios.delete(`${base_url}/admins/${id}`,{
+        headers: {
+       'Authorization': `Bearer ${token}`
+     }}).then(
         (response)=>{
           alert('Instructor Deleted Successfully.')
           props.update(id);
