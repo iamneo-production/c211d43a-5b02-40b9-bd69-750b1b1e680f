@@ -38,6 +38,7 @@
       border-radius: 4px;
       width: 200px;
       background-color: #ede7e7;
+      color:rgb(43, 40, 40);
     }
     
     .Dis{
@@ -70,6 +71,7 @@
     flex-wrap: wrap;
     width: 100%;
     padding:2%;
+    padding-left: 6%;
     
    }
     

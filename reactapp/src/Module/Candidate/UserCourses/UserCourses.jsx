@@ -14,11 +14,20 @@ function UserCourses() {
     setSearchTerm(event.target.value);
   };
 
+  const token = localStorage.getItem('token');
+  console.log(token,"hi");
+  
   useEffect(() => {
-    axios.get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course')
+    axios.get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course', {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
       .then(response => {
         setAllCourses(response.data);
+        console.log(response.data);
       })
+      
       .catch(error => {
         console.error('Error fetching courses:', error);
       });
