@@ -8,18 +8,21 @@ import axios from "axios";
 
 // change admin to admindata for connection to backend
 
+// const token = localStorage.getItem('token');
+//     console.log(token,"hi");
+
+// ,{
+//   headers: {
+//  'Authorization': `Bearer ${token}`
+// }}
+
 
 export default function Admin() {
   const [admindata, admindatachange] = useState(null);
-  const token = localStorage.getItem('token');
-    console.log(token,"hi");
+  
 
   const getAllAdmins=()=>{
-    axios.get(`${base_url}/admins`,{
-       headers: {
-      'Authorization': `Bearer ${token}`
-    }
-  }).then(
+    axios.get(`${base_url}/admins`).then(
       (response)=>{
         //succcess
         console.log(response);
@@ -80,7 +83,7 @@ export default function Admin() {
                 );
               })}
           </ul>
-          <div className="card" >
+          <div className="card" id="addcard" >
             <div data-card="front" className="card__front flow-content">
               <Link to="/instructor/add">
                 <button className="Custom_add_button">

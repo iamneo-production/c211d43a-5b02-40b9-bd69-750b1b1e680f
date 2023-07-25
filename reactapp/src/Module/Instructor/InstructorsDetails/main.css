@@ -112,7 +112,7 @@ a {
   font-style: italic;
 }
 
-.card__img {
+#instructor_card_img {
   width: 5rem;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -223,4 +223,9 @@ a {
   font-weight: 600;
   border: 0px;
   cursor: pointer;
+}
+
+
+#addcard{
+  margin-bottom: 2.5rem;
 }
