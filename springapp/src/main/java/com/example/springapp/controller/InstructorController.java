@@ -18,6 +18,7 @@ import com.example.springapp.model.Admin;
 import com.example.springapp.service.InstructorService;
 
 @RestController
+@CrossOrigin(origins = "https://8081-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io")
 public class InstructorController {
 
     @Autowired

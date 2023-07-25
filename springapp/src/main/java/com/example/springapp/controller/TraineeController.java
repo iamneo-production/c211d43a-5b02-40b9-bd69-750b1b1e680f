@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springapp.model.Trainee;
-import com.example.springapp.services.TraineeService;
+import com.example.springapp.service.TraineeService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
-//@CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
+// @CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
 public class TraineeController {
 
 	@Autowired

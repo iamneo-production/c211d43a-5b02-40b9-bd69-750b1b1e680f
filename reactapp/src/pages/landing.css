@@ -207,7 +207,7 @@ body { background: var(--white); }
   color: var(--mango-tango);
 }
 
-.navbar {
+.LandingNavbar {
   position: fixed;
   top: 0;
   left: -250px;
@@ -220,7 +220,7 @@ body { background: var(--white); }
   z-index: 3;
 }
 
-.navbar.active {
+.LandingNavbar.active {
   left: 0;
   transition: 0.25s ease-out;
 }
@@ -235,16 +235,16 @@ body { background: var(--white); }
   color: var(--white);
 }
 
-.navbar .logo {
+.LandingNavbar .logo {
   width: 160px;
   margin-bottom: 30px;
   margin-inline: auto;
 }
 
-.navbar-list { 
+.LandingNavbar-list { 
     margin-bottom: 15px; }
 
-.navbar-link {
+.LandingNavbar-link {
   color: white;
   font-weight: var(--fw-600);
   padding-block: 15px;
@@ -1417,9 +1417,9 @@ form button{
 
   .menu-open-btn,
   .menu-close-btn,
-  .navbar .logo { display: none; }
+  .LandingNavbar .logo { display: none; }
 
-  .navbar {
+  .LandingNavbar {
     position: static;
     max-width: unset;
     height: unset;
@@ -1430,20 +1430,20 @@ form button{
     align-items: center;
   }
 
-  .navbar-list {
+  .LandingNavbar-list {
     margin-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .navbar-link {
+  .LandingNavbar-link {
     position: relative;
     font-size: var(--fs-5);
     padding: 20px 25px;
   }
 
-  .navbar-link::after {
+  .LandingNavbar-link::after {
     --scale: 0;
     
     content: "";
@@ -1459,7 +1459,7 @@ form button{
     transition: var(--transition);
   }
 
-  .navbar-link:is(:hover, :focus)::after { --scale: 1; }
+  .LandingNavbar-link:is(:hover, :focus)::after { --scale: 1; }
 
   .overlay { display: none; }
 

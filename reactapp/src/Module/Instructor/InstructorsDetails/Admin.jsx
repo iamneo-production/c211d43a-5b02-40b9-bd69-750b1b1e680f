@@ -4,16 +4,22 @@ import "./main.css";
 import { Link } from "react-router-dom";
 import base_url from "./api"
 import axios from "axios";
-import admin from "./Data";
+// import admin from "./Data";
 
 // change admin to admindata for connection to backend
 
 
 export default function Admin() {
   const [admindata, admindatachange] = useState(null);
+  const token = localStorage.getItem('token');
+    console.log(token,"hi");
 
   const getAllAdmins=()=>{
-    axios.get(`${base_url}/admins`).then(
+    axios.get(`${base_url}/admins`,{
+       headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  }).then(
       (response)=>{
         //succcess
         console.log(response);
@@ -58,8 +64,8 @@ export default function Admin() {
         <div className="container flow-content">
           <h2 className="section-title">Instructor Details</h2>
           <ul role="list" className="grid" data-columns="3">
-            {admin &&
-              admin.map((e, index) => {
+            {admindata &&
+              admindata.map((e, index) => {
                 return (
                   <div key={index}>
                     <Card

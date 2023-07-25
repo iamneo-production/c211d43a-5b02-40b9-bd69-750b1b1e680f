@@ -11,13 +11,15 @@ import com.example.springapp.service.CourseService;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "https://8081-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/")
 @RequestMapping("/course")
 public class CourseController {
 	@Autowired
     private  CourseService courseService;
 
 
-	@CrossOrigin(origins = "http://localhost:3000")
+	// @CrossOrigin(origins = "http://localhost:3000")
+    
     @PostMapping("/add")
     public ResponseEntity<Course> createCourse(@RequestBody Course course) {
         Course createdCourse = courseService.saveDetail(course);
@@ -28,7 +30,7 @@ public class CourseController {
         }
     }
 
-	@CrossOrigin(origins = "http://localhost:3000")
+	// @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping
     public List<Course> getAllCourses() {
     	List<Course> cou=courseService.showAll();
