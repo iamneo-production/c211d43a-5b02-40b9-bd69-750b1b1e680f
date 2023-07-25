@@ -7,10 +7,12 @@ import "./landing.css"
 function Courses(){
     return(
         <>
+        <div className="screen1">
         <Navbar/>
         <Topcourse/>
         <Ctc/>
         <Footer/>
+        </div>
         </>
     );
 }

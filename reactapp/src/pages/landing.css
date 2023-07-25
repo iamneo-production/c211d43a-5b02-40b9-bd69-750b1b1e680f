@@ -103,7 +103,11 @@ body { background: var(--white); }
 \*-----------------------------------*/
 .departments-card { padding: 30px; }
 
+.screen{
+  width: 100vw;
 
+  margin-top: 900px;
+}
 .btn {
   color: var(--white);
   font-family: var(--ff-poppins);
@@ -176,11 +180,12 @@ body { background: var(--white); }
 \*-----------------------------------*/
 
 .header {
-  padding-block: 25px;
+  padding-block: 15px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  margin-top: -30px;
   z-index: 4;
   
   transition: padding var(--transition);
@@ -210,7 +215,7 @@ body { background: var(--white); }
 .LandingNavbar {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -240px;
   width: 100%;
   max-width: 250px;
   height: 100%;
@@ -218,6 +223,7 @@ body { background: var(--white); }
   padding: 80px 20px;
   transition: 0.15s ease-in;
   z-index: 3;
+  margin-top: 20px;
 }
 
 .LandingNavbar.active {
@@ -265,8 +271,21 @@ body { background: var(--white); }
   pointer-events: all;
   opacity: 1;
 }
-
-
+.main{
+  margin-top: 3970px;
+}
+.screen1{
+  width: 100vw;
+  margin-top: 1750px;
+}
+.screen2{
+  width: 100vw;
+  margin-top: 1470px;
+}
+.screen3{
+  width: 100vw;
+  margin-top: 1050px;
+}
 /*-----------*\
 \*-----------*/
 .video{
@@ -328,7 +347,9 @@ video.back-video{
 
 .about-banner { margin-bottom: 30px; }
 
-.about-banner img { width: 100%; }
+.about-banner img { 
+  width: 100%; 
+}
 
 .about-title { margin-bottom: 20px;
   color:#2568FB
@@ -358,6 +379,10 @@ justify-content: center; }
 .about {
   background: #FECD45;
   padding: 150px 0 var(--section-padding);
+  width: 100%;
+}
+.about .container{
+  width: 100vw;
 }
 
 .hero-banner { margin-bottom: 30px; }
@@ -537,11 +562,11 @@ justify-content: center; }
 /*-----------------------------------*\
  * #DEPARTMENTS
 \*-----------------------------------*/
-.Student {
+.StudentLand {
   padding-block: var(--section-padding);
   background:#FDF5DF;
 }
-.Student .btn-primary { margin-inline: auto; }
+.StudentLand .btn-primary { margin-inline: auto; }
 
 
 
@@ -676,9 +701,13 @@ margin-top: -35px;
 }
 
 .instructor-title { 
- 
-  margin-bottom: 30px; }
-
+  color: #0f2557;
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 44px;
+  font-weight: 600;
+  font-family: 'Poppins',sans-serif;
+}
 .instructor-list {
   display:flex;
   justify-content: space-between;
@@ -713,6 +742,7 @@ flex-direction: row;}
   color: var(--onyx);
   font-family: var(--ff-poppins);
   font-size: var(--fs-2);
+  font-weight: 700;
 }
 
 .instructor-card .card-subtitle {
@@ -855,33 +885,50 @@ flex-direction: row;}
 	border-radius: 10px;
 	transition: all 0.5s;
   }
-  .bg-secondary {
-	background-color: #F2F1F8;
+  .team-item .bg-secondary {
+	background-color: #fff;
     padding: 1.5rem ;
+  }
+
+  .top-courses .btn-primary{
+    display:flex;
+    align-items:center;
   }
  /*************************************************/
  /***********************************************/
- .testimonials{
+ .abtestimonial{
+  width: 100%;
   background-color: #E1E2E2;
-  position: relative;
+ 
  }
- .testimonials .title {
+ .abtestimonial .btn-primary{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:150px;
+  margin-inline: auto;
+  margin: 20px;
+
+ }
+ .abtestimonial .title {
   color: #0F2557;
   text-align: center;
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
   padding:35px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
  
   font-size: 44px;
   padding: 10px;
  
 }
+
+
 /****************************************/
 /***************************************/
 
- figure.Student {
+ figure.StudentLand {
   font-family: 'poppins', sans-serif;
   position: relative;
   overflow: hidden;
@@ -900,35 +947,37 @@ flex-direction: row;}
   box-sizing: border-box;
   transition: 0.5s;
   cursor: pointer;
+  margin: 40px;
 }
 
-figure.Student *,
-figure.Student *:before,
-figure.Student *:after {
+figure.StudentLand *,
+figure.StudentLand *:before,
+figure.StudentLand *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-figure.Student figcaption {
+figure.StudentLand figcaption {
   width: 100%;
 }
-figure.Student h2,
-figure.Student h4,
-figure.Student blockquote {
+figure.StudentLand h2,
+figure.StudentLand h4,
+figure.StudentLand blockquote {
+  
   margin: 0;
 }
-figure.Student h2,
-figure.Student h4 {
+figure.StudentLand h2,
+figure.StudentLand h4 {
   font-weight: 300;
 }
-figure.Student h2 {
+figure.StudentLand h2 {
   color: #000;;
 }
-figure.Student h4 {
+figure.StudentLand h4 {
   color: #000;
 }
-figure.Student blockquote {
+figure.StudentLand blockquote {
   font-size: 1em;
   padding: 45px 20px 40px 50px;
   margin-top: 30px;
@@ -939,11 +988,11 @@ figure.Student blockquote {
   position: relative;
   transition: 0.5s;
 }
-figure.Student blockquote:hover{
+figure.StudentLand blockquote:hover{
   -webkit-text-stroke:0.4px #ff0000;
   transform: scale(1.1);
 }
-figure.Student blockquote:before {
+figure.StudentLand blockquote:before {
   font-family: 'FontAwesome';
   content: "\201C";
   position: absolute;
@@ -953,7 +1002,15 @@ figure.Student blockquote:before {
   top: 0px;
   left: 20px;
 }
-figure.Student .profile {
+figure.StudentLand .profile {
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  border: solid 5px #A6A57A;
+}
+figure.StudentLand .profile img {
   width: 100px;
   border-radius: 50%;
   display: inline-block;
@@ -965,7 +1022,7 @@ figure.Student .profile {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 124px;
+  
 }
 .testimonials .btn-primary{
   display: flex;
@@ -1040,10 +1097,20 @@ form button{
   padding-block: 50px;
 }
 
+.ctc .container{
+  width: 100vw;
+}
+.departments .container{
+  width: 100vw;
+}
 .cta-title {
   color: var(--white);
   margin-bottom: 30px;
   align-items: left;
+  font-size: xx-large;
+  font-weight: 700;
+  font-style: var(--ff-poppins);
+ 
 }
 
 .cta-banner { display: none; }
@@ -1055,7 +1122,9 @@ form button{
 /*-----------------------------------*\
  * #FOOTER
 \*-----------------------------------*/
-
+.footer .container{
+  width: 100%;
+}
 .footer { background: var(--rich-black-fogra-29); }
 
 .footer-top { padding-block: var(--section-padding); }
@@ -1348,7 +1417,6 @@ form button{
 
   .cta-banner {
     display: block;
-    background: url("https://lh3.googleusercontent.com/pw/AIL4fc-EN-wrIjQ-FZ2A3h_uPx684c5BnM0f4q4AsZmC3SYSOfJM8ihiuevwZjz4YdTRNXXWMOLjDJJEOuaaGS1i2EZeHvh-2rbNG-SmmhzCoShAB_tH3XSiGykltlvvng6q1r90uvWuqDewE6FpbhA-2uZhLXw9f8C_4xmJIY8J5nbNKyVj7wOVdARQLJGqFAXffXOgdX8yF7X-90XEeylwTUrQScfzozpC4q2OloyUfSsBuQSxPwee1k4i1SgOK-Qovn-0qPqLcEelO3YJw3AJ9QzhPavaetCmFj2Rmswzql3t36z9BWBuPjAVkAW77EuhxYw-d4pRIRu3M0szm_ZohBSQv4VSkYULbe4wR3Tg9L44Wrd93DdTgd3f8wvDXT6CgO2PvJn2KoZkOnQt65S-ec_alTV9lqS2x2k7eOvhe-maAKplZ02B_5nTs0byajMlkWlgfvKwZwhdiRl9h_IAz1-03Yf9FkZZTWedHFdhrTxyo-MZ2jGyMkoo0KBmDLi7PyEm9q4hq377EIYvG4ekchUB4-sHlp0aSYIJG8TEnLW-2yDHLUv5L1fXsw2kOcImoXxInCc1dctS8z1f-zsvzphAfBsOR76xUJDL-o-gpaGle2mdt5ZEKGqqJR8HxCZ88JpTRBSSN4zXr_w21RnCfjHmR0ntEq16Qh7pFOOgbbTpjzyFFsUYvOcxRlO09ng5jJU2MYQM3EqgsDsHThuVRMyd7mqqw2MVHYVabfvMD9psdCJcELHsK6IF048B93Y-iTbs409DuD0xmKM79BcvJcrAakRwlMiDykAPLXwSL7NyU6WTkSWZmAp7dAl-cL4SOyVWMgKKqhUVeTM5VfnJkiL8dT9uS9fVGNf_ZTX262BCnX9I8Nl3-Bp1WqZDaDZtz3zpVSDRbNUEmAfApQvmFhjm=w318-h212-no?authuser=0") no-repeat;
     background-size: contain;
     background-position:left;
     width: 350px;

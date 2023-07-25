@@ -7,6 +7,7 @@ function Aboutus(){
     const imageUrl = 'https://img.freepik.com/free-photo/happy-man-with-diploma-academic-cap_23-2147745788.jpg?w=900&t=st=1689242947~exp=1689243547~hmac=a4fbc203d18a0fb735ce4d5a03ee87f3fddcd670761f8b04f0539b59753d0698';
     return(
         <>
+        <div className="screen">
         <Navbar/>
             <section class="about">
             <div class="container">
@@ -36,6 +37,7 @@ function Aboutus(){
           </section>
           <Ctc/>
           <Footer/>
+          </div>
           </>
     );
 }

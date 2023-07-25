@@ -2,17 +2,17 @@ import React from "react";
 import "./landing.css"
 
 function Testimonial(){
-  const img1 ='https://lh3.googleusercontent.com/pw/AIL4fc8UEsgz2y--17hHfGcWy-0abVNDLAkB7tj1XiEf2tmGv48eS6il8IhgikXxgI1SN74NenoWOLow6xkPyKTyubnH8loWK4izzeKFIORORRA4MfwnQxpNAGQgmVNT5RbTqQT5bmmErYmUBV8PIyYd04RI0U0ZPiXTVzAMKG_E9zEYA62NNF4wUARsXmiIfG6iRDh1XjFJqDu0QNhQTUHrt7wRm6C4xA7DNGxV8uMiqQwa8-oxeNl9w828_Z_457JV0k-Hr97xpQj4wPmePbSFU0mUhVvN1-sQ1qPVpy24ol9eKgpGK5isVgUs-BYlpRQ54mJgkoqN14h7yHGwlHwGtLbT-DgTLDQcXG3rUGZS_PDhpsRV_M86fp74eQ6s2QQ-2nauBjWCc2pD4lfziCw-n6tvdmDsdrahohRFDt7E7ra25BfYRjkEGEAp0QY_sejV0i35hj9k7kLaB5c3hXd60lpdujLFy6Q3ogeXLTOajzTICtjxYhdADVm8sf1nGMKneCnMgaq5xEaDDw561AuPV4X2hAbk12PCmLso-mKs7XtKh0SXtkcFt5JjQPe3vVu-5Z_5ZE9ApLPkHkTZMUYGc2PmFHIaIkG3SSaHlKpszXeyTZSepPvEa3D1wILS6VZKUGcVDyZpC3UpILqZJRobt0NaehtMLQVdcIR6w-pM4rPKyUeRy7sAFmpPrY9-4InNaadkfTGlOpURoGAPxVyPXvzxfI4NAFsuuQpcwHASG9nX5lcYhDBaxHB6USVau4E4Kk9VsXtV3oMfpI1qXx1ZBCzmCqn13s6XeCdmL8uaH3XUUJueo39tRrh4jrELceR_zRonunWWXFbqo39nICQLH5fCO3If48TeVaa4TeSN4QKR4wiXr01bMC7Ya4QWLpNjBr2jUcLwP1qzzwjEYPFRGyen=w569-h854-s-no?authuser=0';
+  const img1 ='https://lh3.googleusercontent.com/pw/AIL4fc9G2cNAO3f9P3Cdh-C06LLlkHRusAyMuWvN_7sv0KH5ar09GsPrS1QNSmgpX89iDpQ5Aj7ak_J7IO0zdQz4SAuHF2fEc1jPd8ooEaH-L2svqghwSiQmG2kPWFTxzmwkpsU-JYY8mlxNFcPeAkZuTHU=w602-h902-s-no?authuser=0';
 
-const img2 ='https://lh3.googleusercontent.com/pw/AIL4fc8b7DmXx2md_EUXHf2ReoVP-yevFvE7-7X6ElIoCVsU5TXboTwMDEGwGhM6p9LC1_gF9M-TglTV8kfkftHjV8hUPGm4k8MRVWcQHGB7S3NVebW-HgCQuKATQfr8eSZ0es9xvYgJIF_WEHmCscVuryBEcy1wx26JJ4qsQglGXM_HuGvKP2N39KUegPlEGeLoIAw7UXfZFU1YBOafsMuXL2H8xaeg89TjvP1v9OCzZcHPwe2yNCo_1r2pfV7tuT0U5mZJMPtHesdRdE04-ClqM5VzP3ST-yqYpSw7BtHJ-8YWn2EOLkNTXEkz1er8YpKiPaLyCrBiE9ZOTucM9Ulm0klY1DbKBQ_NJDS-v7CKz6xytC6hmIJwF9vb4hd1giuKBKK6f7f8HLTtFC-IhTgz7oGqqVwn2CtIhqUwSjoAilrjecvKv06ObR_3N0KOQaDy5RLEMm-AbTShX0lbR1SjBjE20f6vr8CqCqFME6ZzyKwCugU6SLY5uUEnDhvpGSDoBaG-87XbeYQaO_9SYhDR7uRflQO0tnoAdnhs7ssKzzA9Q7vOHLALnrGDtpu_NI_pTwcEau-DHjcmQkK0xwB1SEw7LDEVWhfwTqyJG_x0Y0-ougT6cHBX26PBR9oRiHbbX14WpKNpXgbCzpMTPfsQ25JiQ7f5kAqjxlkOJ4aFKgD69klsj5LSFrMiqc4e0F_jDQV8-OTiYFZf60kp0KX8FOVFEQnRvrkfLlXsMXg10o5zTEtGQawzyB9fn67l3vmJPUYDL3MUiQJ-WAfwzr1V8sgPe8BQnBtMoipZUqa5Y9HbQ_hCnMHEVtlQE3C4pPAjIErgGmMW7GLbMHkKmisplgF18ybArDfeN-CipWIYPAwFC6efPf-wsVoxcijl5GwlgWR8soOVEnkFDGcSTo4g_VwW=w587-h854-s-no?authuser=0';
-const img3 ='https://lh3.googleusercontent.com/pw/AIL4fc8cwUBMGnQH4o8ZUAzTzrzmp6a3YKFiSB5gJsEWJYhhh7GJAkJlSgdwVvRkmQAXIRl3KMC2I5YFqjBZ_T51Xank-HXtZsI9tbwQkLRZhl6mlDuSfL4CueVXS3gKuB0Vaj88gF2jhtckhdDiDpddYaqciGJK3642BbgIquOPmSGnvBdVjr67QDtn1_Yw7bUXJhWjQoIUzvKvzDzf5kkLjUCmJcI8W1GJsufSruLJoYd3QcajPEyR2_oYyUmu171tnYJZO9MhjjGoKB9OrcCcpHxrpdb7JtlbJap4VchwuzND1ylP01qj7YBT42zTt9sA0qqhjJjRL3SgAus9UotP3d40pNrO-_oV-f8HUJrH-wPPHtOJ-vbZAM3kw44wE3QE1LoxoMqGvt6k7qR-qb9rQI6v3NXvJqJaBHfpgo22dhbznrWpm4xSNFLefosiOIzjJq3haUP1W8w5rsMAegkTKD3e32qjo_bx4PM4h_xrXyVjZHj_03uWqJP_lwQTJLZaV4N_52cLgiKGuEOc6rBdR6m21sUScz-8NgWHkLm8oj63mWU5VDdrePIUwufDonWX34wcol4cCkBq3lDH5hUeUMHcGZmZ0ITC7k3wSdhofhVDqgtpmW_HKqhaKaPK9bWwgCdnhbVbCbkN953IMfd1GQ679BP2bT03cL-q2sdrwDFo_919nI3_n-0MVutblGXZY-Ec9POZpnJD8GeG9NeAFOeknwjjYuC7SXJiiSC5Y64FJPF2t2rKaGAtkTsgSplDPbxLLTn4PHDxuOMoAEJ6JfoAqisxVahTlm_W0uVUXFZG_algbO6ieChfLZYu431el2pKk7v6p4hvncFX0XayUsH-TcOuH3LJn2B-hN-OEnPpagNEGcD0ElHXl1plf3UwAoh5plLXsXVsQbLjcXzVEinp=w569-h854-s-no?authuser=0';
+const img2 ='https://lh3.googleusercontent.com/pw/AIL4fc8EKmRPiA8GkivS1mFN0MhNXMvC2MiLw-GEGdn7kOcKacOuKohShb_JiNyX2Nzl6ACNPs4YJ-ziYFua0z22ZDN6m8UD_P7AHbIlfmbeDXffN-5OFPO6kAhvQ4PYtXePFtUziv-zxyZjuj1DmD9zUgPjPZ9ec1JuHrz-r-FaDzpFtZdK0ws1iWnSZ3dHWsEFOf_qV0Bk30bCQCYKF2hNNVfpZsp0l8pKa6KDLAlWDeMF_z9asfFgGX1gAdo9ri15UKrEVObl9jhkXqfmR1BzneNMCpgMP6Otp6K3CC1yuf39jHn-X2-eh9HFBPjlJlVKRmrRKu4ucEjRSLieTwWXBbpuFrIjV5dvJQpjT245OPFfKJ7F0o6gNZYthbHHANVgp81YLOu_YOJ70uglhit7bP60e_StEliE2mGGv8ybFiCd-OlbW3qDPLwIGlQUlcBeJEimJaJeMtjzyYIkzubaQr65KUeSqffUNHmCSp7b-0Q8zo3gv76CK2SsjuzUdTsbVdDHasWgNSSPMXiPBm8lc_UsfeUwALOz4jOusYTp71Q1GBkwZlD8u5rZSynVTD32SC3up9locHfUv2aV0UJTQyjPnISBPu4aaJZf5dYdyM_iOBexEJS764xFwG7RkViO41vacdFvjFasRCEJ2GYQ50VohwSQ-E48j4ikxnEfw2iYluzo30Dqk7784mnat5hva2ErOJgIL-wLPChykC8UD21qAy8fXMohmHnGapCAHoTssgWdvrGzjk6imc5GMz4V62O3f-soBU6zcH9G5RUTf_jQNXPeEj9ZVnQhb9CyOkXI31WG31jwl_YP4kh4S8vTm_Q_23Mf4mQIh8tI-MPf4w33zqWJgsTZLeK1a7BuSJHhogiYxa_JniWp-binUcyjaFAxzW7t0drV9-umzpbLgGZQ=w587-h854-s-no?authuser=0';
+const img3 ='https://lh3.googleusercontent.com/pw/AIL4fc8VuVGKT3zcqCtYA9Za9WfmOtWDw9jWm51GprzDvau-KLxRjy_aE6r2z3seQCKPHy7TOrsasoYwlEcqSEm_nfeceasWsdeGS6z5NNlmvEZ6q2gpHAAWLWrZ5iqEfphRjqiksZy7X0G5nbo0o9QdMPVfNTo6DQvr6B04uBSJB_oByZLGuflzY-BbSnoJljjeDLxcE6D7LOPhuGEI6BbYzqH3Aw2G5opm7HSzDfsQHerqp3lgI3jvsu6P9xlE-aca3Q1OPbSp6ZXyEo65i-WKD-Jk57sBvZwsHd_Kg7ksITCZf2geWrs-rJtwcj-gdpGif3dsOWamZSPSV8o_7u3Gq8kiq8aDONTddTZiSFvLYghu0UYiClIfBrKJPnIZu7pyW4ZKtwK4iAixTeat_zVaOr0LWXo3UPOSsSsHaLD1-PmizJEUKB_Wxp7C0lxXxYC1nua8LwTFeEJ2BFDombgTVI_BCJnjZ6Vsao52iuamcFrxLIxTqFEWOoMF6-55DfbJzG8QPaL0QvHQpI3D0ttI1ScZc4iyb4SeluQ1t90zMJGwiCx-A1VIQIpVFp_HA2uL74Jqm9_azW2woCp2ChwRUEfXEAxYBM5qWMr8bpVrI986e16zF5pVhLL7tJUjZn0YorP0NE8xOu4isq1fDFwOtUcGeBsCpKQsTonF2p6VkQA5lDeMKnXMk9fpw24d2EyjIxWAi5hDdkOOBpbWX85U0pdQBSL_Rw7TydcHc_2wIb0GPw6vHiIIglfL8MeBn_rXfor2I0sU4Pql7if3l1rPBAr0em0Zv64Qf2OdmRPh9Mt-PB5F2AZNosW-5dcM0KV3Q0Tm4HuraerQEn8Kdxxx4hqx_jTKw-lBQZT7dFEEGrYk55rSR3QFOS57619OhHwo-kMKgodSfuLNrUhuqiKw0vql=w569-h854-s-no?authuser=0';
     return(
         <div class="abtestimonial">
       <h2 class="title">What our Students Say</h2>
       <div class="row">
         
         <div class="testimonial">
-  <figure class="Student">
+  <figure class="StudentLand">
     <img src={img1} alt="profile-sample3" class="profile"/>
     <figcaption>
       <h2>Sam Austin</h2>
@@ -20,14 +20,16 @@ const img3 ='https://lh3.googleusercontent.com/pw/AIL4fc8cwUBMGnQH4o8ZUAzTzrzmp6
       <blockquote>After taking this course , am now an AWS Certified Cloud Practitioner!.</blockquote>
     </figcaption>
   </figure>
-  <figure class="Student"><img src={img2} alt="profile-sample6" class="profile" />
+  <figure class="StudentLand">
+    <img src={img2} alt="profile-sample6" class="profile" />
   <figcaption>
     <h2>Christina Worell</h2>
     <h4>CEO</h4>
     <blockquote>One of the best courses on management and leadership I have come across so far.</blockquote>
   </figcaption>
 </figure>
-  <figure class="Student"><img src={img3} alt="profile-sample6" class="profile" />
+  <figure class="StudentLand">
+    <img src={img3} alt="profile-sample6" class="profile" />
     <figcaption>
       <h2>Catherine Tuffey</h2>
       <h4>DATA SCIENTIST</h4>
@@ -35,9 +37,10 @@ const img3 ='https://lh3.googleusercontent.com/pw/AIL4fc8cwUBMGnQH4o8ZUAzTzrzmp6
     </figcaption>
   </figure>
 </div>
-      
-      <button class="btn btn-primary">  Get Started  </button>
+
+     
       </div>
+      
   </div>
 
     );

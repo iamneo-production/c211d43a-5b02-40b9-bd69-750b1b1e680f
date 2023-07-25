@@ -8,21 +8,22 @@ import Teacher from './Teacher';
  import Testimonial from './Testimonial';
  import Ctc from './Ctc';
  import Footer from './Footer';
- import Topcourse from './Topcourse';
  const Home = () => {
    return (
 
       <>
+      <div className='main'>
         <Navbar/>
        <Video/>
        <About/>
        <Coursedisplay/>
-       <Topcourse/>
        <Teacher/>
-        <Testimonial/>
+       <Testimonial/>
+      
         
         <Ctc/>
         <Footer/>
+        </div>
     </>
    );
  };
