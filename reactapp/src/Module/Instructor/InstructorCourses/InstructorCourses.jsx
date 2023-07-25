@@ -40,7 +40,7 @@ function InstructorCourses() {
       instructorId: instructorId,
     };
 
-    axios.post('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course', data,{
+    axios.post('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course/add', data,{
       headers: {
         'Authorization': `Bearer ${token}`
       }

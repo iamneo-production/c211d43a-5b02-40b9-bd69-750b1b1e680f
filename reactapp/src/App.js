@@ -24,6 +24,8 @@ import InstructorLesson from './Module/Instructor/InstructorCourses/InstructorLe
 // import InstructorDetails from "./Module/Instructor/InstructorDetails/InstructorDetails";
 import InstructorSettings from "./Module/Instructor/InstructorSettings/InstructorSettings";
 import Trainee from "./Module/Instructor/Trainee/Trainee";
+import Assessment from './Module/Instructor/Assessment/Assessment';
+import Events from './Module/Instructor/Events/Events';
 
 import Navbar from './Navbar';
 import About from './pages/About';
@@ -44,6 +46,7 @@ import Admin from "./Module/Instructor/InstructorsDetails/Admin";
 import AddAdmin from "./Module/Instructor/InstructorsDetails/AddAdmin";
 import EditAdmin from "./Module/Instructor/InstructorsDetails/EditAdmin";
 import Main from "./Components/LessonDetails/Main"
+
 
 function App() {
   return (
@@ -71,6 +74,8 @@ function App() {
           <Route path="/InstructorDetails" element={<NavAdmin><Admin/></NavAdmin>}/>
           <Route path="/InstructorSettings" element={<NavAdmin><InstructorSettings/></NavAdmin>}/>
           <Route path="/Trainee" element={<NavAdmin><Trainee/></NavAdmin>}/>
+          <Route path="/Assessment" element={<NavAdmin><Assessment/></NavAdmin>}/>
+          <Route path="/Events" element={<NavAdmin><Events/></NavAdmin>}/>
 
 
           <Route index element={<Home/>}/>

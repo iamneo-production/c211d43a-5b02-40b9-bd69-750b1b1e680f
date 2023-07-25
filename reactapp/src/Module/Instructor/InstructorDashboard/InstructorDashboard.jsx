@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaMedal, FaGraduationCap, FaBookReader } from 'react-icons/fa';
 import  {BiSearchAlt} from 'react-icons/bi'
 import { MdNotifications} from 'react-icons/md'
-
+import img from './../../Assets/images/teacher1.png'
 
 const EventUpdateBanner = ({ updates }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,7 +53,7 @@ const Top = () => {
           description: 'Starts on Aug 08.',
           image:"https://img.freepik.com/premium-psd/poster-template-magenta-color-background_24972-2122.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais",
         },
-        
+        // Add more update objects as needed
       ];
     
     return(
@@ -71,7 +71,7 @@ const Top = () => {
             <div className="adminDiv flex">
                 <MdNotifications className='icon'/>
                 <div className="adminImage">
-                    <img src="" alt="Admin Image"/>
+                    <img src={img} alt="Admin Image"/>
                 </div>
             </div>
 
@@ -140,11 +140,11 @@ const Top = () => {
 
 const Listing = () => {
     const enrolledStudents = [
-        { id: 1, name: 'Manish', email: 'johndoe@example.com', avatar: 'https://img.freepik.com/premium-photo/portrait-attractive-curly-business-lady-toothy-beaming-smiling-good-morning-mood-ready-start-working-wear-formalwear-yellow-shirt_274222-20422.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais' },
-        { id: 2, name: 'Smith', email: 'janesmith@example.com', avatar: 'https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais' },
-        { id: 1, name: 'Pradeep', email: 'johndoe@example.com', avatar: 'https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?size=626&ext=jpg&ga=GA1.1.1383474551.1689404268&semt=ais' },
-        { id: 2, name: 'Shree', email: 'janesmith@example.com', avatar: 'https://img.freepik.com/free-photo/young-woman-with-round-glasses-yellow-sweater_273609-7091.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais' },
-        // Add more enrolled students data
+      { id: 1, name: 'Manish', email: 'manish@gmail.com', avatar: 'https://img.freepik.com/premium-photo/portrait-attractive-curly-business-lady-toothy-beaming-smiling-good-morning-mood-ready-start-working-wear-formalwear-yellow-shirt_274222-20422.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais' },
+      { id: 2, name: 'Smith', email: 'janesmith@gmail.com', avatar: 'https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais' },
+      { id: 1, name: 'Pradeep', email: 'pradeep@gmail.com', avatar: 'https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?size=626&ext=jpg&ga=GA1.1.1383474551.1689404268&semt=ais' },
+      { id: 2, name: 'Shree', email: 'shree@gmail.com', avatar: 'https://img.freepik.com/free-photo/young-woman-with-round-glasses-yellow-sweater_273609-7091.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais' },
+      // Add more enrolled students data
       ];
     
     
@@ -166,17 +166,17 @@ const Listing = () => {
       const courses = [
         {
           title: "Phyton Programing",
-          description: "This is course 1 description.",
+          description: "Learn Python Programming the Easy Way, Complete with Examples, Quizzes, Exercises and more. Learn Python 2 and Python 3.",
           image: "https://img.freepik.com/premium-photo/python-inscription-text-against-laptop-code-background-learn-python-programming-language_488220-61295.jpg?size=626&ext=jpg&ga=GA1.1.1383474551.1689404268&semt=ais"
         },
         {
           title: "Artificial Intelligence",
-          description: "This is course 2 description.",
+          description: "Combine the power of Data Science, Machine Learning and Deep Learning to create powerful AI for Real-World applications!",
           image: "https://img.freepik.com/premium-photo/futuristic-robot-artificial-intelligence-concept_31965-6378.jpg?size=626&ext=jpg&ga=GA1.1.1383474551.1689404268&semt=ais",
         },
         {
           title: "Soft Skills",
-          description: "This is course 3 description.",
+          description: "Learn the soft skills for personal development & success in life & work, with over 100 practical tips & strategies & develop your soft skills going forward.",
           image: "https://img.freepik.com/free-photo/improvement-summary-personal-development-workflow_53876-125155.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais",
         }
       ];
