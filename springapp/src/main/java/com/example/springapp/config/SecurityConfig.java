@@ -28,7 +28,7 @@ import java.util.Arrays;
 @EnableMethodSecurity
 public class SecurityConfig {
 
-	public static final String[] ENDPOINTS_WHITELIST = { "/users/login", "/users/new", "/users/welcome","/candidate/getalluser","/admins","/trainee","/admins/{adminId}" };
+	public static final String[] ENDPOINTS_WHITELIST = { "/users/login", "/users/new", "/users/welcome","/candidate/getalluser","/admins","/trainee","/admins/{adminId}","/notes","/notes/{notesId}" };
 
 //	@Autowired
 //	private CorsConfigurationSimple corsConfigurationSimple;
