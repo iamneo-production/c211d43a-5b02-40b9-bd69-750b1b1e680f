@@ -9,9 +9,16 @@ function InstructorCourses() {
   const [pop3up, setPop3up] = useState(false);
   const [CourseAdminDetails, setCourseAdminDetails] = useState([]);
 
+  const token = localStorage.getItem('token');
+  console.log(token,"hi");
+
   useEffect(() => {
     axios
-      .get('http://localhost:8080/course')
+      .get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course',{
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      })
       .then(response => {
         setCourseAdminDetails(response.data);
       })
@@ -33,7 +40,11 @@ function InstructorCourses() {
       instructorId: instructorId,
     };
 
-    axios.post('http://localhost:8080/course', data)
+    axios.post('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course', data,{
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
       .then(response => {
         setCourseAdminDetails([...CourseAdminDetails, response.data]);
         setPopup(false);
@@ -57,7 +68,11 @@ function InstructorCourses() {
     };
   
     try {
-      const response = await axios.put(`http://localhost:8080/course/${id}`, updateItem);
+      const response = await axios.put(`https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course/${id}`, updateItem,{
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
       setCourseAdminDetails(prevCourseAdminDetails => {
         const updatedCourseIndex = prevCourseAdminDetails.findIndex(course => course.id === id);
         if (updatedCourseIndex !== -1) {
@@ -68,7 +83,11 @@ function InstructorCourses() {
         return prevCourseAdminDetails;
       });
 
-      const updatedCourseResponse = await axios.get('http://localhost:8080/course');
+      const updatedCourseResponse = await axios.get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course',{
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
       setCourseAdminDetails(updatedCourseResponse.data);
   
       
@@ -83,11 +102,19 @@ function InstructorCourses() {
   const handleDelete = () => {
     const id = document.getElementById('id').value;
 
-    axios.delete(`http://localhost:8080/course/${id}`)
+    axios.delete(`https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course/${id}`,{
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
       .then(response => {
         console.log('Course deleted successfully');
         axios
-          .get('http://localhost:8080/course')
+          .get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/course',{
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          })
           .then(resp => {
             setCourseAdminDetails(resp.data);
           })
