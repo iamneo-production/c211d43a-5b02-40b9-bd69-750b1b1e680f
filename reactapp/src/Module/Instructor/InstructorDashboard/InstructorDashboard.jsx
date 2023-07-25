@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaMedal, FaGraduationCap, FaBookReader } from 'react-icons/fa';
 import  {BiSearchAlt} from 'react-icons/bi'
 import { MdNotifications} from 'react-icons/md'
-import img from './../../Assets/images/teacher1.png'
+
 
 const EventUpdateBanner = ({ updates }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -71,7 +71,7 @@ const Top = () => {
             <div className="adminDiv flex">
                 <MdNotifications className='icon'/>
                 <div className="adminImage">
-                    <img src={img} alt="Admin Image"/>
+                    <img src="" alt="Admin Image"/>
                 </div>
             </div>
 
