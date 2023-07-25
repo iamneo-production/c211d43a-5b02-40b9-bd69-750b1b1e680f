@@ -8,15 +8,11 @@ import axios from "axios";
 export default function Trainee() {
   const [traineeData, traineeDataChange] = useState(null);
 
-  const token = localStorage.getItem('token');
-  console.log(token,"hi");
+  // const token = localStorage.getItem('token');
+  // console.log(token,"hi");
 
   const getAllTrainee=()=>{
-      axios.get(`${base_url}/trainee`,{
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      }).then(
+      axios.get(`${base_url}/trainee`).then(
         (response)=>{
           console.log(response);
           traineeDataChange(response.data);

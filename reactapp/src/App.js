@@ -25,7 +25,7 @@ import InstructorLesson from './Module/Instructor/InstructorCourses/InstructorLe
 import InstructorSettings from "./Module/Instructor/InstructorSettings/InstructorSettings";
 import Trainee from "./Module/Instructor/Trainee/Trainee";
 import Assessment from './Module/Instructor/Assessment/Assessment';
-import Events from './Module/Instructor/Events/Events';
+
 
 import Navbar from './Navbar';
 import About from './pages/About';
@@ -47,6 +47,11 @@ import AddAdmin from "./Module/Instructor/InstructorsDetails/AddAdmin";
 import EditAdmin from "./Module/Instructor/InstructorsDetails/EditAdmin";
 import Main from "./Components/LessonDetails/Main"
 
+import UserLesson from './Module/Candidate/UserCourses/UserLesson';
+import Quiz from './Module/Candidate/UserEvents/Quiz';
+import ScorePage from './Module/Candidate/UserEvents/ScorePage';
+import AdminEvent from './Module/Instructor/Events/AdminEvent';
+
 
 function App() {
   return (
@@ -61,22 +66,25 @@ function App() {
           <Route path="/UserDashboard" element={<UserDashboard />} />
           <Route path="/UserCourses" element={<UserCourses />} />
           <Route path="/UserEvents" element={<UserEvents/>}/>
+          <Route path='/quiz/:ida'  element={<Quiz />} />
+          <Route path='/score/:finalans/:total' element={<ScorePage />} />
           <Route path="/UserAssessment" element={<UserAssessment/>}/>
           <Route path="/UserLeaderboard" element={<UserLeaderboard />} />
           <Route path="/UserSettings" element={<UserSettings />} />
           <Route path="/UserHelpcenter" element={<UserHelpcenter />} />
           <Route path="/EnrolledCourse" element={<EnrolledCourse/>}/>
+          <Route path="/UserLesson/:a" element={<UserLesson />} />
 
           <Route path="/NavAdmin" element={<NavAdmin/>} />
           <Route path="/InstructorDashboard" element={<NavAdmin><InstructorDashboard/></NavAdmin>}/>
           <Route path="/InstructorCourses" element={<NavAdmin><InstructorCourses/></NavAdmin>}/>
-          <Route path="/InstructorLesson" element={<NavAdmin><InstructorLesson/></NavAdmin>}/>
+          <Route path="/InstructorLesson/:id" element={<NavAdmin><InstructorLesson/></NavAdmin>}/>
           <Route path="/InstructorDetails" element={<NavAdmin><Admin/></NavAdmin>}/>
           <Route path="/InstructorSettings" element={<NavAdmin><InstructorSettings/></NavAdmin>}/>
           <Route path="/Trainee" element={<NavAdmin><Trainee/></NavAdmin>}/>
           <Route path="/Assessment" element={<NavAdmin><Assessment/></NavAdmin>}/>
-          <Route path="/Events" element={<NavAdmin><Events/></NavAdmin>}/>
-
+          <Route path="/Events" element={<NavAdmin><AdminEvent /></NavAdmin>}/>
+     
 
           <Route index element={<Home/>}/>
           <Route path='/Navbar' element={<Navbar/>}/>
