@@ -319,7 +319,7 @@ body { background: var(--white); }
    color: #fff;
    font-size: 24px;
    border: 2px solid #fff;
-   padding: 14p 70px;
+   padding: 14px 70px;
    border-radius:50px ;
    margin-top: 20px;
 }
@@ -972,7 +972,7 @@ figure.StudentLand h4 {
   font-weight: 300;
 }
 figure.StudentLand h2 {
-  color: #000;;
+  color: #000;
 }
 figure.StudentLand h4 {
   color: #000;
