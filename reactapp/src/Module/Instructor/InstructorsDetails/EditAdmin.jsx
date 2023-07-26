@@ -18,7 +18,6 @@ export default function EditAdmin() {
 
   useEffect(() => {
     document.title = "Update Instructor";
-    document.body.style.backgroundColor ="#0d1a2d";
     fetchAdminData();
   }, []);
 
@@ -54,6 +53,7 @@ export default function EditAdmin() {
       });
   };
   return (
+    <div id="instructor_login-box">
     <div className="instructor_login-box">
       <h2>Update Instructor</h2>
       <form onSubmit={handleSubmit} id="instructor_form">
@@ -120,6 +120,7 @@ export default function EditAdmin() {
         </Link>
         </div>
       </form>
+    </div>
     </div>
   );
 }

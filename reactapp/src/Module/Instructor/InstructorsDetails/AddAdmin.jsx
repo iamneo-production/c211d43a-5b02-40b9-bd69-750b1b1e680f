@@ -9,7 +9,6 @@ export default function AddAdmin() {
 
   useEffect(()=>{
     document.title = "Add Instructor";
-    document.body.style.backgroundColor ="#0d1a2d";
   },[]);
 
     const [admin, setAdmin] =useState({});
@@ -38,6 +37,7 @@ export default function AddAdmin() {
       );
     }
   return (
+    <div id="instructor_login-box">
     <div className="instructor_login-box">
     <h2>Create Admin</h2>
     <form onSubmit={handleSubmit} id="instructor_form">
@@ -90,5 +90,6 @@ export default function AddAdmin() {
       </div>
     </form>
   </div> 
+  </div>
   );
 }

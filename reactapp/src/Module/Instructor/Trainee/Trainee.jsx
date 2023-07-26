@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Trainee.css";
 import Card from "./Card";
-// import trainee from "./data";
+import trainee from "./data";
 import base_url from "./api";
 import axios from "axios";
 
@@ -11,34 +11,34 @@ export default function Trainee() {
   // const token = localStorage.getItem('token');
   // console.log(token,"hi");
 
-  const getAllTrainee=()=>{
-      axios.get(`${base_url}/trainee`).then(
-        (response)=>{
-          console.log(response);
-          traineeDataChange(response.data);
-        },
-        (error)=>{
-          console.log(error);
-        }
-      )
+  const getAllTrainee = () => {
+    axios.get(`${base_url}/trainee`).then(
+      (response) => {
+        console.log(response);
+        traineeDataChange(response.data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    )
   }
 
-  useEffect(()=>{
-    document.titile ="Candidate Dashboard";
+  useEffect(() => {
+    document.titile = "Candidate Dashboard";
     getAllTrainee();
-  },[]);
+  }, []);
 
 
   return (
     <div id="Trainee-Body">
       <div id="Trainee">
-        {traineeData && traineeData.map((e,index)=>{
+        {trainee && trainee.map((e, index) => {
           return (
             <div key={index}>
-                <Card 
+              <Card
                 data={e}
-                />
-              </div>
+              />
+            </div>
           )
         })}
       </div>

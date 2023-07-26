@@ -4,7 +4,7 @@ import "./main.css";
 import { Link } from "react-router-dom";
 import base_url from "./api"
 import axios from "axios";
-// import admin from "./Data";
+import admin from "./Data";
 
 // change admin to admindata for connection to backend
 
@@ -67,8 +67,8 @@ export default function Admin() {
         <div className="container flow-content">
           <h2 className="section-title">Instructor Details</h2>
           <ul role="list" className="grid" data-columns="3">
-            {admindata &&
-              admindata.map((e, index) => {
+            {admin &&
+              admin.map((e, index) => {
                 return (
                   <div key={index}>
                     <Card
