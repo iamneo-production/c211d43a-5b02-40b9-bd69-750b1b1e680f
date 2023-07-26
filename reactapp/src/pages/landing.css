@@ -302,7 +302,7 @@ body { background: var(--white); }
   text-align: center;
   padding-top: 55px;
 }
-.video-content h1{
+.video .video-content h1{
   font-size: 65px;
   color: #fff;
   font-weight: 600;
