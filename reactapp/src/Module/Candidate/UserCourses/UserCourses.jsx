@@ -78,7 +78,7 @@ function UserCourses() {
       ) : (
         <div className='cardLists'>
           {AllCourses.map((ele, index) =>
-            <Card key={index} ele={ele.title} ele1={ele.description} />
+            <Card key={index} ele2={ele.id} ele={ele.title} ele1={ele.description} />
           )}
         </div>
       )}

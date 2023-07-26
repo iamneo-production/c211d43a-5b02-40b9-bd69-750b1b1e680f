@@ -3,7 +3,7 @@ import Navbar from '../Navbar';
 import Video from './Video';
 import About from './About';
 import Coursedisplay from './Coursedisplay';
-import "./landing.css"
+import Teacher from './Teacher';
 
  import Testimonial from './Testimonial';
  import Ctc from './Ctc';
@@ -12,13 +12,18 @@ import "./landing.css"
    return (
 
       <>
+      <div className='main'>
         <Navbar/>
        <Video/>
        <About/>
        <Coursedisplay/>
-        <Testimonial/>
+       <Teacher/>
+       <Testimonial/>
+      
+        
         <Ctc/>
         <Footer/>
+        </div>
     </>
    );
  };

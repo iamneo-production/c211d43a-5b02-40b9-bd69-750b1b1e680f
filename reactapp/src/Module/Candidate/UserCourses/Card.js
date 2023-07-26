@@ -3,8 +3,14 @@ import AIImage from '../UserCourses/AllCourses/AIImage.jpg';
 import "./UserCourses.css"
 import { Button } from '@mantine/core';
 
-export default function  Card({ele,ele1})
+export default function  Card({ele2,ele,ele1})
 {
+  
+  function handleNavigate(a)
+{
+ 
+ //nav(`/UserLesson/${a}`)
+}
     return(
 
       <div className='en-course'>
@@ -18,7 +24,7 @@ export default function  Card({ele,ele1})
           <div class="en-enrollmentdetails">
             <p class="enrolled-started">{ele1}</p>
           </div>
-          <Button className="enbtn" variant="gradient" gradient={{ from: 'green', to: 'cyan' }}>Enroll</Button>
+          <Button className="enbtn" onClick={()=>handleNavigate(ele2)} variant="gradient" gradient={{ from: 'green', to: 'cyan' }}>Enroll</Button>
         </div>
       </div>
     </div>
