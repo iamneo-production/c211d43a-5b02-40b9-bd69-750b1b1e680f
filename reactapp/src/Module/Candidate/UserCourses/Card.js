@@ -9,7 +9,7 @@ export default function  Card({ele2,ele,ele1})
   function handleNavigate(a)
 {
  
- nav(`/UserLesson/${a}`)
+ //nav(`/UserLesson/${a}`)
 }
     return(
 

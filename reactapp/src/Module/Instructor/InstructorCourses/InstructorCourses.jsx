@@ -129,7 +129,7 @@ function InstructorCourses() {
   };
   
   function handlenavcourse(id){
-    nav(`/InstructorLesson/${id}`)
+   // nav(`/InstructorLesson/${id}`)
     }
 
 
