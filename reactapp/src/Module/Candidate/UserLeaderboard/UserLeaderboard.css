@@ -1,0 +1,183 @@
+/* CSS for the Leaderboard component */
+
+/* General styles */
+
+.lApp {
+  width: 100%;
+  overflow-x: hidden;
+  color: #707070;
+  font-family: "open sans";
+  padding-top: 5%;
+  display: block;
+  padding-right: 5%;
+}
+
+.page_wrape {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* Info Card styles */
+
+.lmain-content {
+  margin-left: 250px;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgb(230, 230, 230);
+}
+
+.info-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.card {
+  width: 31%;
+  min-height: 220px;
+  padding: 20px;
+  background: linear-gradient(#060f61, #00ffff);
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(#060f61, #00ffff);
+}
+
+.card:nth-child(3) {
+  background: linear-gradient(#060f61, #00ffff);
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: -15%;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+}
+
+.card::after {
+  top: auto;
+  bottom: -5%;
+  right: -5%;
+}
+
+.card .card-icon {
+  margin-bottom: 15px;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px #fff;
+}
+
+.card .card-icon span i {
+  font-size: 50px;
+  color: gold;
+}
+
+.card .card-detail {
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.card .card-detail h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.card .card-detail h4 {
+  color: #000;
+  font-size: 20px;
+}
+
+/* Table styles */
+
+.lmain-table {
+  margin-left: 250px;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgb(230, 230, 230);
+}
+
+.title {
+  margin: 15px 0;
+}
+
+.user_table {
+  display: grid;
+}
+
+.user_table table thead tr td {
+  padding: 20px 0;
+  font-weight: bold;
+  color: #000;
+  font-size: 25px;
+}
+
+.user_table table tbody tr td {
+  padding: 15px 0;
+  font-size: 20px;
+  color: #2e2c2c;
+}
+
+.user_table tbody tr .btn {
+  padding: 7px 25px;
+  background: #060f61;
+  border-radius: 3px;
+  display: inline-block;
+  color: #fff;
+}
+
+
+
+/* Search bar styles */
+.lsearch-bar {
+  margin-bottom: 15px;
+}
+
+.lsearch-bar input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+
+  .user_table {
+    overflow-x: auto;
+  }
+
+  .user_table table {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100%;
+  }
+}
