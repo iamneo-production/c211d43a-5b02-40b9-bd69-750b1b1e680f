@@ -148,21 +148,8 @@ const Listing = () => {
       ];
     
     
-      const eventUpdates = [
-        {
-          title: 'Update 1',
-          description: 'This is the first event update.',
-        },
-        {
-          title: 'Update 2',
-          description: 'This is the second event update.',
-        },
-        {
-          title: 'Update 3',
-          description: 'This is the third event update.',
-        },
-        // Add more update objects as needed
-      ];
+     
+      
       const courses = [
         {
           title: "Phyton Programing",
@@ -249,19 +236,8 @@ const Body = () => {
 };
 
 const Landing = () => {
-  const eventUpdates = [
-    // ... (Event updates data from before)
-  ];
-
-  const courses = [
-    // ... (Courses data from before)
-  ];
-
-  const enrolledStudents = [
-    // ... (Enrolled students data from before)
-  ];
-
-  const video = 'https://player.vimeo.com/external/437106982.sd.mp4?s=8431b9534b82d2419ffff68218a1ea7bb5168ba6&profile_id=164&oauth2_token_id=57447761';
+ 
+ 
 
   return (
     <div className='abccontainer'>

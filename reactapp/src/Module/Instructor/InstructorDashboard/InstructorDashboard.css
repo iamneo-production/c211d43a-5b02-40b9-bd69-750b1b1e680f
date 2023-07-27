@@ -185,10 +185,11 @@
   }
   .topSection .cardSection .leftCard .updates span {
     font-size: 10px;
-  }/*# sourceMappingURL=Top.css.map */
+  }
   .flex{
     display: flex;
     align-items: center;
+    
 }@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 *{
