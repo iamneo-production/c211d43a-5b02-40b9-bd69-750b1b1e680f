@@ -19,6 +19,7 @@ body {
 }
 #Trainee-Body {
   background: #0d1a2d;
+  padding: 2rem;
 }
 #Trainee {
   display: flex;
