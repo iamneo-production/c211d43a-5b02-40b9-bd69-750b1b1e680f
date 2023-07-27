@@ -57,7 +57,7 @@
     box-shadow: 0 2px 4px var(--inputColor);
     color: yellow;
   }
-  .topSection .headerSection .adminDiv .adminImage {
+  .topSection .headerSection .adminDiv .adminnImage {
     border: 3px solid solid var(--whiteColor);
     border-radius: 10px;
     width: 2.7rem;
@@ -65,24 +65,27 @@
     cursor: pointer;
    
   }
-  .topSection .headerSection .adminDiv .adminImage img {
+  .topSection .headerSection .adminDiv .adminnImage img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     background-color: var(--whiteColor);
   }
-  .topSection .cardSection {
+  .topSection .cardSection123 {
     margin-top: 3rem;
     gap: 1rem;
-   
     padding: 20px;
     border-radius: 5px;
     margin-top: 10px;
   }
-  .topSection .cardSection .rightCard {
+  .topSection .cardSection123 .flex {
+    display: flex;
+    align-items: center;
+  }
+  .topSection .cardSection123 .rightCard {
     position: relative;
     flex-basis: 70%;
-    height: 200px;
+    height: 300px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -92,7 +95,7 @@
     overflow: hidden;
   
   }
-  .topSection .cardSection .rightCard .videoDiv {
+  .topSection .cardSection123 .rightCard .videoDiv {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -101,58 +104,59 @@
     bottom: 0;
     left: 0;
   }
-  .topSection .cardSection .rightCard .videoDiv video {
+  .topSection .cardSection123 .rightCard .videoDiv video {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .topSection .cardSection .rightCard h1, .topSection .cardSection .rightCard p, .topSection .cardSection .rightCard .btn {
+  .topSection .cardSection123 .rightCard h1, .topSection .cardSection123 .rightCard p, .topSection .cardSection123 .rightCard .btn {
     z-index: 100;
   }
-  .topSection .cardSection .rightCard h1 {
+  .topSection .cardSection123 .rightCard h1 {
     font-size: 1.5em;
     color: var(--whiteColor);
     font-weight: 800;
   }
-  .topSection .cardSection .rightCard p {
+  .topSection .cardSection123 .rightCard p {
     padding: 1rem;
     color: var(--paleGreen);
     font-weight: 500;
   }
-  .topSection .cardSection .rightCard .buttons {
+  .topSection .cardSection123 .rightCard .buttons {
     gap: 1rem;
   }
-  .topSection .cardSection .rightCard .buttons .btn {
+  .topSection .cardSection123 .rightCard .buttons .btn {
     box-shadow: none;
     padding: 0.8rem 1.5rem;
     color: var(--PrimaryColour);
     border: 2px solid transparent;
   }
-  .topSection .cardSection .rightCard .buttons .transparent {
+  .topSection .cardSection123 .rightCard .buttons .transparent {
     background: none;
     border: 2px solid var(--paleGreen);
     color: var(--paleGreen);
   }
-  .topSection .cardSection .rightCard .buttons .transparent:hover {
+  .topSection .cardSection123 .rightCard .buttons .transparent:hover {
     background: var(--paleGreen);
     color: var(--PrimaryColour);
   }
-  .topSection .cardSection .leftCard {
+  .topSection .cardSection123 .leftCard {
     flex-basis: 30%;
-    
+    height: 300px;
     border-radius: 5px;
-    margin-top: -45px;
+    margin-top: -65px;
+    background-color:transparent;
   }
   .link{
     color: #000;
   }
-  .topSection .cardSection .leftCard h3 {
+  .topSection .cardSection123 .leftCard h3 {
     text-align: left;
     margin-bottom: 20px;
     font-size: 1.5rem;
   }
-  .topSection .cardSection .leftCard .main {
+  .topSection .cardSection123 .leftCard .main {
     position: relative;
     padding: 1rem;
     height: 200px;
@@ -161,29 +165,29 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .topSection .cardSection .leftCard .image {
+  .topSection .cardSection123 .leftCard .image {
     border: 3px solid solid var(--whiteColor);
     border-radius: 10px;
     width: 2.4rem;
     overflow: hidden;
     margin-left: -15px;
   }
-  .topSection .cardSection .leftCard img {
+  .topSection .cardSection123 .leftCard img {
     width: 100%;
     height: 100%;
     border-radius: 20%;
   }
-  .topSection .cardSection .leftCard .updates {
+  .topSection .cardSection123 .leftCard .updates {
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
-  .topSection .cardSection .leftCard .updates p {
+  .topSection .cardSection123 .leftCard .updates p {
     font-size: 0.938rem;
     padding: 5px;
     cursor: pointer;
   }
-  .topSection .cardSection .leftCard .updates span {
+  .topSection .cardSection123 .leftCard .updates span {
     font-size: 10px;
   }
   .flex{
@@ -275,4 +279,345 @@ body{
 }
 ::-webkit-scrollbar{
     display: none ;
+}/* InstructorDashboard.css */
+
+
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+}
+.Sheader{
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333333;
+}
+.box123 {
+  display: flex;
+  align-items: start;
+  background-color:#23C0AD;
+  width: 270px;
+  padding: 25px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.box123:hover {
+  transform: translateY(-5px);
+}
+
+.iconn {
+  font-size: 45px;
+  margin-right: 20px;
+  color: #555555;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.demo-info {
+  margin-bottom: 30px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.demo-section {
+  margin-bottom: 20px;
+}
+
+.student1-actions {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  align-items: end;
+ margin-left: 420px;
+}
+
+.btn-view-profile,
+.btn-unenroll {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn-view-profile:hover,
+.btn-unenroll:hover {
+  background-color: #45a049;
+}
+
+.btn-unenroll {
+  background-color: #f44336;
+}
+
+.btn-unenroll:hover {
+  background-color: #d32f2f;
+}
+
+.demo-section h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333333;
+}
+
+.student1-list {
+  display: flex;
+  flex-direction: column;
+}
+.student1 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #F1F3F4;
+  padding: 16px;
+  width: 900px;
+  border-radius: 8px;
+  
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease-in-out;
+  flex-direction: row;
+}
+
+.student1 img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.student1-info h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.student1-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #888888;
+}
+
+.student1:hover {
+  transform: translateY(-5px);
+}
+
+.course-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-list li {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-list h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.course-list p {
+  margin: 0;
+  font-size: 14px;
+  color: #555555;
+}
+
+
+
+.123event123{
+  background-color:transparent;
+}
+.event-update-banner {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.slide h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.slide p {
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+}
+
+
+.new-courses-section {
+  text-align: center;
+}
+
+.new-courses-section h2 {
+  margin-bottom: 20px;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-card {
+  width: 300px;
+  margin: 10px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 200px;
+}
+
+.course-details123 {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.course-details123 h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.course-details123 p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.button-container .enroll-icon,
+.button-container .save-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 24px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-container .enroll-icon:hover,
+.button-container .save-icon:hover {
+  background-color: #0056b3;
+}
+
+.button-container .enroll-icon i,
+.button-container .save-icon i {
+  margin-right: 5px;
+}
+
+
+.container123{
+  position: fixed;
+  width: 84vw;
+  height: 98vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #AAAA;
+  
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 8px rgb(190, 190, 190);
+}
+::-webkit-scrollbar{
+  display: none ;
+}
+
+.mainContent11 {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  overflow: auto;
+  
+}
+.mainContent11 .bottom {
+  margin-top: 2rem;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.mainContent11 .flex{
+  display: flex;
+  align-items: center;
 }

@@ -70,7 +70,7 @@ const Top = () => {
 
             <div className="adminDiv flex">
                 <MdNotifications className='icon'/>
-                <div className="adminImage">
+                <div className="adminnImage">
                     <img src="" alt="Admin Image"/>
                 </div>
             </div>
@@ -78,21 +78,21 @@ const Top = () => {
         </div>
         <div className="statistics">
          
-            <div className="box">
+            <div className="box123">
               <FaGraduationCap className="iconn" />
               <div className="content">
                 <h3>7</h3>
                 <Link className='link'><span>Courses Completed</span></Link>
               </div>
             </div>
-            <div className="box">
+            <div className="box123">
               <FaMedal className="iconn" />
               <div className="content">
                 <h3>456</h3>
                 <Link className='link'>Badges Earned</Link>
               </div>
             </div>
-            <div className="box">
+            <div className="box123">
               <FaBookReader className="iconn" />
               <div className="content">
                 <h3>8</h3>
@@ -101,7 +101,7 @@ const Top = () => {
             </div>
           </div>
           <h2>New Launchers</h2>
-            <div className="cardSection flex">
+            <div className="cardSection123 flex">
             
                 <div className="rightCard flex">
                     <h1>Enhancing Lives Through Education</h1>
@@ -122,7 +122,7 @@ const Top = () => {
                 <div className="leftCard flex">
                         
                     
-                    <div>
+                    <div className='123event123'>
       <h3>Upcoming Events</h3>
       <EventUpdateBanner updates={eventUpdates} />
       
@@ -139,12 +139,12 @@ const Top = () => {
 };
 
 const Listing = () => {
-    const enrolledStudents = [
+    const enrolledstudent1s = [
       { id: 1, name: 'Manish', email: 'manish@gmail.com', avatar: 'https://img.freepik.com/premium-photo/portrait-attractive-curly-business-lady-toothy-beaming-smiling-good-morning-mood-ready-start-working-wear-formalwear-yellow-shirt_274222-20422.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais' },
       { id: 2, name: 'Smith', email: 'janesmith@gmail.com', avatar: 'https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais' },
       { id: 1, name: 'Pradeep', email: 'pradeep@gmail.com', avatar: 'https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?size=626&ext=jpg&ga=GA1.1.1383474551.1689404268&semt=ais' },
       { id: 2, name: 'Shree', email: 'shree@gmail.com', avatar: 'https://img.freepik.com/free-photo/young-woman-with-round-glasses-yellow-sweater_273609-7091.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais' },
-      // Add more enrolled students data
+      // Add more enrolled student1s data
       ];
     
     
@@ -163,7 +163,7 @@ const Listing = () => {
         },
         {
           title: "Soft Skills",
-          description: "Learn the soft skills for personal development & success in life & work, with over 100 practical tips & strategies & develop your soft skills going forward.",
+          description: "Learn soft skills for personal development  with over 100 practical tips & develop your soft skills going forward.",
           image: "https://img.freepik.com/free-photo/improvement-summary-personal-development-workflow_53876-125155.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais",
         }
       ];
@@ -179,17 +179,17 @@ const Listing = () => {
          
           <div className="demo-info">
   <div className="demo-section">
-    <h2>Enrolled Students</h2>
-    <div className="student-list">
-      {enrolledStudents.map((student) => (
-        <div className="student" key={student.id}>
-          <img src={student.avatar} alt="Student Avatar" />
-          <div className="student-info">
-            <h4>{student.name}</h4>
-            <p>{student.email}</p>
+    <h2>Enrolled student1s</h2>
+    <div className="student1-list">
+      {enrolledstudent1s.map((student1) => (
+        <div className="student1" key={student1.id}>
+          <img src={student1.avatar} alt="student1 Avatar" />
+          <div className="student1-info">
+            <h4>{student1.name}</h4>
+            <p>{student1.email}</p>
           </div>
-          <div className="student-actions">
-            <button className="btn-view-profile">View Profile</button>
+          <div className="student1-actions">
+            <button className="btn-view-profile"> Profile</button>
             <button className="btn-unenroll">Unenroll</button>
           </div>
         </div>
@@ -207,7 +207,7 @@ const Listing = () => {
         <div className="image-container">
           <img src={course.image} alt={course.title} />
         </div>
-        <div className="course-details">
+        <div className="course-details123">
           <h3>{course.title}</h3>
           <p>{course.description}</p>
           <div className="button-container">
@@ -240,8 +240,8 @@ const Landing = () => {
  
 
   return (
-    <div className='abccontainer'>
-    <div className='mainContent'>
+    <div className='container123'>
+    <div className='mainContent11'>
       <Top />
       <div className='bottom flex'>
         <Listing />
