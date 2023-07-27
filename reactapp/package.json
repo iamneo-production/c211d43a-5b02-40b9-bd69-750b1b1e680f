@@ -1,7 +1,6 @@
 {
   "name": "reactapp",
   "version": "0.1.0",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.7.1",

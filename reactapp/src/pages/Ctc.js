@@ -1,12 +1,11 @@
 import React from "react";
-import "./landing.css"
+
 
 function Ctc(){
     return(
         <div>
 <div class="cta">
-        <div class="container">
-
+        <div className="container">
           <div class="title-wrapper">
 
             <h2 class="h2 cta-title">
@@ -24,6 +23,7 @@ function Ctc(){
         </div>
       </div>
       </div>
+      
     );
 }
 export default Ctc;
