@@ -18,7 +18,6 @@
     "embla-carousel-react": "^7.1.0",
     "https-browserify": "^1.0.0",
     "js-cookie": "^3.0.5",
-    "node-module": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
@@ -32,7 +31,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "PORT=8081 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -53,10 +52,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
-    "dependencies": {
-      "detect-port-alt": "1.1.6",
-      "debug": "4.3.4"
-    }
+    ]
   }
 }
