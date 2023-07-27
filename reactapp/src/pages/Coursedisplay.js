@@ -18,7 +18,7 @@ const img8 = 'https://lh3.googleusercontent.com/pw/AIL4fc-uewtLESMjdJFIhcvLe-NSX
   <h4 className="subject">Subjects</h4>
   <h2 className="topcourse-title">Explore Top Subjects</h2>
     <div className="flex-container">
-      <div className="flex-box">
+      <div className="fabcbox123">
         <div className="cat-item ">
           <img className="image" src={img1} alt=""/>
           <a className="cat-overlay" href="">
@@ -28,7 +28,7 @@ const img8 = 'https://lh3.googleusercontent.com/pw/AIL4fc-uewtLESMjdJFIhcvLe-NSX
       </div>
 
       </div>
-      <div className="flex-box">
+      <div className="fabcbox123">
         <div className="cat-item ">
           <img className="image" src={img2} alt=""/>
           <a className="cat-overlay" href="">
@@ -38,7 +38,7 @@ const img8 = 'https://lh3.googleusercontent.com/pw/AIL4fc-uewtLESMjdJFIhcvLe-NSX
       </div> 
          
       </div>
-      <div className="flex-box">
+      <div className="fabcbox123">
         <div className="cat-item ">
           <img className="image" src={img3} alt=""/>
           <a className="cat-overlay" href="">
@@ -48,7 +48,7 @@ const img8 = 'https://lh3.googleusercontent.com/pw/AIL4fc-uewtLESMjdJFIhcvLe-NSX
       </div>
 
       </div>
-      <div className="flex-box">
+      <div className="fabcbox123">
         <div className="cat-item ">
           <img className="image" src={img4} alt=""/>
           <a className="cat-overlay" href="">
@@ -58,7 +58,7 @@ const img8 = 'https://lh3.googleusercontent.com/pw/AIL4fc-uewtLESMjdJFIhcvLe-NSX
       </div>
 
       </div>
-      <div className="flex-box">
+      <div className="fabcbox123">
         <div className="cat-item ">
           <img className="image" src={img5} alt=""/>
           <a className="cat-overlay" href="">
@@ -68,7 +68,7 @@ const img8 = 'https://lh3.googleusercontent.com/pw/AIL4fc-uewtLESMjdJFIhcvLe-NSX
       </div>
 
       </div>
-      <div className="flex-box">
+      <div className="fabcbox123">
         <div className="cat-item ">
           <img className="image" src={img6} alt=""/>
           <a className="cat-overlay" href="">
@@ -77,7 +77,7 @@ const img8 = 'https://lh3.googleusercontent.com/pw/AIL4fc-uewtLESMjdJFIhcvLe-NSX
           </a>
       </div>
       </div>
-      <div className="flex-box">
+      <div className="fabcbox123">
         <div className="cat-item ">
           <img className="image" src={img7} alt=""/>
           <a className="cat-overlay" href="">
@@ -86,7 +86,7 @@ const img8 = 'https://lh3.googleusercontent.com/pw/AIL4fc-uewtLESMjdJFIhcvLe-NSX
           </a>
       </div>
       </div>
-      <div className="flex-box">
+      <div className="fabcbox123">
         <div className="cat-item ">
           <img className="image" src={img8} alt=""/>
           <a className="cat-overlay" href="">
