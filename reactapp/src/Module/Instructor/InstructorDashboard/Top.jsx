@@ -2,7 +2,7 @@ import React from 'react'
 import './InstructorDashboard.css'
 import  {BiSearchAlt} from 'react-icons/bi'
 import { MdNotifications} from 'react-icons/md'
-import{AiOutlineArrowRight} from 'react-icons/ai'
+
 import { Link } from 'react-router-dom';
 import { FaMedal, FaGraduationCap, FaBookReader } from 'react-icons/fa';
 
@@ -10,7 +10,6 @@ import img from '../../../Assets/images/teacher1.png'
 
 
 
-import { BsArrowRightShort } from 'react-icons/bs'
 import EventUpdateBanner from '../EventUpdateBanner'
 
 const Top = () => {

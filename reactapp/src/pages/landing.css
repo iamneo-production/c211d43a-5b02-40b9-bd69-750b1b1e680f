@@ -212,6 +212,7 @@ body { background: var(--white); }
   color: var(--mango-tango);
 }
 
+
 .LandingNavbar {
   position: fixed;
   top: 0;
@@ -225,6 +226,11 @@ body { background: var(--white); }
   z-index: 3;
   margin-top: 20px;
 }
+
+/* #landing-navbar{
+  background: #3e3434;
+  opacity: 0.4;
+} */
 
 .LandingNavbar.active {
   left: 0;
@@ -428,7 +434,7 @@ justify-content: center; }
   
 }
 
-  .flex-box{
+  .fabcbox123{
       width: 250px;
       height: 160px;
       background-image: linear-gradient(rgba(0,0,0,0.92));
@@ -533,16 +539,7 @@ justify-content: center; }
       transform: scale(1.1);
     }
    
-  .flex-box{
-      
-      width: 250px;
-      height: 160px;
-      background-image: linear-gradient rgba(0,0,0,0.92);
-      margin: 2px;
-      margin-bottom: 20px;
-      margin-top: 20px;
-      border-radius: 20px;
-  }
+
   .text{
       position: absolute;
       width: 100%;
