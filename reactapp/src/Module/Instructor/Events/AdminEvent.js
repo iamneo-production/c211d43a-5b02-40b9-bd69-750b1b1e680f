@@ -34,15 +34,14 @@ function handleLessonDelete(a) {
  console.log(b)
   axios.delete(`http://localhost:8080/event/delete/${b}`)
     .then(response => {
-      // Handle the successful deletion (optional)
+     
       console.log('Lesson deleted successfully.');
       
-      // If you want to update the LessonAdminDetails state to reflect the updated data
       const updatedLessonAdminDetails = LessonAdminDetails.filter(lesson => lesson.id !== b);
       setLessonAdminDetails(updatedLessonAdminDetails);
     })
     .catch(error => {
-      // Handle errors (optional)
+   
       console.error('Error deleting lesson:', error);
     });
 }
@@ -84,7 +83,7 @@ const handleInputChange = (index, event) => {
 useEffect(() => {
   axios.get('http://localhost:8080/event/getall')
     .then(response => {
-      // Update the LessonAdminDetails state with the fetched data
+  
            
       setLessonAdminDetails(response.data)
       console.log(response.data)
@@ -126,14 +125,10 @@ function handleModalExtend()
 
 return (
     <div>
-<br></br>
-    <Button className='LessonAddCourse' onClick={() => handleAddEvent()}>Add Lesson</Button>
+
+    <Button className='AdminEvntAddCourse' onClick={() => handleAddEvent()}>Add Lesson</Button>
      
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
     <Table >
       <thead >
     <tr >
@@ -164,38 +159,35 @@ return (
 
     <Modal opened={modal1Visible} onClose={() => setModal1Visible(false)} title="Add lesson" className='lessonaddmodal'>
     <NumberInput placeholder="id"  label="id"  id='id' />
-    <br></br>
-    <label>title</label>
+    
+    <label className='lessonaddmodal'>title</label>
     <Input placeholder="title" value={setName}  onChange={(e)=>handleaddlessontitle(e)}  id="title"  />
-    <br></br>
-    <label >description</label>
+    
+    <label  className='lessonaddmodal'>description</label>
     <Input placeholder="description" value={addlessondes} onChange={(e)=>handleaddlessondes(e)} id="description" />
     
-    <br></br>
+    
     {quizzes.map((ele,indx) => 
       <div>
 
-<Badge >question {indx+1}</Badge>
-    <br></br>
-    <br></br>
+<Badge className='lessonaddmodal' >question {indx+1}</Badge>
+    
     <Input value={ele.qus} name='qus' onChange={(e)=>handleInputChange(indx,e)} />
-<br></br>
-<label>ans</label>
+
+<label className='lessonaddmodal'>ans</label>
 {generateAnswerSelect(indx)}
-<br></br>
-    <br></br>
-<label>option 1</label>
+
+    
+<label className='lessonaddmodal'>option 1</label>
 <Input value={ele.opt1} name='opt1' onChange={(e)=>handleInputChange(indx,e)} ></Input>
-<br></br>
-<label >option 2</label>
+
+<label  className='lessonaddmodal'>option 2</label>
 <Input value={ele.opt2} name='opt2' onChange={(e)=>handleInputChange(indx,e)} ></Input>
-<br></br>
-<label >option 3</label>
+
+<label className='lessonaddmodal'>option 3</label>
 <Input value={ele.opt3 } name='opt3' onChange={(e)=>handleInputChange(indx,e)}></Input>
-<br></br>
-<label>option 4</label>
+<label className='lessonaddmodal'>option 4</label>
 <Input  value={ele.opt4} name='opt4' onChange={(e)=>handleInputChange(indx,e)}></Input>
-<br></br>
 
 
 
@@ -205,7 +197,7 @@ return (
       
       )}
    
-    <br></br>
+    
     <Button onClick={handleModalExtend}>add question</Button>
     
     <Button style={{marginLeft:'180px'}} onClick={handleLessonadd } >submit</Button>

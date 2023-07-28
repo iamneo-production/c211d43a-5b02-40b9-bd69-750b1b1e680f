@@ -10,14 +10,15 @@
 #toppartLesson
 {
     margin-top: 32px;
+    margin-left: 20px;
 }
-body
+/* body
 {
     background-color: var(--Body-Background);
     overflow-x: hidden;
     overflow-y:scroll;
     font-family: 'Courier New', Courier, monospace;
-}
+} */
 .CourseHeadBottomTable
 {
 display: flex;
@@ -96,10 +97,12 @@ border-radius: 20px;
     
     display: flex;
     flex-direction: column;
- transition: all 5s ease;
+    
     height: 100hv;
     width: 100hv;
     visibility: visible;
+    font-family: sans-serif;
+    margin-left: 40px;
 }
 .oldCoursePrice
 {
@@ -128,14 +131,15 @@ border-radius: 20px;
     height: 0px;
     width: 0px;
     visibility: hidden;
-
+    
    
 }
 
 .CourseDropHead
 {
 
-
+    font-family: sans-serif;
+    
 width: 600px;
 cursor: context-menu;
 }
@@ -146,10 +150,11 @@ cursor: context-menu;
 {
     background-color: #ffffff;
     border-radius: 10px;
+   
 }
 .eachdropbox
 {
-    transition: all .5s ease;
+    
     box-shadow: 0rem 0rem 0.2rem 0rem black;
     width: 600px;
   border-radius: 1%;
@@ -163,7 +168,7 @@ cursor: context-menu;
 }
 .CourseDropDownList
 {
-
+   
     display: flex;
     flex-direction: column;
     padding-top: 100px;
@@ -221,11 +226,20 @@ margin-left: 60px;
    color: #000000;    
    box-shadow: #000000 0rem 0rem 1rem 0rem;
 }
+.cardfixed input
+{
+    background-color: white;
+}
+.cardrelative input
+{
+    background-color: white;
+}
+
 .cardfixed
 {
     position: absolute;
     left: 70%;
-    top: 1655px;
+    top: 1455px;
 
     align-items: start;
     
@@ -350,7 +364,7 @@ width: 200px;
 .second-navbar
 {
     background-color: #fefefe;
-    
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
    margin-left: 100px;
@@ -389,9 +403,11 @@ height: 400px;
 background: black;
 color: white;
 position: relative;
-left:0px;
-margin-top: 324px;
+left:-70px;
+margin-top: 424px;
+width:1800px;
 
+padding-right: 550px;
 
 }
 .contacts-column div{
@@ -410,18 +426,35 @@ margin-top: 324px;
 {
 position: relative;
 left: -5px;
+height: 30px;
+width: 30px;
 }
 
 .twitterclass
 {
     position: relative;
     left: 2px;
+    height: 20px;
+    width: 20px;
 }
 .telegramclass
 {
     position: relative;
     left: -8px;
+    height: 20px;
+    width: 20px;
+    
 }
+
+
+
+.youtubeclass
+{
+    height: 20px;
+    width: 20px;
+}
+
+
 .contacts-column div div img
 {
     border-radius: 20px;
@@ -431,10 +464,14 @@ left: -5px;
 {
     border: #000000;
     background-color: #fefefe;
+    height: 20px;
+    width: 20px;
 }
 .instagramclass
 {
     left: 100px;
+    height: 20px;
+    width: 20px;
 }
 
 
@@ -446,8 +483,10 @@ left: -5px;
    
     
     height: 500px;
-    padding-left: 10px;
-    width: 1450px;
+    padding-left: 150px;
+    padding-right: 300px;
+    margin-top: -220px;
+    width: 1650px;
         background: linear-gradient(to bottom, #006666 0%, #66ff33 100%);
         
     margin-left: -15px;
@@ -502,7 +541,7 @@ transition: all .5s ease;
 .keyFeaturesChild div{
     margin-right: 100px;
 }
-.centerCard
+.centeerCard
 {
     border-radius: 25px;
     width: 250px;
@@ -512,15 +551,17 @@ transition: all .5s ease;
     
     height: 100%;
     transform-style: preserve-3d;
-    transition: all .5s ease;
+    
 }
 
-.centerCard:hover
+.centeerCard:hover
 {
     transform: rotateY(180deg);
 }
 .centerCardFront img{
     object-fit: cover;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -547,6 +588,7 @@ transition: all .5s ease;
     top: 140%;
     left: 0px;
     width: 250px;
+    height:350px;
     backface-visibility: hidden;
     color: white;
     background-color:  #009900;;
@@ -569,6 +611,8 @@ transition: all .5s ease;
 
 .leftCardimage
 {
+    height: 300px;
+    width:250px;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -579,6 +623,7 @@ transition: all .5s ease;
     background-color: #009900;
     border-radius: 15px;
     width: 250px;
+    height:350px;
     transform: scale(0.8);
     opacity: 50%;
 }
@@ -587,21 +632,23 @@ transition: all .5s ease;
 {
     
     position: absolute;
-left: 10px;
-top: 0px;
+    font-stretch: condensed;
+left: 20px;
+top: 50px;
 }
-.features
+.feaaatures
 {
+    margin-top: 100px;
     position: relative;
     left: 100px;
     display: flex;
     flex-direction: row;
  
 }
-.features button i{
+.feaaatures button i{
     color: #000000;
 }
-.features button
+.feaaatures button
 {
   background-color: white;
   border: white;
@@ -670,7 +717,8 @@ justify-content: center;
    
    top: 30%;
     flex-direction: column;
-}.contacts-column-fourth
+}
+.contacts-column-fourth
 {
     display: flex;
     
@@ -781,9 +829,9 @@ color: red;
 @media screen and (max-width:1000px) {
 
     
-.features
+.feaatures
 {
-margin-left: -100px;
+margin-left: 0px;
 }
 
 #leftBuutonArrow
@@ -796,7 +844,7 @@ margin-left: -100px;
 #rightBuutonArrow
 {
     position: relative;
-    left: -190px;
+    left: 20px;
 }
 
 .leftCard
@@ -817,7 +865,7 @@ margin-left: -100px;
 @media screen and (max-width:840px){
 .eachdropbox
 {
-    width: 300px;
+    width: 350px;
 }
 }
 
@@ -850,7 +898,7 @@ margin-left: -100px;
     .SingleCourse-TopPart
     {
         position: relative;
-        left: -80px;
+        left: 0px;
         width: 1000px;
     }
 
@@ -861,11 +909,11 @@ margin-left: -100px;
     .SingleCourse-TopPart
     {
         position: relative;
-        left: -80px;
+        left: 10px;
         width: 850px;
     }
 
-    .features
+    .feaatures
     {
         position: relative;
         left: 100px;

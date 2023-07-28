@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import './ScorePage.css'; // Import your CSS file for ScorePage styles
+import './ScorePage.css'; 
 import { Button } from '@mantine/core';
 
 export default function ScorePage() {
@@ -14,7 +14,7 @@ export default function ScorePage() {
 
       </h2>
      
-      <Button style={{position:'absolute',top:'450px'}} onClick={()=>nav('/event')}>back to Events</Button>
+      <Button style={{position:'absolute',top:'450px'}} onClick={()=>nav('/')}>back to Events</Button>
     </div>
   );
 }

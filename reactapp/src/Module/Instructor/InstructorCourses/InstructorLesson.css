@@ -1,8 +1,8 @@
-.LessonAddCourse
+.InstructorAddButton
 {
     
 position: relative;
-left: 90%;
+left: 950px;
 
 
 }
@@ -18,4 +18,11 @@ margin-left: 10px;
 a{
    transform: scale(0.7);
  
+}
+
+.lessonaddmodal
+{
+
+   margin-top: 40px;
+   
 }

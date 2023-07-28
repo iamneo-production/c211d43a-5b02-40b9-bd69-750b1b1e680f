@@ -9,9 +9,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function UserLesson() {
   
-const checkarr = [{headingName:'BEGINNER CONTENT',headingArr:['welcome to the react course','what is react js','setting up the course dev environment'],condition:false,oldDropDownIcon:'fas fa-chevron-up'},
-{headingName:'INTERMEDIATE CONTENT',headingArr:['Arrow function','Exports and Imports','spread and rest operator','react state and working with Events'],condition:false,oldDropDownIcon:'fas fa-chevron-up'},
-{headingName:'ADVANCED CONTENT',headingArr:['uderstanding error message','Analyzing code flow warnings','use the react dev tools'],condition:false,oldDropDownIcon:'fas fa-chevron-up'}]
+const checkarr = [{headingName:'BEGINNER CONTENT',headingArr:['welcome to the  course','what is  js','setting up the course dev environment'],condition:false,oldDropDownIcon:'fas fa-chevron-up'},
+{headingName:'INTERMEDIATE CONTENT',headingArr:['Arrow function','Exports and Imports','spread and rest operator',' state and working with Events'],condition:false,oldDropDownIcon:'fas fa-chevron-up'},
+{headingName:'ADVANCED CONTENT',headingArr:['understanding error message','Analyzing code flow warnings','use the  dev tools'],condition:false,oldDropDownIcon:'fas fa-chevron-up'}]
 
 const {a}= useParams()
  const nav = useNavigate()
@@ -215,7 +215,7 @@ useEffect(() => {
   const handleScroll = () => {
     const scrollPosition =  document.documentElement.scrollTop;
   
-    setIsFixed(scrollPosition >= 1500);
+    setIsFixed(scrollPosition >= 1400);
   };
 
   window.addEventListener('scroll', handleScroll);
@@ -262,8 +262,8 @@ console.log(lesson)
      {/*//*/}
     <div className='SingleCourseEnrollMent'>
      <div className='CourseDetails' id='toppartLesson' >
-     <div className='smallNavigator'><h4 className='navunderline'>Home</h4><h4><i className='fa fa-chevron-right'></i></h4>
-      <h4 className='navunderline'>Courses</h4><h4><i className='fa fa-chevron-right'></i></h4>
+     <div className='smallNavigator'><h4 className='navunderline' onClick={()=>nav('/')}>Home</h4><h4><i className='fa fa-chevron-right'></i></h4>
+      <h4 className='navunderline'  onClick={()=>nav('/UserCourses')}>Courses</h4><h4><i className='fa fa-chevron-right'></i></h4>
       <h4>{CourseDetails[0].CourseName}</h4>
      
      
@@ -308,11 +308,7 @@ console.log(lesson)
         
          </div>
   {/*//*/}
-  <br></br>
-  <br></br>
-  <br></br>
-  <br></br>
-  <br></br>
+
  <div className='second-navbar'>
  <div onClick={handleScrollkey}> Key Features</div>
  <div onClick={handleScrollReq}>Advantages</div>
@@ -337,18 +333,9 @@ console.log(lesson)
  
  
  </div>
- <br></br>
- 
- <br></br>
- <br></br>
- <br></br>
- <br></br>
- <br></br>
- <br></br>
- <br></br>
- <br></br>
+
   {/*//*/}
-  <div className='features'>
+  <div className='feaaatures'>
  <button><i className='fa fa-caret-left '  id='leftBuutonArrow' onClick={handleleftButton}></i></button>
  
  <div className='leftCard'>
@@ -366,7 +353,7 @@ console.log(lesson)
  
  
  
-  <div className="centerCard">
+  <div className="centeerCard">
    <div className='centerCardFront'>
    <img src={featuresArr[centerCardNo].imaage} height='300px' width='250px' />
    <div className="rollcontainer">
@@ -401,17 +388,15 @@ console.log(lesson)
   {/*//*/}
   
  
- <br></br>
- <br></br>
+
    {/*//*/}
   
    <div className='CourseDropDownList'>
    <h2>CONTENT YOU WILL LEARN</h2>
- {CourseDetails[0].CourseLargerDescription.map( (ele,index) =>(<div key={index} className='eachdropbox' ><h3 onClick={()=>handleDropDownList(index)} className='CourseDropHead'  >
+ {CourseDetails[0].CourseLargerDescription.map( (ele,index) =>(<div key={index} className='eachdropbox' ><h4 onClick={()=>handleDropDownList(index)} className='CourseDropHead'  >
  
-   <i className={ele.oldDropDownIcon}></i>{ele.headingName}</h3><div className={CourseDetails[0].CourseLargerDescription[index].condition?'DropDownTail-Visible':'DropDownTail-hidden'}>{ele.headingArr.map((cont,rollno) =><h4  key={rollno}><i className='fa fa-chevron-right'></i><i>{cont}</i></h4>)}</div></div>))}
- <br></br>
- <br></br>
+   <i className={ele.oldDropDownIcon}></i>{ele.headingName}</h4><div className={CourseDetails[0].CourseLargerDescription[index].condition?'DropDownTail-Visible':'DropDownTail-hidden'}>{ele.headingArr.map((cont,rollno) =><h4  key={rollno}><i className='fa fa-chevron-right'></i><i>{cont}</i></h4>)}</div></div>))}
+
   
  
  
@@ -449,7 +434,7 @@ console.log(lesson)
  <div className='twitterclass'><img src='https://th.bing.com/th/id/OIF.U3bRXVZg8LcVoSYFDF72xQ?pid=ImgDet&rs=1' height='20px' width='20px' ></img> <div className='logonamevis'>TWITTER</div></div>
  </div>
  <div >
- <div className='telegramclass'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png' height='20px' width='20px'  ></img> <div className='contacts-column-second logonamevis'> TELEGRAM</div></div>
+ <div className='telegramclass'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png'  ></img> <div className='contacts-column-second logonamevis'> TELEGRAM</div></div>
  <div className='instagramclass' style={{position:'relative',left:'-5px'}}><img src='https://th.bing.com/th/id/OIP.m-Yx687f--Vfv1Zioj2KuAHaHw?pid=ImgDet&rs=1' style={{backgroundColor:"black"}} height='20px' width='20px'></img> <div className='contacts-column-third logonamevis'>INSTAGRAM</div></div>
  <div className='linkedinclass' style={{position:'relative',left:'-5px'}}><img src='https://th.bing.com/th/id/OIP.b5oDvUVU5UVN4cefTJGq3wHaHa?pid=ImgDet&rs=1' height='20px' width='20px'></img> <div className='contacts-column-fourth logonamevis'>LINKEDIN</div></div>
  </div>

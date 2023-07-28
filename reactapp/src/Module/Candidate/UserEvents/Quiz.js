@@ -57,10 +57,10 @@ export default function Quiz() {
   }, []);
 
   function handleSubmit() {
-    // Check if any question is unanswered
+    
     const unansweredQuestions = quizzes.some((ele) => ele.cand === 0);
     if (unansweredQuestions) {
-      // Show alert if any question is unanswered
+    
       alert('Please answer all the questions before submitting.');
     } else {
       const finalans = quizzes.filter((ele) => ele.ans === ele.cand).length;
@@ -71,34 +71,34 @@ export default function Quiz() {
   }
 
   return (
-    <div>
-      <h2>welcome to our competition</h2>
+    <div className='totalquizes'>
+      <h2 className='totalquizesh2' >welcome to our competition</h2>
       {quizzes.map((ele, index) => (
-        <div className='quiz-container' key={index}>
-          <div className='quiz-question'>
+        <div className='quizzz-cooontainer' key={index}>
+          <div className='quizzz-quuuestion'>
             <p>{ele.qus}</p>
-            <div className='quiz-options'>
-              <ul className='quiz-container_ul'>
+            <div className='quizzz-optttions'>
+              <ul className='quizzz-cooontainer_ul'>
                 <li
-                  className={ele.cand === 1 ? 'quiz-container_li' : 'quiz-container_noli'}
+                  className={ele.cand === 1 ? 'quizzz-cooontainer_li' : 'quizzz-cooontainer_noli'}
                   onClick={() => handleoption(0, index)}
                 >
                   {ele.opt1}
                 </li>
                 <li
-                  className={ele.cand === 2 ? 'quiz-container_li' : 'quiz-container_noli'}
+                  className={ele.cand === 2 ? 'quizzz-cooontainer_li' : 'quizzz-cooontainer_noli'}
                   onClick={() => handleoption(1, index)}
                 >
                   {ele.opt2}
                 </li>
                 <li
-                  className={ele.cand === 3 ? 'quiz-container_li' : 'quiz-container_noli'}
+                  className={ele.cand === 3 ? 'quizzz-cooontainer_li' : 'quizzz-cooontainer_noli'}
                   onClick={() => handleoption(2, index)}
                 >
                   {ele.opt3}
                 </li>
                 <li
-                  className={ele.cand === 4 ? 'quiz-container_li' : 'quiz-container_noli'}
+                  className={ele.cand === 4 ? 'quizzz-cooontainer_li' : 'quizzz-cooontainer_noli'}
                   onClick={() => handleoption(3, index)}
                 >
                   {ele.opt4}
@@ -107,21 +107,11 @@ export default function Quiz() {
             </div>
           </div>
 
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+        
         </div>
       ))}
-      <Button onClick={handleSubmit}>submit</Button>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      <Button  className='QuizSubmitBtn' onClick={handleSubmit}>submit</Button>
+   
     </div>
   );
 }

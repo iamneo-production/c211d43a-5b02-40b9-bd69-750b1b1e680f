@@ -107,7 +107,7 @@ function handleLessonadd()
   const description = document.getElementById('description').value;
   const courseid = document.getElementById('courseid').value;
   
-  // Create a new lesson object
+  
   const newLesson = {
  
     title: title,
@@ -116,12 +116,12 @@ function handleLessonadd()
    
   }
 console.log(newLesson)
-  // Add the new lesson object to the lessons array
+
   axios.post('http://localhost:8080/lesson/add', newLesson).then(response => {
-      // Update the LessonAdminDetails state with the added lesson
+ 
       setLessonAdminDetails([...LessonAdminDetails, response.data]);
 
-      // Clear the input fields
+   
       document.getElementById('id').value = '';
       document.getElementById('title').value = '';
       document.getElementById('description').value = '';
@@ -136,7 +136,7 @@ console.log(newLesson)
 useEffect(() => {
   axios.get('http://localhost:8080/lesson/getlesson')
     .then(response => {
-      // Update the LessonAdminDetails state with the fetched data
+  
       setLessonAdminDetails(response.data);
     })
     .catch(error => {
@@ -148,13 +148,9 @@ useEffect(() => {
 return (
     <div>
 
-    <Button className='LessonAddCourse' onClick={() => setModal1Visible(true)}>Add Lesson</Button>
+    <Button className='InstructorAddButton' onClick={() => setModal1Visible(true)}>Add Lesson</Button>
      
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
     <Table >
       <thead>
     <tr>
@@ -185,37 +181,36 @@ return (
     </Table>
 
 
-    <Modal opened={modal1Visible} onClose={() => setModal1Visible(false)} title="Add lesson" className='lessonaddmodal'>
-    <NumberInput placeholder="id" label="id"  id='id' />
-    <br></br>
-    <label>title</label>
-    <Input placeholder="title" id="title"  />
-    <br></br>
-    <label >description</label>
+    <Modal opened={modal1Visible} onClose={() => setModal1Visible(false)} title="Add lesson" >
+    <NumberInput placeholder="id" label="id" className='lessonaddmodal' id='id' />
+    
+    <label className='lessonaddmodal'>title</label>
+    <Input placeholder="title"  id="title"  />
+    
+    <label className='lessonaddmodal'>description</label>
     <Input placeholder="description" id="description" />
-    <br></br>
-    <label>course id</label>
+    
+    <label className='lessonaddmodal'>course id</label>
    
     <select   id="courseid"   >
       <option>{id}</option>
       </select>
-    <br></br>
-    <br></br>
-    <Button onClick={handleLessonadd } >submit</Button>
+   
+    <Button onClick={handleLessonadd } className='lessonaddmodal'>submit</Button>
       </Modal>
       <Modal opened={modal2Visible} onClose={() => setModal2Visible(false)} title="update" className='lessonaddmodal'>
-        <label>Id</label>
-    <Input value={AddId} label="id"  id='id' onChange={handleUpdateId} />
-    <br></br>
-    <label>title</label>
-    <Input value={AddTitle}  id="title" onChange={handleUpdateTitle} />
-    <br></br>
-    <label >description</label>
-    <Input value={AddDescription} id="description" onChange={handleUpdateDescription} />
-    <br></br>
+        <label className='lessonaddmodal'>Id</label>
+    <Input value={AddId} label="id"  id='id'  onChange={handleUpdateId} />
    
-    <br></br>
-    <Button  onClick={handleLessonSubmitUpdate} >submit</Button>
+    <label className='lessonaddmodal'>title</label>
+    <Input value={AddTitle}  id="title" onChange={handleUpdateTitle} />
+    
+    <label  className='lessonaddmodal'>description</label>
+    <Input value={AddDescription} id="description" onChange={handleUpdateDescription} />
+   
+   
+  
+    <Button className='lessonaddmodal'  onClick={handleLessonSubmitUpdate} >submit</Button>
       </Modal>
  
  
