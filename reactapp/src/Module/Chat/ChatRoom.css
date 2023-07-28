@@ -5,7 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.Container {
+.Containerrr {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -21,7 +21,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 10px;
   margin-top: -100px;
-  background-image: url('https://img.freepik.com/premium-vector/social-networks-dating-apps-vector-seamless-pattern_341076-469.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=ais');
 }
 
 
@@ -120,8 +119,7 @@ padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-background-color: #ccc;
-background-image: url('https://img.freepik.com/premium-vector/colorful-geometric-background-with-gradient-motion-shapes-composition_301033-501.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=ais');
+background-color:	#747170;
 
   width: 200px;
 }
@@ -144,6 +142,7 @@ background-image: url('https://img.freepik.com/premium-vector/colorful-geometric
 .profile h2 {
   margin: 0;
   font-size: 18px;
+  color: black;
 }
 
 .member-list ul {
@@ -159,10 +158,10 @@ background-image: url('https://img.freepik.com/premium-vector/colorful-geometric
   font-size: 24px;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
-  background-color: #fff;
+  background-color: 	#747170;
   text-align: center;
+  
   margin-top: -10px;
-  background-image: url('https://img.freepik.com/premium-vector/colorful-geometric-background-with-gradient-motion-shapes-composition_301033-501.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=ais');
 }
 
 .member-list ul li {
@@ -185,7 +184,7 @@ background-image: url('https://img.freepik.com/premium-vector/colorful-geometric
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
- background-image: url('');
+
 }
 
 .message-box {
@@ -199,8 +198,7 @@ background-image: url('https://img.freepik.com/premium-vector/colorful-geometric
 .profile {
   position: relative;
   padding-top: 10px;
-  background-image: url('https://img.freepik.com/premium-vector/colorful-geometric-background-with-gradient-motion-shapes-composition_301033-501.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=ais');
-
+  background-color: 	#747170;
 }
 
 .profile-bar {
@@ -221,13 +219,13 @@ background-image: url('https://img.freepik.com/premium-vector/colorful-geometric
 
 .profile-bar h2 {
   margin: 0;
-  color: #f9f9f9;
+  color: black;
 
 }
 
 .profile h2 {
   margin: 0;
-  color: #f9f9f9;
+  color: black;
 }
 
 
@@ -308,8 +306,7 @@ background-image: url('https://img.freepik.com/premium-vector/colorful-geometric
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #fff;
-  background-image: url('https://img.freepik.com/premium-photo/sunrise-skies-gradient-abstract-background_608068-1452.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.1.1700164988.1685182975&semt=ais');
+  background-color: 	#747170;
 }
 
 .send-message input {

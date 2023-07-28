@@ -1,7 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import imageUrl from'./Asserts/wepik-export-202305271050202fy3.png';
-function About(){
+
   
+
+
+
+
+function About(){
+  const navigate = useNavigate();
+
+  const handleclick=()=>{
+    navigate('/auth');
+  }
+
+
     return(
     
       <section class="hero">
@@ -21,7 +34,7 @@ function About(){
              of the subjects that will be especially useful useful for climbing career ladder.
             </p>
 
-            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-primary" onClick={handleclick}>Get Started</button>
 
           </div>
 

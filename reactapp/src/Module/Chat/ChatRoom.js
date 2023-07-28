@@ -132,7 +132,7 @@ const ChatRoom = () => {
   );
 
   return (
-    <div className="Container">
+    <div className="Containerrr">
       {userData.connected ? (
         <div className="chat-box">
           <div className="member-list">
@@ -170,7 +170,7 @@ const ChatRoom = () => {
                 <h2>Instructor</h2>
               </div>
               <ul className="chat-messages">
-                <div className="message-container">
+                <div className="message-Containerrr">
                   {publicChats.map((chat, index) => (
                     <li className={`message ${chat.senderName === userData.username && "self"}`} key={index}>
                       {chat.senderName !== userData.username && (
