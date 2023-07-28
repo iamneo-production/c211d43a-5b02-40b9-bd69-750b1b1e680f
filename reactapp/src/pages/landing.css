@@ -278,19 +278,19 @@ body { background: var(--white); }
   opacity: 1;
 }
 .main{
-  margin-top: 3970px;
+  margin-top: -20px;
 }
 .screen1{
   width: 100vw;
-  margin-top: 1400px;
+  margin-top: 0px;
 }
 .screen2{
   width: 100vw;
-  margin-top: 1470px;
+  margin-top: 0px;
 }
 .screen3{
   width: 100vw;
-  margin-top: 1050px;
+  margin-top: -20px;
 }
 /*-----------*\
 \*-----------*/
