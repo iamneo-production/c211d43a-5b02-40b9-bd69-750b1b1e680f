@@ -152,21 +152,8 @@ const Listing = () => {
      
       
       const courses = [
-        {
-          title: "Phyton Programing",
-          description: "Learn Python Programming the Easy Way, Complete with Examples, Quizzes, Exercises and more. Learn Python 2 and Python 3.",
-          image: ""
-        },
-        {
-          title: "Artificial Intelligence",
-          description: "Combine the power of Data Science, Machine Learning and Deep Learning to create powerful AI for Real-World applications!",
-          image: "",
-        },
-        {
-          title: "Soft Skills",
-          description: "Learn soft skills for personal development  with over 100 practical tips & develop your soft skills going forward.",
-          image: "",
-        }
+        
+        
       ];
     
       
@@ -203,7 +190,7 @@ const Listing = () => {
 
 
 <div className="new-courses-section">
-  <h2>Newly Launched Courses</h2>
+  
   <div className="courses-container">
     {courses.map((course, index) => (
       <div key={index} className="course-card">
