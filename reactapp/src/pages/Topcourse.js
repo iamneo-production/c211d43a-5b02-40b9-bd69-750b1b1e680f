@@ -3,7 +3,7 @@ import "./landing.css"
 
 function Topcourse(){
 
-  const img1 = 'https://img.freepik.com/premium-vector/ai-artificial-intelligence-wireframed-female-cyborg-hand-touching-digital-graph-interface_127544-264.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=ais';
+const img1 = 'https://img.freepik.com/premium-vector/ai-artificial-intelligence-wireframed-female-cyborg-hand-touching-digital-graph-interface_127544-264.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=ais';
 const img2 = 'https://img.freepik.com/premium-vector/artificial-intelligence-digital-technology-concept-robot-with-hologram-brain-big-data-analytics-illustration_41793-1060.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=ais';
 const img3 = 'https://img.freepik.com/premium-photo/close-up-office-workplace-with-computer-monitors-wooden-desktop-abstract-round-big-data-hologram-blurry-background-code-digital-science-concept-double-exposure_670147-8173.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=ais';
 const img4 = 'https://img.freepik.com/premium-photo/creative-background-male-hand-with-phone_99433-522.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.1.1700164988.1685182975&semt=ais';
