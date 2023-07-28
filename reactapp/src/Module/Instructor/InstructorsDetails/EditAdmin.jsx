@@ -35,18 +35,15 @@ export default function EditAdmin() {
   };
 
   const navigate = useNavigate();
-  const token = localStorage.getItem('token');
-    console.log(token,"hi");
+  // const token = localStorage.getItem('token');
+  //   console.log(token,"hi");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { ...adminData };
 
     axios
-      .put(`${base_url}/admins/${adminid}`,{
-        headers: {
-       'Authorization': `Bearer ${token}`
-     }}, data)
+      .put(`${base_url}/admins/${adminid}`, data)
       .then((response) => {
         alert("Instructor Details Updated Successfully.");
         navigate("/instructordetails");

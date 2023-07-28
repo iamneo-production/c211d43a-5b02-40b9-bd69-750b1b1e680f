@@ -6,16 +6,18 @@ export default function Notes(props) {
   const [inputValue, setInputValue] = useState("");
 
   const [notes, setNotes] = useState();
-  const token = localStorage.getItem('token');
-    console.log(token,"hi");
+
+  // const token = localStorage.getItem('token');
+  //   console.log(token,"hi");
+  //   ,{
+  //     headers: {
+  //    'Authorization': `Bearer ${token}`
+  //  }}
 
 
   // Get Functions 
   const getAllNotes = () => {
-    axios.get(`${base_url}/notes`,{
-      headers: {
-     'Authorization': `Bearer ${token}`
-   }}).then(
+    axios.get(`${base_url}/notes`).then(
       (response) => {
         console.log(response);
         setNotes(response.data);
@@ -40,10 +42,7 @@ export default function Notes(props) {
   };
 
   const postDataToServer = () => {
-    axios.post(`${base_url}/notes`,{
-      headers: {
-     'Authorization': `Bearer ${token}`
-   }}, { notes: inputValue }).then(
+    axios.post(`${base_url}/notes`, { notes: inputValue }).then(
       (response) => {
         console.log(response);
         console.log("Success");
@@ -64,10 +63,7 @@ export default function Notes(props) {
   };
 
   const handledelete=(id)=>{
-      axios.delete(`${base_url}/notes/${id}`,{
-        headers: {
-       'Authorization': `Bearer ${token}`
-     }}).then(
+      axios.delete(`${base_url}/notes/${id}`).then(
         (response)=>{
           updateNotes(id);
         },(error)=>{

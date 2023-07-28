@@ -7,19 +7,20 @@ import base_url from "./api";
 export default function Card(props) {
 
 const navigate = useNavigate();
-const token = localStorage.getItem('token');
-    console.log(token,"hi");
+// const token = localStorage.getItem('token');
+//     console.log(token,"hi");
 
+// ,{
+//   headers: {
+//  'Authorization': `Bearer ${token}`
+// }}
   const LoadEdit =(id) => {
     navigate("/instructor/update/"+id);
   }
 
   const handledelete=(id)=>{
     if(window.confirm('Are you sure you want to remove this Instructor?')){
-      axios.delete(`${base_url}/admins/${id}`,{
-        headers: {
-       'Authorization': `Bearer ${token}`
-     }}).then(
+      axios.delete(`${base_url}/admins/${id}`).then(
         (response)=>{
           alert('Instructor Deleted Successfully.')
           props.update(id);
@@ -40,7 +41,8 @@ const token = localStorage.getItem('token');
         >
           <div data-card="front" className="card__front flow-content">
             <img
-              className="card__img mx-auto"
+              className="mx-auto"
+              id="instructor_card_img"
               src={props.data.src}
               alt="Random images (from Unsplash)"
             />

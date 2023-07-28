@@ -18,7 +18,7 @@ import com.example.springapp.service.NotesService;
 
 @RestController
 // @CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
+@CrossOrigin(origins ="https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
 public class NotesController {
 
     @Autowired

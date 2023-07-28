@@ -34,7 +34,7 @@ main .menu::-webkit-scrollbar {
     top: 0;
     left: 0;
     z-index: 5;
-    min-height: 70px;
+    max-height: 65px;
     max-width: 100%;
     background-color: #060f61;
     padding: 15px;
