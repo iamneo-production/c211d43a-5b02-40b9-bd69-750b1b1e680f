@@ -212,6 +212,7 @@ body { background: var(--white); }
   color: var(--mango-tango);
 }
 
+
 .LandingNavbar {
   position: fixed;
   top: 0;
@@ -225,6 +226,11 @@ body { background: var(--white); }
   z-index: 3;
   margin-top: 20px;
 }
+
+/* #landing-navbar{
+  background: #3e3434;
+  opacity: 0.4;
+} */
 
 .LandingNavbar.active {
   left: 0;
