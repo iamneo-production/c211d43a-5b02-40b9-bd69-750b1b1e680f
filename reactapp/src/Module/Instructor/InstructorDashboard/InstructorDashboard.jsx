@@ -71,7 +71,7 @@ const Top = () => {
             <div className="adminDiv flex">
                 <MdNotifications className='icon'/>
                 <div className="adminnImage">
-                    <img src="" alt="Admin Image"/>
+                    <img src="" alt="Adminimg"/>
                 </div>
             </div>
 
@@ -231,9 +231,9 @@ const Listing = () => {
   );
 };
 
-const Body = () => {
-  // ... (The code for the Body component from before)
-};
+// const Body = () => {
+//   // ... (The code for the Body component from before)
+// };
 
 const Landing = () => {
  
