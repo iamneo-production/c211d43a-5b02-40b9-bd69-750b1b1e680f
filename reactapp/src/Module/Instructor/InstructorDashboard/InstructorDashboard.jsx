@@ -6,6 +6,7 @@ import  {BiSearchAlt} from 'react-icons/bi'
 import { MdNotifications} from 'react-icons/md'
 
 
+
 const EventUpdateBanner = ({ updates }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -154,17 +155,17 @@ const Listing = () => {
         {
           title: "Phyton Programing",
           description: "Learn Python Programming the Easy Way, Complete with Examples, Quizzes, Exercises and more. Learn Python 2 and Python 3.",
-          image: "https://img.freepik.com/premium-photo/python-inscription-text-against-laptop-code-background-learn-python-programming-language_488220-61295.jpg?size=626&ext=jpg&ga=GA1.1.1383474551.1689404268&semt=ais"
+          image: ""
         },
         {
           title: "Artificial Intelligence",
           description: "Combine the power of Data Science, Machine Learning and Deep Learning to create powerful AI for Real-World applications!",
-          image: "https://img.freepik.com/premium-photo/futuristic-robot-artificial-intelligence-concept_31965-6378.jpg?size=626&ext=jpg&ga=GA1.1.1383474551.1689404268&semt=ais",
+          image: "",
         },
         {
           title: "Soft Skills",
           description: "Learn soft skills for personal development  with over 100 practical tips & develop your soft skills going forward.",
-          image: "https://img.freepik.com/free-photo/improvement-summary-personal-development-workflow_53876-125155.jpg?size=626&ext=jpg&ga=GA1.2.1383474551.1689404268&semt=ais",
+          image: "",
         }
       ];
     
@@ -178,7 +179,9 @@ const Listing = () => {
          
          
           <div className="demo-info">
+
   <div className="demo-section">
+    
     <h2>Enrolled student1s</h2>
     <div className="student1-list">
       {enrolledstudent1s.map((student1) => (
@@ -243,8 +246,11 @@ const Landing = () => {
     <div className='container123'>
     <div className='mainContent11'>
       <Top />
+      
       <div className='bottom flex'>
+       
         <Listing />
+        
       </div>
     </div>
     </div>

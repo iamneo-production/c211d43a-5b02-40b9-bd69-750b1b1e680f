@@ -41,6 +41,7 @@ import Courses from './pages/Courses';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Instructor from './pages/Instructor';
+import Chat from './Module/Chat/Chat';
 
 import Admin from "./Module/Instructor/InstructorsDetails/Admin";
 import AddAdmin from "./Module/Instructor/InstructorsDetails/AddAdmin";
@@ -106,6 +107,7 @@ function App() {
           <Route path="/instructor/add" element={<AddAdmin />} />
           <Route path="/instructor/update/:adminid" element={<EditAdmin />} />
           <Route path='/lesson' element={<Main/>}/>
+          <Route path='/Chat' element={<Chat/>}/>
         </Routes>
       </Router>
     </>
