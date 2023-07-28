@@ -1,11 +1,17 @@
 import React from "react";
-import "./landing.css"
+import { useNavigate } from "react-router-dom";
+
 
 function About(){
-  const imageUrl = 'https://lh3.googleusercontent.com/pw/AIL4fc_MP150Q9ops_CKAx2wDSl8RUvU58FDRAVmN7wh9Dwqt8H1gM4ktffRffdcxxnPmmgSoJqXB1I48qNYHzO0gsD0k1k1Z5uuEsiLcR83T65MhVSda5HswrtS-eyDJTC1MNCLepsoZEvVsPbQd2T_Gj8NdijtbE7ic34ygq9EzAqtZEKiNtrC8IlI5etn7ESb30LB5WI5bLmfOXLKyncrcTCKnheTzPG4MrUIvX9c5zVNLTROfdGyRb06F54cyF7a22hh41V7Akg4yrcYfO4PnWWN8QWz8YnNicmALWZRcZXrWmy1JrL_stz08vYHP7UATOm6Hp_Wz9fd3p6TFU8Na7ZVIbs3zNLYZHT79VbExy-6eORxSKESJwx-CIBkV3WnBmkcFhqMKqZWkyCpb7isp8WrYNS_4gu6fwqSzoRmhU2E-tJn2KJUf-jM-RISw12RqEPwkP1CE3lfg4zudOyrE8bSUaLFHlL3Enii9hIeEf92jo1occPs5IpnRxtSGAiOKAfMerhwtBKBZALh7MUsCSzdOsR2_U2FTwnAIC0TFj9roiNN1J2tbiTDNC668fgxQnEEuDXXAtg8P9ok60j3huXb9r7dgO5QYajlmRIKOHV4njoB5zXJEAMeCIs5Jur36iK6LLxNfIP58d6joKcvxywvuxn_F7lOjL015dWE0TW9p7D7vle31MT5uFCMe1rz7yFLl_bw7mTJnc01VE3F-qrnn83ZKUlCHEpny4IMRFD32atU5DP3CfeujBLUSXvPF4Oyfaboo_V1swe5ep25CXQmUNDYS78DjmbClhYbUBYHeddujfKQJS_PthJXkZzVCv_qwJfp1hz4endio0C9zpNaNEwijgm2RwELoo-Q05L2oI7pH0hn6PZDi_LLvj5M7KHlYYFqOMGSxTO0NY4oCYDd=w854-h854-s-no?authuser=0';
+  const navigate = useNavigate();
+
+  const handleclick=()=>{
+    navigate('/auth');
+  }
+  const imageUrl = 'https://lh3.googleusercontent.com/pw/AIL4fc9WFK311ylzAhF0RK4DT0qRxmQhPce0LeVux0G7Hvh5oxcE9lnBR0LTaj-a9YCTAroAkedEePnQkVJOPxXsrHjw6Yt6xvA_dmNm7zMjoJKqKZRqN1bACsKx1cJQL6TC9rrU8nZ3R3wHtO5ofrJZ6EfdHEMGAZOFZsWuJIGxqfm0Vpt4yvji6Uls8j1QLJLQYIo_-30czh16RqkeafwthtDyp2yqnfENLXLx4xJLDPBaJFePNHD6xLEW8MU669zepXgu5oKbgTiGUUbdJ5zb-2etJXJt8ws6kiloMlUBIgt5RLlEnvBp09BGYgLEASPLdpGUGzwC2VZ-1keY7Azohn0KamfMW6VydobO4crBzz41rM3zmiAzqn1oWwpMcRxlh2FpCumswYc-nR_miaphjwmK5UwfA03ZeCFTyb6PH3iUTjaKi5IS_DwjtgU4lSOU9pw8ItbBvTJMm_lY0Qt9eeCEIqCcG7lhQNnxkqYfz-haLVmv9AV4XIYzDZ4mYxFifELXax_qFhUJT1ILtarei621ZYQ4_Z6FTC8F0rXdlqE5DcpMBmWjuSbEj6xXfegSLfilukxRCzfPrwElTeJxSphR1Vr7-D5Yp84Z87XCp8MpkcD0oGSrH0ti2wuz9N2lph9P9Xd57Q53qFo_qANwjFvQkFXLDXDygSwdZ5x7FVsGwSSf5o5J-ssvs8beT6SXq_FfXNLWVT917gwxAOQFJdZqIPTO-2OymCz6Vnf1ahzPbcvHfBswngS0ePNcdy9QUkk1bUFkrKmMZvBZUkegeJwGduDk4Ij1Zli0449C9llzkFN76UwQXHyjnf7yNocpLWiUabPprbM3kYUAtsWL_ohhP1eP-k4o2swHVPVtnOjXxv36IZJ69fdD8HEsVfKBp4upOojWQf9nXngr-7gRVanN=w854-h854-s-no?authuser=0';
     return(
     
-        <section class="hero">
+      <section class="hero">
         <div class="container">
 
           <figure class="hero-banner">
@@ -22,7 +28,7 @@ function About(){
              of the subjects that will be especially useful useful for climbing career ladder.
             </p>
 
-            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-primary" onClick={handleclick}>Get Started</button>
 
           </div>
 

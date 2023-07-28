@@ -128,6 +128,9 @@ function InstructorCourses() {
       });
   };
   
+  function handlenavcourse(id){
+   // nav(`/InstructorLesson/${id}`)
+    }
 
 
 
@@ -159,7 +162,7 @@ function InstructorCourses() {
               <td>{ele.title}</td>
               <td>{ele.description}</td>
               <td>{ele.instructorId}</td>
-              <Button className="tableButton">Add Lesson</Button>
+              <Button className="tableButton" onClick={()=>handlenavcourse(ele.id)}>Add Lesson</Button>
               <br />
               <br />
             </tr>

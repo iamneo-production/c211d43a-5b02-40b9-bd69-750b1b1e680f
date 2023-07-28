@@ -1,12 +1,17 @@
 import React from "react";
-import "./landing.css"
+import { useNavigate } from "react-router-dom";
+
 
 function Ctc(){
+  const navigate = useNavigate();
+
+  const handleclick=()=>{
+    navigate('/auth');
+  }
     return(
         <div>
 <div class="cta">
-        <div class="container">
-
+        <div className="container">
           <div class="title-wrapper">
 
             <h2 class="h2 cta-title">
@@ -15,7 +20,7 @@ function Ctc(){
               
             </h2>
 
-            <button class="btn btn-primary">Register Now</button>
+            <button class="btn btn-primary" onClick={handleclick}>Register Now</button>
 
           </div>
 
@@ -24,6 +29,7 @@ function Ctc(){
         </div>
       </div>
       </div>
+      
     );
 }
 export default Ctc;
