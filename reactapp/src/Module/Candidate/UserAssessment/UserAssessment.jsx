@@ -3,6 +3,7 @@ import React, { useState,useEffect } from 'react';
 import "./UserAssessment.css";
 import axios from 'axios';
 import {Modal} from '@mantine/core';
+import NavCandidate from '../../../Components/NavCandidate';
 
 
 function UserAssessment() {
@@ -28,6 +29,7 @@ function UserAssessment() {
   
   return (
     <div>
+      <NavCandidate/>
       <h1>Assessment</h1>
       <button className='end' onClick={()=>setPop(true)}>End Test</button>
 

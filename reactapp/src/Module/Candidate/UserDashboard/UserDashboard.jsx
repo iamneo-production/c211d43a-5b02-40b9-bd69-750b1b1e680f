@@ -80,7 +80,7 @@ function UserDashboard() {
   };
 
   const handleFeatureClick3 = () => {
-    navigate("#");
+    navigate("/chatRoom");
     console.log("Clicked on Feature 2");
   };
 

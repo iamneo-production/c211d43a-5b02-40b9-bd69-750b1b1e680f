@@ -51,6 +51,7 @@ export default function Nav(props) {
               <NavLink label="Events" onClick={() => navigate('/Events')} style={navLinkStyle} />
               <NavLink label="Instructor" onClick={() => navigate('/InstructorDetails')} style={navLinkStyle} />
               <NavLink label="Candidate" onClick={() => navigate('/Trainee')} style={navLinkStyle} />
+              <NavLink label="Chat" onClick={() => navigate('/chat')} style={navLinkStyle} />
               <NavLink label="Settings" onClick={() => navigate('/InstructorSettings')} style={navLinkStyle} />
 
           </Navbar>
