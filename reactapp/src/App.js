@@ -52,6 +52,7 @@ import UserLesson from './Module/Candidate/UserCourses/UserLesson';
 import Quiz from './Module/Candidate/UserEvents/Quiz';
 import ScorePage from './Module/Candidate/UserEvents/ScorePage';
 import AdminEvent from './Module/Instructor/Events/AdminEvent';
+import ChatRoom from './Module/Chat/ChatRoom';
 
 
 function App() {
@@ -102,7 +103,7 @@ function App() {
           <Route path='/Video' element={<Video/>}/> 
           <Route path='/Home' element={<Home/>}/>
           <Route path='/Instructor' element={<Instructor/>}/>
-
+           <Route path='/ChatRoom' element={<ChatRoom/>}/>
           {/* <Route path="/instructordetails" element={<Admin/>} /> */}
           <Route path="/instructor/add" element={<AddAdmin />} />
           <Route path="/instructor/update/:adminid" element={<EditAdmin />} />

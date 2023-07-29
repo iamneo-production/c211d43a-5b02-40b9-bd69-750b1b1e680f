@@ -156,7 +156,7 @@ function Landing(){
                   
                   <tr class="flex">
                      <td class="flex">
-                        <img src="images/user.jpeg" width="30px" height="30px" alt=""/>
+                        <img src="https://img.freepik.com/premium-photo/portrait-happy-young-casual-man-standing_171337-29744.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=sph" width="30px" height="30px" alt=""/>
                         <div>
                            <h5>John Doe</h5>
                            <small>STUDENT</small>
@@ -171,7 +171,7 @@ function Landing(){
                   </tr>
                   <tr class="flex">
                      <td class="flex">
-                        <img src="images/user.jpeg" width="30px" height="30px" alt=""/>
+                        <img src="https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.1.1700164988.1685182975&semt=sph" width="30px" height="30px" alt=""/>
                         <div>
                            <h5>Dalton Hodges</h5>
                            <small>STUDENT</small>
@@ -186,7 +186,7 @@ function Landing(){
                   </tr>
                   <tr class="flex">
                      <td class="flex">
-                        <img src="images/user.jpeg" width="30px" height="30px" alt=""/>
+                        <img src="https://img.freepik.com/free-photo/young-woman-with-round-glasses-yellow-sweater_273609-7091.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=sph" width="30px" height="30px" alt=""/>
                         <div>
                            <h5>Shaja Khan</h5>
                            <small>Joseph Morris</small>
@@ -201,7 +201,7 @@ function Landing(){
                   </tr>
                   <tr class="flex">
                      <td class="flex">
-                        <img src="images/user.jpeg" width="30px" height="30px" alt=""/>
+                        <img src="https://img.freepik.com/premium-photo/young-handsome-man-with-beard-isolated-keeping-arms-crossed-frontal-position_1368-132662.jpg?w=900" width="30px" height="30px" alt=""/>
                         <div>
                            <h5>Hector McCarthy</h5>
                            <small>STUDENT</small>
@@ -216,7 +216,7 @@ function Landing(){
                   </tr>
                   <tr class="flex">
                      <td class="flex">
-                        <img src="images/user.jpeg" width="30px" height="30px" alt=""/>
+                        <img src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=sph" width="30px" height="30px" alt=""/>
                         <div>
                            <h5>Louie Tapia</h5>
                            <small>STUDENT</small>
@@ -231,7 +231,7 @@ function Landing(){
                   </tr>
                   <tr class="flex">
                      <td class="flex">
-                        <img src="images/user.jpeg" width="30px" height="30px" alt=""/>
+                        <img src="https://img.freepik.com/free-photo/indian-man-smiling-cheerful-expression-closeup-portrait_53876-129387.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=sph" width="30px" height="30px" alt=""/>
                         <div>
                            <h5>Watson Freeman</h5>
                            <small>STUDENT</small>
@@ -246,7 +246,7 @@ function Landing(){
                   </tr>
                   <tr class="flex">
                      <td class="flex">
-                        <img src="images/user.jpeg" width="30px" height="30px" alt=""/>
+                        <img src="https://img.freepik.com/free-photo/positive-young-caucasian-male-with-pleasant-friendly-smile-shows-white-teeth-rejoices-new-stage-life-wears-casual-striped-sweater-round-spectacles-stands-alone-against-pink-wall_273609-14966.jpg?size=626&ext=jpg&uid=R104530040&ga=GA1.2.1700164988.1685182975&semt=sph" width="30px" height="30px" alt=""/>
                         <div>
                            <h5>Andi Carey</h5>
                            <small>STUDENT</small>
