@@ -1,9 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
 :root {
   --main-color: #006eff;
   --text-grey: #8390a2;
   --text-white: #000000;
+  --shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+
+
+
+
+.main-content{
+  --main-color: #006eff;
+  --text-grey: #8390a2;
+  --text-white: #fff;
   --shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -169,14 +192,12 @@ main{
   margin-right: 15px;
   color: var(--text-grey);
   opacity: .5;
-  color:black;
 }
 
 .wrapper{
   margin-top: 50px;
   flex-wrap: wrap;
   align-items: flex-start;
-  color:black;
 }
 
 .customers,.projects{
@@ -215,7 +236,6 @@ table{
   padding: 15px 20px;
   font-size: 15px;
   border-collapse: collapse;
-  color:black;
 }
 
 thead{

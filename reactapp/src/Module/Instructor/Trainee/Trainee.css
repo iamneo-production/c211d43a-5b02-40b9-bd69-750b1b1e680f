@@ -11,22 +11,26 @@
 *::after {
   box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   font-family: Lato, sans-serif;
   font-size: 15px;
   line-height: 1.6;
 }
+
 #Trainee-Body {
   background: #0d1a2d;
   padding: 2rem;
 }
+
 #Trainee {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 .trainee-card_image img {
   max-width: 13vw;
   max-height: 34vh;
@@ -34,6 +38,9 @@ body {
   box-shadow: -3px 3px 0px 0 rgb(57, 147, 162);
   display: block;
   margin-left: 2rem;
+  cursor: none;
+  margin-right: 0;
+  border-radius: 0;
 }
 
 .trainee-card {
@@ -78,6 +85,7 @@ body {
   font-weight: bold;
   font-family: Merriweather, serif;
 }
+
 .trainee-card_details p {
   font-size: 1rem;
   text-align: center;
@@ -100,12 +108,12 @@ body {
   display: inline;
 }
 
-#add{
+#add {
   position: relative;
   height: 10vh;
 }
 
-#addIcon{
+#addIcon {
   position: absolute;
   height: 6vh;
   bottom: 1.5vh;
@@ -113,4 +121,3 @@ body {
   cursor: pointer;
   font-size: 3.5rem
 }
-
