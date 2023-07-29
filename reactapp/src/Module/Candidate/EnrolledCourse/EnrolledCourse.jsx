@@ -57,7 +57,7 @@ function EnrolledCourses(){
                 <div class="en-enrollmentdetails">
                   <p class="enrolled-started">{course.description}</p>
                 </div>
-                <Button className="enbtn" variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>Continue</Button>
+               <div> <Button className="enbtn" variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>Continue</Button></div>
               </div>
              
             </div>
