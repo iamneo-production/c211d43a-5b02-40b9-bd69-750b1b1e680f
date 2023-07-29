@@ -27,7 +27,7 @@ function Landing(){
          <div class="admin-box flex" >
             <img src="" width="30px" height="30px" alt="Admin image"/>
             <div>
-               <h4>Abinath</h4>
+               <h4>Profile</h4>
                <small>Admin</small>
             </div>
          </div>
