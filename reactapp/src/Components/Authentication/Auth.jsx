@@ -114,9 +114,9 @@ function App() {
             <div className="input-field">
               <i className="fas fa-user"></i>
               <input
-                type="text"
+                type="password"
                 placeholder="Password"
-                name="email"
+                name="password"
                 value={signInFormData.password}
                 onChange={handleSignInChange}
                 required
