@@ -80,7 +80,7 @@ function App() {
           <Route path="/NavAdmin" element={<NavAdmin/>} />
           <Route path="/InstructorDashboard" element={<NavAdmin><InstructorDashboard/></NavAdmin>}/>
           <Route path="/InstructorCourses" element={<NavAdmin><InstructorCourses/></NavAdmin>}/>
-          <Route path="/InstructorLesson/:id" element={<NavAdmin><InstructorLesson/></NavAdmin>}/>
+          <Route path="/InstructorLesson" element={<NavAdmin><InstructorLesson/></NavAdmin>}/>
           <Route path="/InstructorDetails" element={<NavAdmin><Admin/></NavAdmin>}/>
           <Route path="/InstructorSettings" element={<NavAdmin><InstructorSettings/></NavAdmin>}/>
           <Route path="/Trainee" element={<NavAdmin><Trainee/></NavAdmin>}/>
