@@ -3,10 +3,6 @@ import axios from 'axios';
 import './UserSettings.css';
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Group, Button, TextInput } from '@mantine/core';
-import axios from 'axios';
-
-import { useDisclosure } from '@mantine/hooks';
-import { Modal, Group, Button, TextInput } from '@mantine/core';
 import NavCandidate from '../../../Components/NavCandidate';
 
 
