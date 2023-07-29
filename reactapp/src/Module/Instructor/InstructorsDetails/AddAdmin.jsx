@@ -78,7 +78,7 @@ export default function AddAdmin() {
         <span></span>
         <span></span>
         Submit</button>
-        <Link to="/instructordetails">
+        {/* <Link to="/instructordetails"> */}
       <button className="mx-4 instructor_create_admin">
         <span></span>
         <span></span>
@@ -86,7 +86,7 @@ export default function AddAdmin() {
         <span></span>
         Back
       </button>
-      </Link>
+      {/* </Link> */}
       </div>
     </form>
   </div> 
