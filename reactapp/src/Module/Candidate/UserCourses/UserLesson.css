@@ -1,0 +1,897 @@
+:root
+{
+--Body-Background: #ffffff ;
+--Card-Designs: #334a5b ;
+--Heading-Text: #ffffff;
+--Content-Text: #000000;
+--Highlight-Text:rgb(0, 255, 174);
+
+}
+#toppartLesson
+{
+    margin-top: 32px;
+}
+body
+{
+    background-color: var(--Body-Background);
+    overflow-x: hidden;
+    overflow-y:scroll;
+    font-family: 'Courier New', Courier, monospace;
+}
+.CourseHeadBottomTable
+{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+background-color: black;
+opacity: 70%;
+border-radius: 20px;
+
+}
+.CourseHeadBottomTable div{
+    margin-left: 10px;
+}
+.CourseHeadBottomTable div h4{
+    color: white;
+}
+
+
+
+.vl {
+    margin-top: 20px;
+    border-left: 2px solid rgb(255, 255, 255);
+    height: 70px;
+  }
+
+.PriceDiff
+{
+    background-color:lightsalmon;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 160px;
+}
+.CoursePrices
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.CoursePrices_h2{
+    margin-right: 15px;
+
+}
+.smallNavigator
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.TableuIntro
+{
+    color: yellow;
+}
+
+.smallNavigator h4 i{
+    height: 10px;
+    width: 20px;
+    color: red;
+
+}
+
+
+
+
+.navunderline:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.DropDownTail-Visible
+{
+    
+    display: flex;
+    flex-direction: column;
+ transition: all 5s ease;
+    height: 100hv;
+    width: 100hv;
+    visibility: visible;
+}
+.oldCoursePrice
+{
+    text-decoration:line-through;
+}
+.TypesOfCourses
+{
+    display: flex;
+    flex-direction: row;
+ 
+    
+}
+
+.TypesOfCourses div{
+
+
+    margin-left: 100px;
+}
+  
+
+
+
+.DropDownTail-hidden
+{
+    display: flex;
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+
+   
+}
+
+.CourseDropHead
+{
+
+
+width: 600px;
+cursor: context-menu;
+}
+
+
+
+.SingleCourseEnrollmentTotal select
+{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.eachdropbox
+{
+    transition: all .5s ease;
+    box-shadow: 0rem 0rem 0.2rem 0rem black;
+    width: 600px;
+  border-radius: 1%;
+  margin-bottom: 10px;
+    
+}
+
+.CourseIncludes :hover
+{
+    color: #1e7f5f;
+}
+.CourseDropDownList
+{
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+     padding-left: 200px;
+     
+     color: #000000;
+}
+
+
+.SingleCourseEnrollMent
+{
+
+display: flex;
+flex-direction: row;
+font-family: 'Times New Roman', Times, serif;
+margin-left: 60px;
+
+}
+
+#cardfixeddiv{
+    position: relative;
+    left: 6%;
+}
+#cardinput
+{
+    
+    width: 330px;
+    height: 30px;
+}
+
+
+.cardrelative input
+{
+    width: 330px;
+    height: 30px;
+}
+
+.cardrelative
+{
+    position: fixed;
+    left: 70%;
+    top: 20%;
+
+    align-items: start;
+    
+    display: flex;
+    height: 500px;
+    width: 400px;
+    flex-direction:column;
+    justify-content: space-around;
+    border-radius: 0.4rem;
+    
+    background-color: rgb(253, 253, 253);
+    overflow: hidden;
+   color: #000000;    
+   box-shadow: #000000 0rem 0rem 1rem 0rem;
+}
+.cardfixed
+{
+    position: absolute;
+    left: 70%;
+    top: 1655px;
+
+    align-items: start;
+    
+    display: flex;
+    height: 500px;
+    width: 400px;
+    flex-direction:column;
+    justify-content: space-around;
+    border-radius: 0.4rem;
+    
+    background-color: rgb(253, 253, 253);
+    overflow: hidden;
+   color: #000000;    
+   box-shadow: #000000 0rem 0rem 1rem 0rem;
+}
+
+.cardrelative button
+{
+    width: 300px;
+    background-color:rgb(0, 172, 0);
+    height: 40px;
+    border-radius: 5px;
+    border-color: #ffffff;
+    font-size: large;
+    color: white;
+    width: 350px;
+}
+
+.cardrelative h3{
+    position: relative;
+    left: 5px;
+    height: 30px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: lightgreen;
+    color: #006666;
+   width:350px ;
+}
+
+.cardrelative i{
+    position: absolute;
+    right: 300px;
+    top: 10%;
+
+}
+
+.cardrelative button:hover
+{
+    background-color: rgb(3, 152, 3);
+   
+}
+.cardrelative button
+{
+    width: 300px;
+    background-color:rgb(0, 172, 0);
+    height: 40px;
+    border-radius: 5px;
+    border-color: #ffffff;
+    font-size: large;
+    color: white;
+    width: 350px;
+}
+.cardfixed button
+{
+    width: 300px;
+    background-color:rgb(0, 172, 0);
+    height: 40px;
+    border-radius: 5px;
+    border-color: #ffffff;
+    font-size: large;
+    color: white;
+    width: 350px;
+}
+
+.cardfixed h3{
+    position: relative;
+    left: 5px;
+    height: 30px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: lightgreen;
+    color: #006666;
+   width:350px ;
+}
+
+.cardfixed i{
+    position: absolute;
+    right: 300px;
+    top: 10%;
+
+}
+
+.cardfixed button:hover
+{
+    background-color: rgb(3, 152, 3);
+   
+}
+
+
+
+
+.SingleCourseEnrollmentTotal i{
+    color: #000000;
+    margin-right: 2px;
+}
+
+
+
+.second-navbar div
+{
+    
+width: 200px;
+}
+
+.second-navbar div:hover{
+    text-decoration: underline;
+   
+}
+
+.second-navbar
+{
+    background-color: #fefefe;
+    
+    display: flex;
+    flex-direction: row;
+   margin-left: 100px;
+   
+    color: #000000;
+}
+.Horizontaolline
+{
+width: 1000px;
+position: relative;
+
+left: 200px;
+
+}
+.contactDetails i{
+    color: #ffffff;
+}
+.Contacts{
+    position: relative;
+    left: 200px;
+    display: flex;
+    flex-direction: row;
+}
+.lastdescription
+{
+    width: 400px;
+}
+
+.contactDetails
+{
+
+display: flex;
+flex-direction: column;
+justify-content:space-around;
+height: 400px;
+background: black;
+color: white;
+position: relative;
+left:0px;
+margin-top: 324px;
+
+
+}
+.contacts-column div{
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+.contacts-column
+{
+    display: flex;
+    flex-direction: row;
+  
+}
+
+
+.facebookclass
+{
+position: relative;
+left: -5px;
+}
+
+.twitterclass
+{
+    position: relative;
+    left: 2px;
+}
+.telegramclass
+{
+    position: relative;
+    left: -8px;
+}
+.contacts-column div div img
+{
+    border-radius: 20px;
+}
+
+.linkedinclass img
+{
+    border: #000000;
+    background-color: #fefefe;
+}
+.instagramclass
+{
+    left: 100px;
+}
+
+
+
+
+
+.SingleCourse-TopPart
+{
+   
+    
+    height: 500px;
+    padding-left: 10px;
+    width: 1450px;
+        background: linear-gradient(to bottom, #006666 0%, #66ff33 100%);
+        
+    margin-left: -15px;
+    color: white;
+}
+
+.CourseContent h2
+{
+    color: var(--Content-Text);
+}
+
+
+.CourseContent 
+{
+    color: var(--Content-Text);
+     display: flex;
+     flex-direction: column;
+     padding-top: 100px;
+     padding-left: 200px;
+    color: #000000;
+    
+}
+
+
+
+.CourseContent div:hover
+{
+color: #1e7f5f;
+transition: all .5s ease;
+
+}
+
+.CourseIncludes
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 100px;
+   color: #000000;
+}
+
+
+.CourseLargeDescription
+{
+    
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+        padding-left: 200px;  
+        color: #000000;
+}
+.keyFeaturesChild div{
+    margin-right: 100px;
+}
+.centerCard
+{
+    border-radius: 25px;
+    width: 250px;
+    color: #000000;
+    transition: all .5s ease;
+    display: flex;
+    
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+}
+
+.centerCard:hover
+{
+    transform: rotateY(180deg);
+}
+.centerCardFront img{
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.centerCardFront h4{
+   position: relative;
+   left: 5%;
+}
+
+.leftCard h4{
+    position: relative;
+    left: 5%;
+}
+
+.rightCard h4
+{
+    position: relative;
+    left: 5%;
+}
+
+.centerCardFront
+{
+    position: absolute;
+    border-radius: 15px;
+    top: 140%;
+    left: 0px;
+    width: 250px;
+    backface-visibility: hidden;
+    color: white;
+    background-color:  #009900;;
+}
+.rightCard
+{
+    background-color: #009900;
+    border-radius: 15px;
+    transform: scale(0.8);
+    opacity: 50%;
+    width: 250px;
+}
+
+.rightCardimage
+{
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.leftCardimage
+{
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.leftCard
+{
+    background-color: #009900;
+    border-radius: 15px;
+    width: 250px;
+    transform: scale(0.8);
+    opacity: 50%;
+}
+
+.centerCardBackq
+{
+    
+    position: absolute;
+left: 10px;
+top: 0px;
+}
+.features
+{
+    position: relative;
+    left: 100px;
+    display: flex;
+    flex-direction: row;
+ 
+}
+.features button i{
+    color: #000000;
+}
+.features button
+{
+  background-color: white;
+  border: white;
+
+  
+    color: #000000;
+    margin-top: 60px;
+}
+.centerCardBack
+{
+      position: absolute;
+      border-radius: 15px;
+    top: 140%;
+    height: 350px;
+    width: 250px;
+    left: 0px;
+    background-color:violet;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    
+}
+
+.smallchild{
+    background-color:rgb(234, 233, 233) ;
+width: 300px;
+height: 60px;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+    color: rgb(0, 0, 0);
+
+}
+.keyFeaturesChild
+{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.keyFeatures
+{
+    display: flex;
+    flex-direction: column;
+    
+}
+.logonamevis
+{
+ position: absolute;
+ width: 100px;
+ top: 0px;
+
+}
+.contacts-column-second
+{
+    display: flex;
+    
+   left: 30%;
+   top: 0%;
+    flex-direction: column;
+}
+.contacts-column-third
+{
+    display: flex;
+    
+   
+   top: 30%;
+    flex-direction: column;
+}.contacts-column-fourth
+{
+    display: flex;
+    
+   
+   top: 60%;
+    flex-direction: column;
+}
+.CourseLargeDescription
+{
+    max-width: 400px;
+   
+}
+.error-icon-two-hidden
+{
+    visibility: hidden;
+}
+
+.error-icon-one-hidden
+{
+    visibility: hidden;
+}
+#error-icon-two
+{
+    position: absolute;
+    top: 55px;
+    left: 300px;
+color: red;
+}
+#error-icon-one
+{
+    position: absolute;
+    top: 55px;
+    left: 300px;
+color: red;
+}
+.emailInput
+{
+    border: 1px solid red;
+}
+.phoneInput
+{
+    border:1px solid  red;
+}
+
+@media screen and (max-width:1330px){
+   
+  .CourseHeadBottomTable
+  {
+    width: 520px;
+  }
+   .cardfixed
+   {
+    position: relative;
+    margin-top: 100px;
+    left: 0px;
+    
+    background-color: white;
+    visibility: hidden;
+   }
+
+   .cardrelative
+   {
+   
+    position: relative;
+    margin-top: 100px;
+    left: 0px;
+    
+    background-color: white;
+
+   }
+
+   .SingleCourseEnrollMent
+   {
+    flex-direction: column;
+   }
+  
+   .Horizontaolline
+   {
+   width: 700px;
+   position: relative;
+   
+   left: 200px;
+   
+   }
+
+  
+}
+@media screen and (max-width:926px)
+{
+    .Horizontaolline
+    {
+    width: 300px;
+    position: relative;
+    
+    left: 200px;
+    
+    }
+ 
+} 
+@media screen and (max-width:1242px)
+{
+.logonamevis
+{
+ visibility: hidden;
+}
+}
+
+@media screen and (max-width:1000px) {
+
+    
+.features
+{
+margin-left: -100px;
+}
+
+#leftBuutonArrow
+{
+    position: relative;
+    left: 200px;
+ 
+}
+
+#rightBuutonArrow
+{
+    position: relative;
+    left: -190px;
+}
+
+.leftCard
+{
+    visibility: hidden;
+}
+
+.rightCard
+{
+    visibility: hidden;
+}
+
+}
+
+
+
+
+@media screen and (max-width:840px){
+.eachdropbox
+{
+    width: 300px;
+}
+}
+
+@media screen and (max-width:1222px) {
+    .TypesOfCourses div{
+        position: relative;
+        left: 100px;
+        margin-left: 10px;
+    }
+    .TypesOfCourses {
+        left: 70px;
+
+   
+    }
+
+    .contacts-column div{
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+.contactDetails
+{
+    left: 0px;
+}
+}
+
+@media screen and (max-width:800px)
+{
+
+    .SingleCourse-TopPart
+    {
+        position: relative;
+        left: -80px;
+        width: 1000px;
+    }
+
+  
+}
+@media screen and (max-width:650px) 
+{
+    .SingleCourse-TopPart
+    {
+        position: relative;
+        left: -80px;
+        width: 850px;
+    }
+
+    .features
+    {
+        position: relative;
+        left: 100px;
+      
+     
+    }
+
+    
+
+    .keyFeaturesChild
+    {
+        width: 600px;
+    }
+
+    .CourseHeadBottomTable
+    {
+        
+        width:450px;
+    }    
+    .keyFeaturesChild div{
+        margin-right: 20px;
+        width: 230px;
+    }
+    .CourseDropDownList
+    {
+        position: relative;
+        left: 50px;
+    }
+}  
