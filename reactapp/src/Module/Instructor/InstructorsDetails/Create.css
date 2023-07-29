@@ -63,6 +63,9 @@ html {
   display: flex;
   margin-top: 40px;
 }
+#instructor_action-button a{
+  transform: scale(1);
+}
 
 .instructor_login-box .instructor_user-box input:focus ~ label,
 .instructor_login-box .instructor_user-box input:valid ~ label {
