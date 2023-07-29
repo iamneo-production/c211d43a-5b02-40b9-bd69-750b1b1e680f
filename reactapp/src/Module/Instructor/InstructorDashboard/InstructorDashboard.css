@@ -3,7 +3,7 @@
 :root {
   --main-color: #006eff;
   --text-grey: #8390a2;
-  --text-white: #fff;
+  --text-white: #000000;
   --shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -169,12 +169,14 @@ main{
   margin-right: 15px;
   color: var(--text-grey);
   opacity: .5;
+  color:black;
 }
 
 .wrapper{
   margin-top: 50px;
   flex-wrap: wrap;
   align-items: flex-start;
+  color:black;
 }
 
 .customers,.projects{
@@ -213,6 +215,7 @@ table{
   padding: 15px 20px;
   font-size: 15px;
   border-collapse: collapse;
+  color:black;
 }
 
 thead{
