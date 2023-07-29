@@ -14,14 +14,17 @@ const Video = () => {
     <>
       <Navbar />
 
-      <div className="video">
-        <video className="back-video" autoPlay loop muted>
+      <div className="video-background-container" id="video-background-container">
+        <video className="video-background" autoPlay loop muted>
           <source src={videoUrl} type="video/mp4" />
         </video>
 
         <div className="video-content">
-          <h1>A better learning starts here</h1>
-          <button className="btn btn-primary" onClick={handleclick}>Get Started</button>
+
+          <h1 className="video-title">A better learning starts here</h1>
+          <button className="btn btn-primary video-button">Get Started</button>
+
+        
         </div>
       </div>
     </>

@@ -19,10 +19,7 @@ return(
      </Link>
       
 
-      <div className="menu-open-btn button" >
-        <ion-icon name="menu-outline"></ion-icon>
-      </div>
-
+      
       <nav className="LandingNavbar" data-LandingNavbar>
 
         <button className="menu-close-btn" data-menu-close-btn>
