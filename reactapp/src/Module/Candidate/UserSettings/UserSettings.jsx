@@ -7,6 +7,7 @@ import axios from 'axios';
 
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Group, Button, TextInput } from '@mantine/core';
+import NavCandidate from '../../../Components/NavCandidate';
 
 
 function UserSettings() {
@@ -45,6 +46,8 @@ function UserSettings() {
   }, []);
   const [opened, { open, close }] = useDisclosure(false);
   return (
+    <div>
+      <NavCandidate/>
     <div className='main-container-settings'>
       <div className='settings-coverpage'>
         <picture>
@@ -114,6 +117,7 @@ function UserSettings() {
             </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
