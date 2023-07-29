@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.springapp.service.LessonService;
-import com.example.springapp.model.Course;
 import com.example.springapp.model.Lesson;
 
 import java.util.List;
@@ -29,20 +28,14 @@ public class LessonController {
         return new ResponseEntity<>(createdLesson, HttpStatus.CREATED);
     }
 
-//    @GetMapping
-//    public ResponseEntity<List<Lesson>> getLessonAll(@RequestBody Lesson lesson) {
-//        List<Lesson> lessons = lessonService.getLessonAll(lesson);
-//        return new ResponseEntity<>(lessons, HttpStatus.OK);
-//    }
-    
-    @GetMapping("/getlesson")
-    public List<Lesson> getLesson() {
-    	List<Lesson> les=lessonService.getLessonAll();
-        return les;
+    @GetMapping("")
+    public ResponseEntity<List<Lesson>> getLessonAll() {
+        List<Lesson> lessons = lessonService.getLessonAll();
+        return new ResponseEntity<>(lessons, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Lesson> getLessonById(@PathVariable("id") int id) {
+    public ResponseEntity<Lesson> getLessonById(@PathVariable("id") Long id) {
         try {
             Lesson lesson = lessonService.getLessonById(id);
                 return new ResponseEntity<>(lesson, HttpStatus.OK);
@@ -52,7 +45,7 @@ public class LessonController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Lesson> updateLesson(@PathVariable("id") int id, @RequestBody Lesson lesson) {
+    public ResponseEntity<Lesson> updateLesson(@PathVariable("id") Long id, @RequestBody Lesson lesson) {
         Lesson updatedLesson = lessonService.updateLesson(lesson);
         if (updatedLesson != null) {
             return new ResponseEntity<>(updatedLesson, HttpStatus.OK);
@@ -62,7 +55,7 @@ public class LessonController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteLesson(@PathVariable("id") int id) {
+    public ResponseEntity<Void> deleteLesson(@PathVariable("id") Long id) {
         lessonService.deleteLesson(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

@@ -12,7 +12,7 @@ import com.example.springapp.model.Lesson;
 public class LessonService {
     private LessonRepository lessonRepository;
 
-//    @Autowired
+    @Autowired
     public LessonService(LessonRepository lessonRepository) {
         this.lessonRepository = lessonRepository;
     }
@@ -25,7 +25,7 @@ public class LessonService {
         return lessonRepository.findAll();
     }
 
-    public Lesson getLessonById(int id) {
+    public Lesson getLessonById(Long id) {
         return lessonRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Lesson not found with ID: " + id));
     }
@@ -35,13 +35,13 @@ public class LessonService {
         if (existingLesson != null) {
             existingLesson.setTitle(lesson.getTitle());
             existingLesson.setDescription(lesson.getDescription());
-//            existingLesson.setcourseId(lesson.getcourseId());
+            existingLesson.setcourseId(lesson.getcourseId());
             return lessonRepository.save(existingLesson);
         }
         return null; // or handle the case when the lesson is not found
     }
 
-    public void deleteLesson(int id) {
+    public void deleteLesson(Long id) {
         lessonRepository.deleteById(id);
     }
 }

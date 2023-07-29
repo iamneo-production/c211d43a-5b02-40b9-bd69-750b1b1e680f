@@ -3,9 +3,9 @@ package com.example.springapp.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 import com.example.springapp.repository.EnrollmentRepository;
 import com.example.springapp.model.Enrollment;
 
@@ -22,15 +22,15 @@ public class EnrollmentService {
         return enrollmentRepository.save(enrollment);
     }
 
-    public ArrayList<Enrollment> getEnrollmentByUserId(int id) {
-        return enrollmentRepository.findByUserId(id);
+    public Optional<Enrollment> getEnrollmentById(Long id) {
+        return enrollmentRepository.findById(id);
     }
 
     public List<Enrollment> getAllEnrollments() {
         return enrollmentRepository.findAll();
     }
 
-    public void unenrollUserFromCourse(int id) {
+    public void unenrollUserFromCourse(Long id) {
         enrollmentRepository.deleteById(id);
     }
 }

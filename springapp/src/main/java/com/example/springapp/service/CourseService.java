@@ -1,3 +1,4 @@
+
 package com.example.springapp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,54 +7,43 @@ import org.springframework.stereotype.Service;
 import com.example.springapp.model.Course;
 import com.example.springapp.repository.CourseRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
 @Service
 public class CourseService {
-
-    private final CourseRepository courseRepo;
+    private CourseRepository courseRepository;
 
     @Autowired
-    public CourseService(CourseRepository courseRepo) {
-        this.courseRepo = courseRepo;
+    public CourseService(CourseRepository courseRepository) {
+        this.courseRepository = courseRepository;
     }
 
-    public Course saveDetail(Course course) {
-        return courseRepo.save(course);
+    public Course createCourse(Course course) {
+        return courseRepository.save(course);
     }
 
-    public List<Course> showAll() {
-        return courseRepo.findAll();
+    public List<Course> getAllCourses() {
+        return courseRepository.findAll();
     }
 
-    public Course getById(int courseId) {
-        return courseRepo.findById(courseId).orElse(null);
+    public Optional<Course> getCourseById(Long id) {
+        return courseRepository.findById(id);
     }
 
-    public String deleteCourse(int courseId) {
-        courseRepo.deleteById(courseId);
-        return "Course Id " + courseId + " deleted Successfully";
-    }
-
-    public Course updateCourse(Course course) {
-        Optional<Course> existingCourseOptional = courseRepo.findById(course.getId());
-
+    public Course updateCourse(Long id, Course updatedCourse) {
+        Optional<Course> existingCourseOptional = courseRepository.findById(id);
         if (existingCourseOptional.isPresent()) {
             Course existingCourse = existingCourseOptional.get();
-            existingCourse.setTitle(course.getTitle());
-            existingCourse.setDescription(course.getDescription());
-            existingCourse.setInstructorId(course.getInstructorId());
-
-            return courseRepo.save(existingCourse);
+            existingCourse.setTitle(updatedCourse.getTitle());
+            existingCourse.setDescription(updatedCourse.getDescription());
+            existingCourse.setInstructorId(updatedCourse.getInstructorId());
+            return courseRepository.save(existingCourse);
         } else {
-            throw new IllegalArgumentException("Course not found with ID: " + course.getId());
+            throw new IllegalArgumentException("Course not found with ID: " + id);
         }
     }
-    
-    public ArrayList<Course> getCoursesById(List<Integer> ids){
-    	return courseRepo.findByIdIn(ids);
-    }
 
+    public void deleteCourse(Long id) {
+        courseRepository.deleteById(id);
+    }
 }
