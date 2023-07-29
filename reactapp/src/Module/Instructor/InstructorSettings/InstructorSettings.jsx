@@ -11,7 +11,7 @@ function InstructorSettings() {
     // Function to fetch user data from the backend
   const fetchInstructorData = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/instructors/settings/2');
+      const response = await axios.get('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/instructors/settings/2');
       setInstructorData(response.data);
     } catch (error) {
       console.error('Error fetching instructor data:', error);
@@ -20,7 +20,7 @@ function InstructorSettings() {
 
   const updateInstructor = async (updatedData) => {
     try {
-      const response = await axios.put('http://localhost:8080/api/instructors/settings/2', updatedData);
+      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/instructors/settings/2', updatedData);
     } catch (error) {
       console.error('Error updating instructor data:', error);
     }

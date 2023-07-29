@@ -7,10 +7,10 @@ import { Modal, Group, Button, TextInput } from '@mantine/core';
 
 function UserSettings() {
   const [userData, setUserData] = useState([]);
-  // Function to fetch user data from the backend
+  //Function to fetch user data from the backend
   const fetchUserData = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/users/settings/1');
+      const response = await axios.get('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/users/settings/1');
       setUserData(response.data);
     } catch (error) {
       console.error('Error fetching user data:', error);
@@ -19,7 +19,7 @@ function UserSettings() {
   
   const updateUser = async (updatedData) => {
     try {
-      const response = await axios.put('http://localhost:8080/api/users/settings/1', updatedData);
+      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/users/settings/1', updatedData);
     } catch (error) {
       console.error('Error updating user data:', error);
     }
@@ -54,6 +54,7 @@ function UserSettings() {
           </div>
           <div className='username-settings'>
             <div className='mr-auto'>
+              {/* <h2 style={{color:'black'}}>Vignesh Chowdary</h2> */}
             <h2 id='user-name' style={{color:'black'}}>{userData.firstName + ' ' + userData.lastName}</h2>
             </div>
             <Modal opened={opened} onClose={close} title="Profile Management" >
@@ -106,6 +107,7 @@ function UserSettings() {
                   <p className='private-to-you'></p>
                 </div>
                 <h4>{userData.email}</h4>
+                {/* <h4>rayankivignesh@gmail.com</h4> */}
               </div>
             </div>
         </div>
