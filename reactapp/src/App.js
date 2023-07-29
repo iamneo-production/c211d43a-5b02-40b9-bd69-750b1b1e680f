@@ -52,7 +52,8 @@ import UserLesson from './Module/Candidate/UserCourses/UserLesson';
 import Quiz from './Module/Candidate/UserEvents/Quiz';
 import ScorePage from './Module/Candidate/UserEvents/ScorePage';
 import AdminEvent from './Module/Instructor/Events/AdminEvent';
-import ChatRoom from './Module/Chat/ChatRoom';
+import UserPayment from './Module/Candidate/UserPayment/UserPayment';
+import UserPaySuccess from './Module/Candidate/UserPayment/UserPaySuccess';
 
 
 function App() {
@@ -76,6 +77,9 @@ function App() {
           <Route path="/UserHelpcenter" element={<UserHelpcenter />} />
           <Route path="/EnrolledCourse" element={<EnrolledCourse/>}/>
           <Route path="/UserLesson/:a" element={<UserLesson />} />
+           <Route path='/UserPayment' element={<UserPayment />} />
+           <Route path="/UserPaySuccess" element={<UserPaySuccess />}  />
+
 
           <Route path="/NavAdmin" element={<NavAdmin/>} />
           <Route path="/InstructorDashboard" element={<NavAdmin><InstructorDashboard/></NavAdmin>}/>
@@ -86,7 +90,7 @@ function App() {
           <Route path="/Trainee" element={<NavAdmin><Trainee/></NavAdmin>}/>
           <Route path="/Assessment" element={<NavAdmin><Assessment/></NavAdmin>}/>
           <Route path="/Events" element={<NavAdmin><AdminEvent /></NavAdmin>}/>
-     
+          
 
           <Route index element={<Home/>}/>
           <Route path='/Navbar' element={<Navbar/>}/>

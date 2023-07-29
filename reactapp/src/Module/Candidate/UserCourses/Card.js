@@ -2,14 +2,18 @@ import React from 'react';
 import AIImage from '../UserCourses/AllCourses/AIImage.jpg';
 import "./UserCourses.css"
 import { Button } from '@mantine/core';
+import { useNavigate } from 'react-router-dom';
 
 export default function  Card({ele2,ele,ele1})
 {
-  
+  const nav = useNavigate();
   function handleNavigate(a)
 {
- 
- //nav(`/UserLesson/${a}`)
+  
+  useEffect(() => {
+
+    localStorage.setItem("courseid",a);
+ nav(`/UserLesson/${a}`)
 }
     return(
 
