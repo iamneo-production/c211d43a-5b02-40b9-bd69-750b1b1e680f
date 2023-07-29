@@ -3,7 +3,7 @@ import './Auth.css';
 import { MdSpaceDashboard, MdOutlineMenuBook, MdCollectionsBookmark, MdLeaderboard } from "react-icons/md";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 
 
 
@@ -16,8 +16,7 @@ function App() {
     // role:'admin',
   });
   const [signUpFormData, setSignUpFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name:'',
     email: '',
     password: ''
   });
@@ -43,34 +42,48 @@ function App() {
   const handleSignInSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/candidate/login', signInFormData)
-      .then((resp) => {
-        if (resp.data !== "Auth Failed") {
-          // Auth successful
-          Cookies.set("token", resp.data);
-          navigate('/Dashboard');
-          
-        } else {
-          // Auth failed
-          alert("User not found");
-        }
+    .post('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/users/login', signInFormData)
+    .then((resp) => {
+      // console.log("Ji");
+      // console.log(resp.data.userId);
+      console.log(resp.data.token!==null);
 
-      })
-      .catch((err) => {
-        alert("User not found")
-      });
-  };
+      if (resp.data.token!==null) {
+        let listvar = resp.data.token.role[0].authority;
+        localStorage.setItem("token",resp.data.token.token);
+        localStorage.setItem("id",resp.data.userId);
+
+        console.log(resp.data.token);
+        // console.log(resp.data.token.token);
+        console.log(localStorage.getItem("id"));
+        // console.log(signUpFormData.name);
+        if (listvar === 'ROLE_USER' ) {
+          navigate('/UserDashboard');
+        } else if(listvar === 'ROLE_ADMIN') {
+          navigate('/InstructorDashboard');
+        }
+      }
+      else {
+        // Auth failed
+        alert("Invalid Credentials");
+      }
+      // console.log(resp.data);
+    })
+    .catch((err) => {
+      // alert(err.response.data);
+      alert("User not found")
+    });
+    
+};
   
   
 
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/candidate/register', signUpFormData).then((response) => {
-      // alert(JSON.stringify(response.data));
+    axios.post('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/users/new', signUpFormData).then((response) => {
         alert("User Registered Successfully")
-        // navigate("/Dashboard")
         setIsSignUpMode(!isSignUpMode)
-      // console.log(response.data);
+     
     }).catch(err => {
       alert(err.response.data);
      
@@ -85,7 +98,7 @@ function App() {
       <div className="forms-container">
         <div className="signin-signup">
 
-          <form className="sign-in-form" onSubmit={ handleSignInSubmit} >
+          <form className="sign-in-form auth_form" onSubmit={ handleSignInSubmit} >
             <h2 className="title">Sign in</h2>
             <div className="input-field">
               <i className="fas fa-user"></i>
@@ -99,11 +112,11 @@ function App() {
               />
             </div>
             <div className="input-field">
-              <i className="fas fa-lock"></i>
+              <i className="fas fa-user"></i>
               <input
-                type="password"
+                type="text"
                 placeholder="Password"
-                name="password"
+                name="email"
                 value={signInFormData.password}
                 onChange={handleSignInChange}
                 required
@@ -129,15 +142,15 @@ function App() {
 
 
 
-          <form className="sign-up-form" onSubmit={handleSignUpSubmit}>
+          <form  className="sign-up-form auth_form" onSubmit={handleSignUpSubmit}>
             <h2 className="title">Sign up</h2>
             <div className="input-field">
               <i className="fas fa-user"></i>
               <input
                 type="text"
-                placeholder="Firstname"
-                name="firstName"
-                value={signUpFormData.firstName}
+                placeholder="Name"
+                name="name"
+                value={signUpFormData.name}
                 onChange={handleSignUpChange}
                 required
               />

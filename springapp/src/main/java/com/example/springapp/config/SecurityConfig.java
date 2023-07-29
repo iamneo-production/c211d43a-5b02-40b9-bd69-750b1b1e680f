@@ -16,13 +16,19 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
+import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
 
-	public static final String[] ENDPOINTS_WHITELIST = { "/users/authenticate", "/users/new", "/users/welcome" };
+	public static final String[] ENDPOINTS_WHITELIST = { "/users/login", "/users/new", "/users/welcome","/candidate/getalluser","/admins","/trainee","/admins/{adminId}","/notes","/notes/{notesId}" };
 
 //	@Autowired
 //	private CorsConfigurationSimple corsConfigurationSimple;
@@ -40,11 +46,12 @@ public class SecurityConfig {
 //	}
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeHttpRequests().antMatchers(ENDPOINTS_WHITELIST).permitAll()
-				.antMatchers("/users/**").authenticated().and().sessionManagement()
+		http.cors() .and() .authorizeHttpRequests().antMatchers(ENDPOINTS_WHITELIST).permitAll()
+				.anyRequest().authenticated().and().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.authenticationProvider(authenticationProvider())
 				.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
+				http.csrf().disable();
 
 		return http.build();
 	}
@@ -71,4 +78,18 @@ public class SecurityConfig {
 	public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
 		return config.getAuthenticationManager();
 	}
+	
+//	  @Bean
+//	    public CorsConfigurationSource corsConfigurationSource() {
+//	        CorsConfiguration configuration = new CorsConfiguration();
+//	        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000")); // Set the allowed origin domains
+//	        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE")); // Set the allowed HTTP methods
+//	        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type,Accept, X-Requested-With")); // Set the allowed headers
+//	        configuration.setAllowCredentials(true); // Enable support for credentials (e.g., cookies)
+//
+//	        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//	        source.registerCorsConfiguration("/**", configuration);
+//	        return source;
+//	    }
+	
 }

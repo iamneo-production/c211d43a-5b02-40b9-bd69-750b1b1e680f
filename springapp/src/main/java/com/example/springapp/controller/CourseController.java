@@ -9,19 +9,18 @@ import com.example.springapp.model.Course;
 import com.example.springapp.service.CourseService;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "https://8081-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/")
 @RequestMapping("/course")
 public class CourseController {
-    private final CourseService courseService;
+	@Autowired
+    private  CourseService courseService;
 
-    @Autowired
-    public CourseController(CourseService courseService) {
-        this.courseService = courseService;
-    }
 
-    @PostMapping
+	// @CrossOrigin(origins = "http://localhost:3000")
+    
+    @PostMapping("/add")
     public ResponseEntity<Course> createCourse(@RequestBody Course course) {
         Course createdCourse = courseService.saveDetail(course);
         if (createdCourse != null) {
@@ -31,9 +30,11 @@ public class CourseController {
         }
     }
 
+	// @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping
     public List<Course> getAllCourses() {
-        return courseService.showAll();
+    	List<Course> cou=courseService.showAll();
+        return cou;
     }
 
     @GetMapping("/{id}")
@@ -65,4 +66,6 @@ public class CourseController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    
+   
 }

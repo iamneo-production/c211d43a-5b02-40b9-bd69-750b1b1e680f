@@ -12,7 +12,7 @@ import com.example.springapp.model.Lesson;
 public class LessonService {
     private LessonRepository lessonRepository;
 
-    @Autowired
+//    @Autowired
     public LessonService(LessonRepository lessonRepository) {
         this.lessonRepository = lessonRepository;
     }
@@ -21,7 +21,7 @@ public class LessonService {
         return lessonRepository.save(lesson);
     }
 
-    public List<Lesson> getLessonAll(Lesson lesson) {
+    public List<Lesson> getLessonAll() {
         return lessonRepository.findAll();
     }
 
@@ -35,7 +35,7 @@ public class LessonService {
         if (existingLesson != null) {
             existingLesson.setTitle(lesson.getTitle());
             existingLesson.setDescription(lesson.getDescription());
-            // existingLesson.setcourseId(lesson.getcourseId());
+//            existingLesson.setcourseId(lesson.getcourseId());
             return lessonRepository.save(existingLesson);
         }
         return null; // or handle the case when the lesson is not found

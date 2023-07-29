@@ -35,7 +35,7 @@
   z-index: 5;
 }
 
-form {
+.auth_form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +96,7 @@ form.sign-in-form {
 .input-field input::placeholder {
   color: #aaa;
   font-weight: 500;
+ text-align:left;
 }
 
 .social-text {
@@ -220,6 +221,7 @@ form.sign-in-form {
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .right-auth-panel .auth-image,

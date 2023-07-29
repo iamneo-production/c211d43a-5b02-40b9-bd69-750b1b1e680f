@@ -10,10 +10,11 @@ const Contact = () => {
   return (
 
      <>
+     <div className='screen3'>
      <Navbar/>
        <section class="contact">
   <div class="container">
-    <form action="" onsubmit="sendEmail(); reset(); return false;">
+    <form action="" onsubmit="sendEmail(); reset(); return false;" id='landing-form'>
         <h2>GET IN TOUCH</h2>
         <input type="text" id="name" placeholder="Enter your name" required/>
         <input type="email" id="mail" placeholder="Enter id" required/>
@@ -26,6 +27,7 @@ const Contact = () => {
 </section>
 <Ctc/>
 <Footer/>
+</div>
    </>
   );
 }

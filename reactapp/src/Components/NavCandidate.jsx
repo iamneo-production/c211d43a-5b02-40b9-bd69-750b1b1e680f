@@ -1,131 +1,82 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./NavCandidate.css";
-import {   NavLink } from "react-router-dom";
-import { BsPersonCircle } from "react-icons/bs";
-import { MdSpaceDashboard,MdOutlineMenuBook,MdCollectionsBookmark,MdLeaderboard,MdSettings,MdHelp } from "react-icons/md";
-// import { HoverCard, Avatar, Text, Group, Anchor, Stack } from '@mantine/core';
-import { Menu, Text } from '@mantine/core';
-import { UnstyledButton, Group, Avatar } from '@mantine/core';
-// import { IconSettings, IconSearch, IconPhoto, IconMessageCircle, IconTrash, IconArrowsLeftRight } from '@tabler/icons-react';
+import { Group, Menu, Text, UnstyledButton } from '@mantine/core';
+import { TbHelpCircle } from 'react-icons/tb';
 
+function NavCandidate()
+{
 
+  
+const navigate=useNavigate()
 
+const dashboard =()=>{
+  navigate("/UserDashboard")
+}
 
-const NavCandidate = ({ children }) => {
+const courses =()=>{
+  navigate("/UserCourses")
+}
+
+const events =()=>{
+  navigate("/UserEvents")
+}
+
+const assessment =()=>{
+  navigate("/UserAssessment")
+}
+
+const helpCenter=()=>{
+  navigate("/UserHelpCenter")
+}
+
 
   return (
     <>
         
-        <header className="can-navbar">
-    <a href="/UserDashboard" className="navlogo">ACADEMIA</a>
-    <div className="navlinkwrap">
-      <span className="navlink">
-      
-
-      <Menu shadow="md" width={200}>
-      <Menu.Target>
-      <UnstyledButton className="unStyledbtn">
-      <Group>
-        <Avatar size={40} color="blue">BH</Avatar>
-        <div>
-          <Text>Bob Handsome</Text>
-          <Text size="xs" color="dimmed">bob@handsome.inc</Text>
-        </div>
-      </Group>
-    </UnstyledButton>
-      </Menu.Target>
-
-      <Menu.Dropdown>
-        {/* <Menu.Label>Application</Menu.Label> */}
-        <Menu.Item  >Profile</Menu.Item>
-        <Menu.Item  >Logout</Menu.Item>
-      </Menu.Dropdown>
-    </Menu>
-
-      </span>
+        <header className="sa-navbar">
+    <a href="/Dashboard" className="navlogo">ACADEMIA</a>
+    <div class="navlinkwrap">
+  <span class="navlink" onClick={dashboard}>Home</span>
+  <span class="navlink" onClick={courses}>Courses</span>
+  <div class="dropdown">
+    <span class="navlink"  onClick={events}>Events</span>
+    <div class="dropdown-content">
+      <a href="/UserEvents"> Events</a>
+      <a href="/UserDashboard">MyEvents</a>
+      {/* <a href="#">Option 3</a> */}
     </div>
-  </header>
-  <main>
-  <div style={{display:"flex"}}>
-          <aside className="menu">
-            <nav className="primary">
-              <ul>
-                <li className="menu-item">
-                  <NavLink
-                    to="/UserDashboard"
-                    activeclassname="active-menu-item"
-                    className="menu-item"
-                  >
-                    <span className="icon"><MdSpaceDashboard/></span>
-                    <span className="desc">Dashboard</span>
-                  </NavLink>
-                </li>
+  </div>
+  <span class="navlink" onClick={assessment}>Assessments</span>
+</div>
+<div class="nav-profile">
+ 
+  <Menu shadow="md" width={200}>
+<Menu.Target>
+<UnstyledButton className="unStyledbtn">
+<Group>
+  {/* <Avatar size={40} color="blue">BH</Avatar> */}
+  <div className="help-icon" ><TbHelpCircle size={20} onClick={helpCenter} /></div>
+  <div>
+    <Text className="txt-head">Bob Handsome</Text>
+    {/* <Text size="xs" color="dimmed">bob@handsome.inc</Text> */}
+  </div>
+</Group>
+</UnstyledButton>
+</Menu.Target>
 
-                <li className="menu-item">
-                  <NavLink
-                    to="/UserCourses"
-                    activeclassname="active-menu-item"
-                    className="menu-item"
-                  >
-                    <span className="icon"><MdOutlineMenuBook/></span>
-                    <span className="desc">Courses</span>
-                  </NavLink>
-                </li>
-
-                <li className="menu-item">
-                  <NavLink
-                    to="/UserCourses"
-                    activeclassname="active-menu-item"
-                    className="menu-item"
-                  >
-                    <span className="icon"><MdCollectionsBookmark/></span>
-                    <span className="desc">MyCourses</span>
-                  </NavLink>
-                </li>
-
-                <li className="menu-item">
-                  <NavLink
-                    to="/UserLeaderboard"
-                    activeclassname="active-menu-item"
-                    className="menu-item"
-                  >
-                    <span className="icon"><MdLeaderboard/></span>
-                    <span className="desc">Leaderboard</span>
-                  </NavLink>
-                </li>
-
-                <li className="menu-item">
-                  <NavLink
-                    to="/UserSettings"
-                    activeclassname="active-menu-item"
-                    className="menu-item"
-                  >
-                    <span className="icon"><MdSettings/></span>
-                    <span className="desc">Settings</span>
-                  </NavLink>
-                </li>
-                <li className="menu-item">
-                  <NavLink
-                    to="/UserHelpCenter"
-                    activeclassname="active-menu-item"
-                    className="menu-item"
-                  >
-                    <span className="icon"><MdHelp/></span>
-                    <span className="desc">HelpCenter</span>
-                  </NavLink>
-                </li>
-                
-                </ul>
-                  
-            </nav>
-            {/* <span></span> */}
-            <span className="expander iconoir-arrow-right"></span>
-          </aside>
-          <main>{children}</main>
-          </div>
-        </main>
+<Menu.Dropdown>
+  {/* <Menu.Label>Application</Menu.Label> */}
+  <Menu.Item  >Profile</Menu.Item>
+  <Menu.Item  >Logout</Menu.Item>
+</Menu.Dropdown>
+</Menu>
+</div>
+ </header>
+ 
     </>
   );
 };
 
 export default NavCandidate;
+

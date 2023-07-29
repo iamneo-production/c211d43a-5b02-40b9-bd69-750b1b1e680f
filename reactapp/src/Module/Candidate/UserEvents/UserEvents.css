@@ -1,0 +1,35 @@
+.AllEvents
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.eventcard
+{
+    margin-top: 200px;
+    margin-left: 20px;
+
+
+
+}
+
+
+.AllEvents {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    justify-content: space-between;
+  }
+  
+  .eventcard {
+    margin-bottom: 20px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .AllEvents {
+      justify-content: center;
+    }
+  }
+  

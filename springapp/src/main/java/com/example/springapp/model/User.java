@@ -21,8 +21,8 @@ public class User {
 
     private String role;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Enrollment> enrollments = new HashSet<>();
+    // @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    // private Set<Enrollment> enrollments = new HashSet<>();
 
     public User() {
     }
@@ -83,11 +83,11 @@ public class User {
         this.role = role;
     }
 
-    public Set<Enrollment> getEnrollments() {
-        return enrollments;
-    }
+    // public Set<Enrollment> getEnrollments() {
+    //     return enrollments;
+    // }
 
-    public void setEnrollments(Set<Enrollment> enrollments) {
-        this.enrollments = enrollments;
-    }
+    // public void setEnrollments(Set<Enrollment> enrollments) {
+    //     this.enrollments = enrollments;
+    // }
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.springapp.model.Course;
 import com.example.springapp.repository.CourseRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -49,6 +50,10 @@ public class CourseService {
         } else {
             throw new IllegalArgumentException("Course not found with ID: " + course.getId());
         }
+    }
+    
+    public ArrayList<Course> getCoursesById(List<Integer> ids){
+    	return courseRepo.findByIdIn(ids);
     }
 
 }

@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+#Trainee-Body {
+  background: #0d1a2d;
+  padding: 2rem;
+}
+#Trainee {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.trainee-card_image img {
+  max-width: 13vw;
+  max-height: 34vh;
+  border: 3px solid #ffff;
+  box-shadow: -3px 3px 0px 0 rgb(57, 147, 162);
+  display: block;
+  margin-left: 2rem;
+}
+
+.trainee-card {
+  background: #000000;
+  /* min-width: 23vw; */
+  width: 24vw;
+  height: 37vh;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0px 0px 0 #3198cc;
+  position: relative;
+  box-shadow: #14578e 5px 10px 0 0;
+  margin: 2rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.trainee-card:hover {
+  background-color: #212121;
+  box-shadow: #20d8d8 5px 10px 0 0;
+}
+
+.trainee-row {
+  display: flex;
+  align-items: center;
+}
+
+.trainee-card_image {
+  margin-left: -5rem;
+}
+
+.trainee-card_details {
+  /* margin: 1rem; */
+  padding: 2.5vw;
+}
+
+.trainee-card_details h1 {
+  font-size: 2.2rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  color: #ffff;
+  text-align: center;
+  font-weight: bold;
+  font-family: Merriweather, serif;
+}
+.trainee-card_details p {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 3rem;
+  color: #f5f5f5;
+}
+
+.trainee-social_links {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  /* padding-right: 5rem; */
+}
+
+.trainee-social_links a {
+  text-decoration: none;
+  margin-left: 1rem;
+  color: whitesmoke;
+  display: inline;
+}
+
+#add{
+  position: relative;
+  height: 10vh;
+}
+
+#addIcon{
+  position: absolute;
+  height: 6vh;
+  bottom: 1.5vh;
+  right: 2.4vw;
+  cursor: pointer;
+  font-size: 3.5rem
+}
+
