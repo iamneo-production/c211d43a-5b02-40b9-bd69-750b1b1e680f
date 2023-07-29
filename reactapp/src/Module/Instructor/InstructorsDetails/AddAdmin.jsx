@@ -79,7 +79,7 @@ export default function AddAdmin() {
         <span></span>
         Submit</button>
         <Link to="/instructordetails">
-      <button className="mx-4 instructor_create_admin">
+      <button className="mx-4 instructor_create_admin" >
         <span></span>
         <span></span>
         <span></span>

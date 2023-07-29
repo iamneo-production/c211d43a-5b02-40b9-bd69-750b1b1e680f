@@ -63,8 +63,8 @@ export default function Admin() {
 
   return (
     <div id="instructor">
-      <section>
-        <div className="container flow-content">
+      <section id="instructor-section">
+        <div className="instructor-container flow-content">
           <h2 className="section-title">Instructor Details</h2>
           <ul role="list" className="grid" data-columns="3">
             {admin &&
@@ -85,12 +85,12 @@ export default function Admin() {
           </ul>
           <div className="card" id="addcard" >
             <div data-card="front" className="card__front flow-content">
-              <Link to="/instructor/add">
+              <Link to="/instructor/add" style={{transform: "scale(1)"}}>
                 <button className="Custom_add_button">
                   <i className="fa-solid fa-plus card__toggle-icon"></i>
                 </button>
               </Link>
-              <p className="card__name" style={{ marginTop: "4rem" }}>
+              <p className="card__name" style={{ marginTop: "4rem"}}>
                 Add Instructor
               </p>
             </div>
