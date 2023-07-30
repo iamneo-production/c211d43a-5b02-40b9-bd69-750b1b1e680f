@@ -1,9 +1,6 @@
 import NavCandidate from '../../../Components/NavCandidate';
 import './UserLeaderboard.css';
 import React, { useState } from 'react';
-
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"></link>
 import card from './cardData';
 import tabledata from './tableData';
 
