@@ -7,9 +7,11 @@ import { TbHelpCircle } from 'react-icons/tb';
 function NavCandidate()
 {
 
-  
 const navigate=useNavigate()
 
+const handle=()=>{
+  navigate('/UserSettings');
+}
 const dashboard =()=>{
   navigate("/UserDashboard")
 }
@@ -71,7 +73,7 @@ const profile=()=>{
 
 <Menu.Dropdown>
   {/* <Menu.Label>Application</Menu.Label> */}
-  <Menu.Item  onClick={profile}>Profile</Menu.Item>
+  <Menu.Item onClick={handle}  >Profile</Menu.Item>
   <Menu.Item  >Logout</Menu.Item>
 </Menu.Dropdown>
 </Menu>

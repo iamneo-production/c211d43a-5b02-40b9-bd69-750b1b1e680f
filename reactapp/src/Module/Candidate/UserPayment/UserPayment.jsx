@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
-import "./UserPayment.css"
+import "./UserPayments.css"
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
@@ -15,11 +15,11 @@ const [orgUserId,setorgUserId] =useState(202)
     {
 
 
-    const b =     pay.some( ele => ele.userId==orgUserId)
+    const b = pay.some( ele => ele.userId===orgUserId)
     console.log(b)
     if(b){
         // If 'a' is true, use axios.put
-        const a =     pay.filter( ele => ele.userId==orgUserId)
+        const a =     pay.filter( ele => ele.userId===orgUserId)
         console.log(a)
         const newCourse = {
        
