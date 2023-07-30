@@ -22,6 +22,9 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
+			<id>1690214984246</id>
+=======
 			<id>1689060508554</id>
 			<name></name>
 			<type>30</type>
@@ -103,6 +106,7 @@
 	<filteredResources>
 		<filter>
 			<id>1689242999717</id>
+>>>>>>> cbcc8086123e777ae0e44922a5de302ddd5bee28
 			<name></name>
 			<type>30</type>
 			<matcher>

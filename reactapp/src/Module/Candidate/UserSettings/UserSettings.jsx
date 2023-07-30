@@ -1,168 +1,124 @@
 import React, { useState, useEffect } from 'react';
-import NavCandidate from '../../../Components/NavCandidate';
+import axios from 'axios';
 import './UserSettings.css';
+import { useDisclosure } from '@mantine/hooks';
+import { Modal, Group, Button, TextInput } from '@mantine/core';
+import NavCandidate from '../../../Components/NavCandidate';
 
-const Settings = () => {
-  const [selectedNavItem, setSelectedNavItem] = useState('');
 
-  const handleNavItemClick = (navItem) => {
-    setSelectedNavItem(navItem);
+function UserSettings() {
+  const [userData, setUserData] = useState([]);
+  //Function to fetch user data from the backend
+  const fetchUserData = async () => {
+    try {
+      const response = await axios.get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/users/login/api/users/settings/${userId}');
+      setUserData(response.data);
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+    }
   };
-
-  const renderMainContent = () => {
-    if (selectedNavItem === 'Close Account') {
-      return (
-        <>
-        <div><NavCandidate/></div>
-        <div className="main-content-settings">
-          <div className='Head-tag-settings'>
-            <h2>Close Account</h2>
-          </div>
-          
-          <p className='tagline'>Close your account permanently</p>
-          <div className="warning-container">
-            <p>
-              <strong>Warning:</strong> If you close your account, you will be unsubscribed from all your courses and will lose access forever.
-            </p>
-            <button className='delete-btn'>Close Account</button>
-            
-          </div>
-        </div>
-        </>
-      );
-    } else if (selectedNavItem === 'Photo') {
-      return (
-        <div className="main-content-settings">
-          <div className='Head-tag-settings'>
-          <h2>Photo</h2>
-          </div>
-          <p className='tagline'>Add a nice photo of yourself for your profile</p>
-          <div className='image-preview-tag'>Image preview:</div>
-          <div className="image-preview" style={{ backgroundImage: 'url(https://png.pngtree.com/png-clipart/20210915/ourmid/pngtree-user-avatar-placeholder-black-png-image_3918427.jpg)' }}></div>
-          <div className="upload-container">
-            <div className="horizontal-rectangle" >
-              <p>Click to upload image</p>
-              <button className="stable-btn">Upload</button>
-            </div>
-            <div className="button-container">
-              <button className="stable-btn">Save changes</button>
-              <button className="stable-btn">Cancel</button>
-            </div>
-          </div>
-        </div>
-      );
-    } else if (selectedNavItem === 'Account Security') {
-      return (
-        <div className="main-content-settings">
-          <div className='Head-tag-settings'>
-            <h2>Account Settings</h2>
-          </div>
-          <p className='tagline'>Edit your account settings and change your password here</p>
-          <div className="account-settings">
-            <input type="text" placeholder="Email" />
-            <input type="password" placeholder="New Password" />
-            <input type="password" placeholder="Retype New Password" />
-          </div>
-          <div className="button-container">
-            <button className='stable-btn'>Change Password</button>
-          </div>
-        </div>
-      );
-    } else if (selectedNavItem === 'Payment methods') {
-      return (
-        <div className="main-content-settings">
-          <div className='Head-tag-settings'>
-            <h2>Your saved payments</h2>
-          </div>
-          <p className='tagline'>Add new payment method & saved payment methods</p>
-          <div className='saved-payment'>Your saved payment methods:</div>
-          <div className='saved-payment-container'></div>
-          <button className='payment-btn'>Add Payment</button>
-        </div>
-      );
-    } else if (selectedNavItem === 'Notifications') {
-      return (
-        <div className="main-content-settings">
-          <div className='Head-tag-settings'>
-            <h2>Notifications</h2>
-          </div>
-          <p className='tagline'>Turn email notifications on or off</p>
-          <div className="notifications-container">
-            <h4>I want to receive:</h4>
-            <div className="checkboxes">
-              <label>
-                <input type="checkbox" />
-                Course recommendations
-              </label>
-              <label>
-                <input type="checkbox" />
-                Announcements from instructors
-              </label>
-              <label>
-                <input type="checkbox" />
-                Profile update
-              </label>
-            </div>
-          </div>
-        </div>
-      );
-    } else if (selectedNavItem === 'Profile') {
-      return (
-        <div className="main-content-settings">
-          <div className='Head-tag-settings'>
-            <h2>Public Profile</h2>
-          </div>
-          <p className='tagline'>Add information about yourself</p>
-          <div className="profile-details">
-            <div className="form-group">
-              <label for="first-name">First Name:</label>
-              <input type="text" id="first-name" />
-            </div>
-            <div className="form-group">
-              <label for="last-name">Last Name:</label>
-              <input type="text" id="last-name" />
-            </div>
-            <div className="form-group">
-              <label for="email">Email:</label>
-              <input type="text" id="email" />
-            </div>
-            <div className="form-group">
-              <label for="mobile-number">Mobile Number:</label>
-              <input type="text" id="mobile-number" />
-            </div>
-          </div>
-          <div className="button-container">
-              <button className="stable-btn">Save changes</button>
-              <button className="stable-btn">Cancel</button>
-          </div>
-        </div>
-      );
+  
+  const updateUser = async (updatedData) => {
+    try {
+      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/users/login/api/users/settings/${userId}', updatedData);
+    } catch (error) {
+      console.error('Error updating user data:', error);
     }
   };
 
+
+  const handleSubmit = async () => {
+    try {
+      await updateUser(userData); // Pass the current userData to the updateUser function
+      close();
+    } catch (error) {
+      console.error('Error updating user data:', error);
+    }
+  };
+  
+
   useEffect(() => {
-    setSelectedNavItem('Profile');
+    fetchUserData();
   }, []);
-
+  const [opened, { open, close }] = useDisclosure(false);
   return (
-    <div className="settings-container">
-      <div className="sidebar-content">
-        <div className="image-holder">
-          <div className="circle-image" style={{ backgroundImage: 'url(https://png.pngtree.com/png-clipart/20210915/ourmid/pngtree-user-avatar-placeholder-black-png-image_3918427.jpg)' }} />
-        </div>
-        <h4 className="user-name">User Name</h4>
-        <ul className="nav-items">
-          <li onClick={() => handleNavItemClick('Profile')}>Profile</li>
-          <li onClick={() => handleNavItemClick('Photo')}>Photo</li>
-          <li onClick={() => handleNavItemClick('Account Security')}>Account Security</li>
-          <li onClick={() => handleNavItemClick('Payment methods')}>Payment methods</li>
-          <li onClick={() => handleNavItemClick('Notifications')}>Notifications</li>
-          <li onClick={() => handleNavItemClick('Close Account')}>Close Account</li>
-        </ul>
-      </div>
-      {renderMainContent()}
-    </div>
-  );
-};
+    <div>
+      <NavCandidate/>
+    <div className='main-container-settings'>
+      <div className='settings-coverpage'>
+        <picture>
+          <img className='cover-page' src="https://www.guvi.in/build/images/user-profile-bg.d2b2824a59b2baf454ce8f4c7daedc87.svg" alt="Cover photo" style={{ display: "block", margin: "auto" }}/>
+        </picture>
+        <div className='inside-main-settings'>
+          <div className='profile-pic'>
+            <picture className='user-img'>
+              <img className='profile-pic' src="https://media.istockphoto.com/id/1316420668/vector/user-icon-human-person-symbol-social-profile-icon-avatar-login-sign-web-user-symbol.jpg?s=612x612&w=0&k=20&c=AhqW2ssX8EeI2IYFm6-ASQ7rfeBWfrFFV4E87SaFhJE=" alt="Your image" />
+            </picture>
+          </div>
+          <div className='username-settings'>
+            <div className='mr-auto'>
+              {/* <h2 style={{color:'black'}}>Vignesh Chowdary</h2> */}
+            {/* <h2 id='user-namesettings' style={{color:'black'}}>{userData.firstName + ' ' + userData.lastName}</h2> */}
+            <h2 id='user-namesettings' style={{color:'black'}}>Haswanth Addanki</h2>
+            </div>
+            <Modal opened={opened} onClose={close} title="Profile Management" >
+            <TextInput
+              label="First name"
+              placeholder="Your first name"
+              value={userData.firstName}
+              onChange={(e) => setUserData({ ...userData, firstName: e.target.value })}
+            />
+            <TextInput
+              label="Last name"
+              placeholder="Your last name"
+              value={userData.lastName}
+              onChange={(e) => setUserData({ ...userData, lastName: e.target.value })}
+            />
+            <TextInput
+              label="Mobile"
+              placeholder="Your mobile number"
+              value={userData.mobile}
+              onChange={(e) => setUserData({ ...userData, mobile: e.target.value })}
+            />
+            <TextInput
+              label="Email"
+              placeholder="Your Email"
+              value={userData.email}
+              onChange={(e) => setUserData({ ...userData, email: e.target.value })}
+            />
+            <TextInput
+              label="Password"
+              placeholder="Password"
+              value={userData.password}
+              onChange={(e) => setUserData({ ...userData, password: e.target.value })}
+            />
+            <Button onClick={handleSubmit}>Update details</Button>
+            <Button onClick={close} style={{ backgroundColor: 'red', marginLeft: '10px' }}>Cancel</Button>
+            </Modal>
 
-export default Settings;
+            <Group position="center">
+              <div onClick={open} className='edit-personal-details'>
+              <a onClick={open} className='edit-btn-settings'>
+                <img src="https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Compose-512.png" />
+              </a>
+            </div>
+            </Group>
+          </div>
+            <div className='profile-email'>
+              <div className='email-head'>
+                <div className='align-items-center'>
+                  <p>Email ID</p>
+                  <p className='private-to-you'></p>
+                </div>
+                {/* <h4>{userData.email}</h4> */}
+                <h4>haswanth18@gmail.com</h4>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  )
+}
+
+export default UserSettings

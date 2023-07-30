@@ -103,8 +103,17 @@ const featuresArr = [
 
 function handleEnroll()
 {
+  
+  
+
+
+  
+
+  let a = emailId.match('@gmail.com') || emailId.length===0
+  console.log(emailId.match('@gmail.com') || emailId.length===0)
   if(emailId.match('@gmail.com') || emailId.length===0)
   {
+
 setcheckEmailId(true)
   }  
   else
@@ -114,9 +123,10 @@ setcheckEmailId(true)
   const regex = /^[0-9]+$/;
 
 
-
+  let b = (regex.test(phoneNo) && phoneNo.length===10 || phoneNo.length===0)
   if(regex.test(phoneNo) && phoneNo.length===10 || phoneNo.length===0)
   {
+
     setcheckPhoneNo(true)
   
   }
@@ -124,10 +134,11 @@ setcheckEmailId(true)
     setcheckPhoneNo(false)
   }
 
-if(checkemailId && checkphoneNo)
+if(a && b)
 {
+  console.log('sucess')
   // axious.get("http://localhost:8080/lesson").then((response)=> setLesson(response.data)).catch((error)=>catchthe(error)).finally(finaloda)
-   nav('/')
+nav('/UserPayment')
 }
 }
 

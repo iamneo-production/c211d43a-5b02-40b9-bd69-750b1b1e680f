@@ -40,7 +40,7 @@ ul:where([role="list"]) {
   padding: 0;
 }
 
-section {
+#instructor-section {
   padding-block: clamp(2rem, 5vw, 5rem);
 }
 
@@ -49,7 +49,7 @@ a {
   text-decoration: none;
 }
 
-.container {
+.instructor-container {
   width: min(100% - 2rem, 65rem);
   margin-inline: auto;
 }

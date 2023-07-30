@@ -1,4 +1,8 @@
-.lApp{
+/* CSS for the Leaderboard component */
+
+/* General styles */
+
+.lApp {
   width: 100%;
   overflow-x: hidden;
   color: #707070;
@@ -8,72 +12,14 @@
   padding-right: 5%;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-}
-
-/*===comman css===*/
-
-a{
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-}
-
-ul,
-li{
-  list-style-type: none;
-}
-
-.page_wrape{
+.page_wrape {
   width: 100%;
   overflow-x: hidden !important;
 }
 
-/*--main content----*/
+/* Info Card styles */
 
-.leaderboard-card {
-
-background: #fff;
-margin-bottom: 30px;
-border-radius: 5px;
-overflow: hidden;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.leaderboard-card.leaderboard-card--first {
-transform: scale(1.05);
-}
-
-.leaderboard-card__top {
-background: #f9f6ff;
-padding: 20px 0 30px 0;
-
-}
-.leaderboard-card__body {
-padding: 15px;
-margin-top: -40px;
-
-}
-
-img.circle-img {
-height: 70px;
-width: 70px;
-border-radius: 70px;
-border: 3px solid #fff;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-img.circle-img.circle-img--small {
-height: 55px;
-width: 55px;
-border-radius: 55px;
-}
-
-.lmain-content{
- 
+.lmain-content {
   margin-left: 250px;
   background-color: white;
   margin: 15px;
@@ -81,7 +27,7 @@ border-radius: 55px;
   box-shadow: 0 0 8px rgb(230, 230, 230);
 }
 
-.lmain-content .info-card{
+.info-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,26 +35,26 @@ border-radius: 55px;
   margin: 20px 0;
 }
 
-.lmain-content .info-card .card{
+.card {
   width: 31%;
   min-height: 220px;
   padding: 20px;
-  background: linear-gradient(#060f61 , #00ffff);
+  background: linear-gradient(#060f61, #00ffff);
   border-radius: 10px;
   color: #fff;
   position: relative;
 }
 
-.lmain-content .info-card .card:nth-child(2){
-  background: linear-gradient(#060f61 , #00ffff);
+.card:nth-child(2) {
+  background: linear-gradient(#060f61, #00ffff);
 }
 
-.lmain-content .info-card .card:nth-child(3){
-  background: linear-gradient(#060f61 , #00ffff);
+.card:nth-child(3) {
+  background: linear-gradient(#060f61, #00ffff);
 }
 
-.lmain-content .info-card .card::before ,
-.lmain-content .info-card .card::after{
+.card::before,
+.card::after {
   content: "";
   position: absolute;
   top: -5%;
@@ -119,13 +65,13 @@ border-radius: 55px;
   border-radius: 100%;
 }
 
-.lmain-content .info-card .card::after{
+.card::after {
   top: auto;
   bottom: -5%;
   right: -5%;
 }
 
-.lmain-content .info-card .card .card-icon {
+.card .card-icon {
   margin-bottom: 15px;
   width: 70px;
   height: 70px;
@@ -135,51 +81,60 @@ border-radius: 55px;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 8px #fff;
+}
 
-} 
-
-.lmain-content .info-card .card .card-icon span  i{
+.card .card-icon span i {
   font-size: 50px;
   color: gold;
 }
 
-.lmain-content .info-card .card .card-detail{
+.card .card-detail {
   margin-bottom: 10px;
   margin-top: 25px;
 }
 
-.lmain-content .info-card .card .card-detail h2{
- text-align: center;
- font-size: 40px;
+.card .card-detail h2 {
+  text-align: center;
+  font-size: 40px;
 }
 
-.lmain-content .info-card .card .card-detail h4 {
+.card .card-detail h4 {
   color: #000;
   font-size: 20px;
 }
 
-.lmain-content .main-table .title{
+/* Table styles */
+
+.lmain-table {
+  margin-left: 250px;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgb(230, 230, 230);
+}
+
+.title {
   margin: 15px 0;
 }
 
-.lmain-content .user_table{
+.user_table {
   display: grid;
 }
 
-.lmain-content .user_table table thead tr td{
+.user_table table thead tr td {
   padding: 20px 0;
   font-weight: bold;
   color: #000;
   font-size: 25px;
 }
 
-.lmain-content .user_table table tbody tr td{
+.user_table table tbody tr td {
   padding: 15px 0;
   font-size: 20px;
   color: #2e2c2c;
 }
 
-.lmain-content .user_table tbody tr .btn{
+.user_table tbody tr .btn {
   padding: 7px 25px;
   background: #060f61;
   border-radius: 3px;
@@ -189,30 +144,40 @@ border-radius: 55px;
 
 
 
-
-/*-responsive media query-*/
-@media screen and (max-width:767px){
-
-  .lmain-content .info-card .card{
-      width: 48%;
-      margin-bottom: 15px;
-  }
-
-  
-  .lmain-content .user_table {
-      overflow-x: auto;
-  }
-
-  .lmain-content .user_table table{
-      width: 700px;
-  }
-}
-/*-responsive media query-*/
-
-@media screen and (max-width:576px){
-
-  .lmain-content .info-card .card{
-      width: 100%;
-  }
+/* Search bar styles */
+.lsearch-bar {
+  margin-bottom: 15px;
 }
 
+.lsearch-bar input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+
+  .user_table {
+    overflow-x: auto;
+  }
+
+  .user_table table {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100%;
+  }
+}

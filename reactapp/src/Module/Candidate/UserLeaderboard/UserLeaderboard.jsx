@@ -1,110 +1,103 @@
 import NavCandidate from '../../../Components/NavCandidate';
 import './UserLeaderboard.css';
-import React from 'react';
+import React, { useState } from 'react';
+import card from './cardData';
+import tabledata from './tableData';
 
+function SearchBar({ onlSearch }) {
+  const handleSearchChange = (event) => {
+    const lsearchTerm = event.target.value;
+    onlSearch(lsearchTerm);
+  };
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"></link>
-function Leaderboard() {
+  return (
+    <div className="lsearch-bar">
+      <input
+        type="text"
+        placeholder="lSearch by name"
+        onChange={handleSearchChange}
+      />
+    </div>
+  );
+}
+  function Leaderboard() {
+    const [searchTerm, setSearchTerm] = useState('');
+  
+    const handleSearch = (searchTerm) => {
+      setSearchTerm(searchTerm);
+    };
+  
     return (
 
         <div>
             <NavCandidate/>
 
-    <div className="App">
-    <div className="page_wrape">
-        {/*  <!---main content--> */}
+            <div className="App">
+      <div className="page_wrape">
+        {/* <!---main content--> */}
 
         <div className="lmain-content">
-            <div className="info-card">
-                <div className="card">
-                    <div className="card-icon">
-                      <span><i className="fa fa-trophy"></i></span>
-                    </div>
-                    <div className="card-detail">
-                        <h2>85,000</h2>
-                        <h4>Arun Kumar S</h4>
-
-                    </div>
-                    <p>Madurai</p>
+          <div className="info-card">
+            {card &&
+              card.map((e, index) => (
+                <div className="card" key={index}>
+                  <div className="card-icon">
+                    <span>
+                      <i className="fa fa-trophy"></i>
+                    </span>
+                  </div>
+                  <div className="card-detail">
+                    <h2>{e.score}</h2>
+                    <h4>{e.name}</h4>
+                  </div>
+                  <p>{e.location}</p>
                 </div>
-                <div className="card">
-                    <div className="card-icon">
-                      <span><i className="fa fa-trophy"></i></span>
-                    </div>
-                    <div className="card-detail">
-                        <h2>84,785</h2>
-                        <h4>Swatha R</h4>
-
-                    </div>
-                    <p>Bangalore</p>
-                </div>
-                <div className="card">
-                    <div className="card-icon">
-                      <span><i className="fa fa-trophy"></i></span>
-                    </div>
-                    <div className="card-detail">
-                        <h2>83,761</h2>
-                        <h4>Madhumitha S</h4>
-
-                    </div>
-                    <p>Chennai</p>
-                </div>
-            </div>
-            <div className="lmain-table">
-                <div className="title">
-                    <h2>All Users</h2>
-                    <div className="user_table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Names</td>
-                                    <td>Score</td>
-                                    <td>Email</td>
-                                    <td>Location</td>
-                                    <td>Greetings</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Anusha adul</td>
-                                    <td>76,000</td>
-                                    <td>anusha@gmail.com</td>
-                                    <td>Vellur</td>
-                                    <td><a href="/#" className="btn">Congratulations</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Bharathi R</td>
-                                    <td>73,765</td>
-                                    <td>rbharathi12@gmail.com</td>
-                                    <td>Erode</td>
-                                    <td><a href="/#" className="btn">Congratulations</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Chandru M</td>
-                                    <td>69,653</td>
-                                    <td>chaan@gmail.com</td>
-                                    <td>Madurai</td>
-                                    <td><a href="/#" className="btn">Congratulations</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Ramesh R</td>
-                                    <td>65,987</td>
-                                    <td>ram01esh@gmail.com</td>
-                                    <td>Coimbatore</td>
-                                    <td><a href="/#" className="btn">Congratulations</a></td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+              ))}
+          </div>
         </div>
-    </div>
 
-      
+        <div className="lmain-table">
+          <div className="title">
+            <h2>All Users</h2>
+            <SearchBar onSearch={handleSearch} />
+            <div className="user_table">
+              <table>
+                <thead>
+                  <tr>
+                    <td>Names</td>
+                    <td>Score</td>
+                    <td>Email</td>
+                    <td>Location</td>
+                    <td>Greetings</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tabledata &&
+                    tabledata
+                      .filter(
+                        (data) =>
+                          data.name.toLowerCase().includes(searchTerm.toLowerCase())
+                      )
+                      .map((tableData, j) => (
+                        <tr key={j}>
+                          <td>{tableData.name}</td>
+                          <td>{tableData.score}</td>
+                          <td>{tableData.email}</td>
+                          <td>{tableData.location}</td>
+                          <td>
+                            <a href="/#" className="btn">
+                              Congratulations
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
     </div>
   );
 }
