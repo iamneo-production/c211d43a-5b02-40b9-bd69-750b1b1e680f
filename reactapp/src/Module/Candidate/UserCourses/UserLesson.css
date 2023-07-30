@@ -12,13 +12,13 @@
     margin-top: 32px;
     margin-left: 20px;
 }
-/* body
+.AccordCustomizesd
 {
-    background-color: var(--Body-Background);
-    overflow-x: hidden;
-    overflow-y:scroll;
-    font-family: 'Courier New', Courier, monospace;
-} */
+    margin-top: 100px;
+    max-width:600px;
+    position: relative;
+    left:200px;
+}
 .CourseHeadBottomTable
 {
 display: flex;
@@ -92,7 +92,7 @@ border-radius: 20px;
     cursor: pointer;
 }
 
-.DropDownTail-Visible
+.DropDownTailVisible
 {
     
     display: flex;
@@ -125,7 +125,7 @@ border-radius: 20px;
 
 
 
-.DropDownTail-hidden
+.DropDownTailhidden
 {
     display: flex;
     height: 0px;
@@ -200,13 +200,13 @@ margin-left: 60px;
 }
 
 
-.cardrelative input
+.cazzrdrelative input
 {
     width: 330px;
     height: 30px;
 }
 
-.cardrelative
+.cazzrdrelative
 {
     position: fixed;
     left: 70%;
@@ -226,16 +226,16 @@ margin-left: 60px;
    color: #000000;    
    box-shadow: #000000 0rem 0rem 1rem 0rem;
 }
-.cardfixed input
+.cazzrdfixed input
 {
     background-color: white;
 }
-.cardrelative input
+.cazzrdrelative input
 {
     background-color: white;
 }
 
-.cardfixed
+.cazzrdfixed
 {
     position: absolute;
     left: 70%;
@@ -256,7 +256,7 @@ margin-left: 60px;
    box-shadow: #000000 0rem 0rem 1rem 0rem;
 }
 
-.cardrelative button
+.cazzrdrelative button
 {
     width: 300px;
     background-color:rgb(0, 172, 0);
@@ -268,7 +268,7 @@ margin-left: 60px;
     width: 350px;
 }
 
-.cardrelative h3{
+.cazzrdrelative h3{
     position: relative;
     left: 5px;
     height: 30px;
@@ -280,19 +280,19 @@ margin-left: 60px;
    width:350px ;
 }
 
-.cardrelative i{
+.cazzrdrelative i{
     position: absolute;
     right: 300px;
     top: 10%;
 
 }
 
-.cardrelative button:hover
+.cazzrdrelative button:hover
 {
     background-color: rgb(3, 152, 3);
    
 }
-.cardrelative button
+.cazzrdrelative button
 {
     width: 300px;
     background-color:rgb(0, 172, 0);
@@ -303,7 +303,7 @@ margin-left: 60px;
     color: white;
     width: 350px;
 }
-.cardfixed button
+.cazzrdfixed button
 {
     width: 300px;
     background-color:rgb(0, 172, 0);
@@ -315,7 +315,7 @@ margin-left: 60px;
     width: 350px;
 }
 
-.cardfixed h3{
+.cazzrdfixed h3{
     position: relative;
     left: 5px;
     height: 30px;
@@ -327,14 +327,14 @@ margin-left: 60px;
    width:350px ;
 }
 
-.cardfixed i{
+.cazzrdfixed i{
     position: absolute;
     right: 300px;
     top: 10%;
 
 }
 
-.cardfixed button:hover
+.cazzrdfixed button:hover
 {
     background-color: rgb(3, 152, 3);
    
@@ -403,9 +403,9 @@ height: 400px;
 background: black;
 color: white;
 position: relative;
-left:-70px;
+left:-100px;
 margin-top: 424px;
-width:1800px;
+width:2000px;
 
 padding-right: 550px;
 
@@ -769,7 +769,7 @@ color: red;
   {
     width: 520px;
   }
-   .cardfixed
+   .cazzrdfixed
    {
     position: relative;
     margin-top: 100px;
@@ -779,7 +779,7 @@ color: red;
     visibility: hidden;
    }
 
-   .cardrelative
+   .cazzrdrelative
    {
    
     position: relative;
@@ -913,6 +913,8 @@ margin-left: 0px;
         width: 850px;
     }
 
+
+
     .feaatures
     {
         position: relative;
@@ -921,7 +923,10 @@ margin-left: 0px;
      
     }
 
-    
+    .second-navbar
+    {
+        width: 500px;
+    }
 
     .keyFeaturesChild
     {
@@ -937,9 +942,9 @@ margin-left: 0px;
         margin-right: 20px;
         width: 230px;
     }
-    .CourseDropDownList
+    .AccordCustomizesd
     {
         position: relative;
-        left: 50px;
+        left: 20px;
     }
 }  

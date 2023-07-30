@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 export default function UserEvents()
 {
-const [eventArr,setEventArr] = useState([{setName:'java',id:1},{setName:'js',id:2},{setName:'python',id:3}])
+const [eventArr,setEventArr] = useState([{setName:'java',id:1},{setName:'js',id:2},{setName:'python',id:3},{setName:'C',id:4},{setName:'C++',id:5},{setName:'swift',id:6}])
 
 const navi =  useNavigate()
 function handleEvents(ida)
