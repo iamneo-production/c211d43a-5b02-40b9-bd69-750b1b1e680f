@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
-import './UserPayments.css'
+import "./UserPayments.css"
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
