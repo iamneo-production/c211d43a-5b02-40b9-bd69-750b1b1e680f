@@ -13,7 +13,7 @@ const CourseDetail=[{id:1,CourseName:'react'}]
     }
 
     return( 
-    
+    //div
     // <div>
     // <div>hey</div>
     // <button onClick={jsutdoit}>redirect</button>
