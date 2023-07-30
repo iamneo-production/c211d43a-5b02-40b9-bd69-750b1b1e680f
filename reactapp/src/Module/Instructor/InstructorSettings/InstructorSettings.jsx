@@ -41,7 +41,7 @@ function InstructorSettings() {
 
   const [opened, { open, close }] = useDisclosure(false);
   return (
-    <div className='main-container-settings' >
+    <div className='main-container-settings' style={{display:'inline'}} >
       <div className='settings-coverpage'>
         <picture>
           <img className='cover-page' src="https://www.guvi.in/build/images/user-profile-bg.d2b2824a59b2baf454ce8f4c7daedc87.svg" alt="Cover photo" />
@@ -54,7 +54,8 @@ function InstructorSettings() {
           </div>
           <div className='username-settings' style={{display:Flex}}>
             <div className='mr-auto'>
-            <h2 id='user-namesettings' style={{color:'black'}}>{InstructorData.firstName + ' ' + InstructorData.lastName}</h2>
+            {/* <h2 id='user-namesettings' style={{color:'black'}}>{InstructorData.firstName + ' ' + InstructorData.lastName}</h2> */}
+            <h2 id='user-namesettings' style={{color:'black'}}>Lakshmi Prasad Mylari</h2>
             </div>
             <Modal opened={opened} onClose={close} title="Profile Management" >
             <TextInput
@@ -105,7 +106,8 @@ function InstructorSettings() {
                   <p>Email ID</p>
                   <p className='private-to-you'></p>
                 </div>
-                <h4>{InstructorData.email}</h4>
+                {/* <h4>{InstructorData.email}</h4> */}
+                <h4>lakshmiprasad12@gmail.com</h4>
               </div>
             </div>
         </div>
