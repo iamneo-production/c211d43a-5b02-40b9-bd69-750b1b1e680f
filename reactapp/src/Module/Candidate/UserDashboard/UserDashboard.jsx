@@ -75,7 +75,7 @@ function UserDashboard() {
   };
   
   const handleFeatureClick2 = () => {
-    navigate("#");
+    navigate("/chatRoom");
     console.log("Clicked on Feature 2");
   };
 
@@ -111,7 +111,7 @@ function UserDashboard() {
          {/* <feature.icon /> */}
         <feature.icon size={rem(26)} stroke={1.5} />
       </ThemeIcon>
-      <Text fz="lg" mt="sm" fw={500}>
+      <Text fz="lg" mt="sm" fw={500} color='black'>
         {feature.title}
       </Text>
       <Text c="dimmed" fz="sm">
@@ -140,7 +140,7 @@ function UserDashboard() {
         <div className={classes.wrapper}>
           <Grid gutter={45}>
             <Col span={12} md={5}>
-              <Title className={classes.title} order={2}>
+              <Title className={classes.title}  order={2}>
                Skills speak louder than words!
               </Title>
               <Text c="dimmed">

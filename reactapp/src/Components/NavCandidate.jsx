@@ -32,6 +32,10 @@ const helpCenter=()=>{
   navigate("/UserHelpCenter")
 }
 
+const profile=()=>{
+  navigate("/UserSettings")
+}
+
 
   return (
     <>
@@ -60,7 +64,7 @@ const helpCenter=()=>{
   {/* <Avatar size={40} color="blue">BH</Avatar> */}
   <div className="help-icon" ><TbHelpCircle size={20} onClick={helpCenter} /></div>
   <div>
-    <Text className="txt-head">Bob Handsome</Text>
+    <Text className="txt-head">Profile</Text>
     {/* <Text size="xs" color="dimmed">bob@handsome.inc</Text> */}
   </div>
 </Group>
