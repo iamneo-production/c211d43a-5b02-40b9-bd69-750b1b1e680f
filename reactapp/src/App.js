@@ -44,7 +44,6 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Instructor from './pages/Instructor';
 import Chat from './Module/Chat/Chat';
-import ChatRoom from './Module/Chat/ChatRoom';
 
 import Admin from "./Module/Instructor/InstructorsDetails/Admin";
 import AddAdmin from "./Module/Instructor/InstructorsDetails/AddAdmin";
