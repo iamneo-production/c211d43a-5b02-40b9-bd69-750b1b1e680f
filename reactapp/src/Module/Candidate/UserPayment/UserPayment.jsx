@@ -11,9 +11,10 @@ const CourseDetail=[{id:1,CourseName:'react'}]
 const [orgCoursId,setorgCoursId] =useState(1)
 const [orgUserId,setorgUserId] =useState(202)
 
+const [pay,setPay]=useState([])
+
     function jsutdoit()
     {
-
 
     const b = pay.some( ele => ele.userId===orgUserId)
     console.log(b)
@@ -67,7 +68,7 @@ const [orgUserId,setorgUserId] =useState(202)
    
     
     }
- const [pay,setPay]=useState()
+
 
 
 

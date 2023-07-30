@@ -64,7 +64,7 @@ function EnrolledCourses(){
           </div>
 
           </div>
-        
+           
            ))} 
         </div>
 
