@@ -14,6 +14,8 @@ body {
   margin: 2rem 0;
   font-size: 2.5rem;
   background: linear-gradient(45deg, #060f61, transparent, #060f61);
+  color: #111;
+
 }
 /* ... (same as before) */
 
@@ -33,19 +35,19 @@ body {
   background: lightgray;
 }
 
-.accordion {
+.Faq {
   width: 90%;
   max-width: 1000px;
   margin: 2rem auto;
 }
-.accordion-item {
+.Faq-item {
   background-color: #fff;
   color: #111;
   margin: 1rem 0;
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
 }
-.accordion-item-header {
+.Faq-item-header {
   padding: 0.5rem 3rem 0.5rem 1rem;
   min-height: 3.5rem;
   line-height: 1.25rem;
@@ -56,21 +58,21 @@ body {
   cursor: pointer;
   background: lightgray;
 }
-.accordion-item-header::after {
+.Faq-item-header::after {
   content: "\002B";
   font-size: 2rem;
   position: absolute;
   right: 1rem;
 }
-.accordion-item-header.active::after {
+.Faq-item-header.active::after {
   content: "\2212";
 }
-.accordion-item-body {
+.Faq-item-body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-.accordion-item-body-content {
+.Faq-item-body-content {
   padding: 1rem;
   line-height: 1.5rem;
   border-top: 1px solid;
