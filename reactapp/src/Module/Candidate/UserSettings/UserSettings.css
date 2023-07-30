@@ -1,6 +1,8 @@
 .main-container-settings {
   height: 100%;
-  width: 100%;
+  width: 63%;
+  display: block;
+  margin: auto;
 }
 
 .inside-main-settings {

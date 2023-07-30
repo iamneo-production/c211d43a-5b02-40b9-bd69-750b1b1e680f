@@ -11,7 +11,7 @@ function UserSettings() {
   //Function to fetch user data from the backend
   const fetchUserData = async () => {
     try {
-      const response = await axios.get('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/users/settings/1');
+      const response = await axios.get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/users/login/api/users/settings/${userId}');
       setUserData(response.data);
     } catch (error) {
       console.error('Error fetching user data:', error);
@@ -20,7 +20,7 @@ function UserSettings() {
   
   const updateUser = async (updatedData) => {
     try {
-      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/users/settings/1', updatedData);
+      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/users/login/api/users/settings/${userId}', updatedData);
     } catch (error) {
       console.error('Error updating user data:', error);
     }
@@ -47,7 +47,7 @@ function UserSettings() {
     <div className='main-container-settings'>
       <div className='settings-coverpage'>
         <picture>
-          <img className='cover-page' src="https://www.guvi.in/build/images/user-profile-bg.d2b2824a59b2baf454ce8f4c7daedc87.svg" alt="Cover photo" />
+          <img className='cover-page' src="https://www.guvi.in/build/images/user-profile-bg.d2b2824a59b2baf454ce8f4c7daedc87.svg" alt="Cover photo" style={{ display: "block", margin: "auto" }}/>
         </picture>
         <div className='inside-main-settings'>
           <div className='profile-pic'>
@@ -58,7 +58,7 @@ function UserSettings() {
           <div className='username-settings'>
             <div className='mr-auto'>
               {/* <h2 style={{color:'black'}}>Vignesh Chowdary</h2> */}
-            <h2 id='user-name' style={{color:'black'}}>{userData.firstName + ' ' + userData.lastName}</h2>
+            <h2 id='user-namesettings' style={{color:'black'}}>{userData.firstName + ' ' + userData.lastName}</h2>
             </div>
             <Modal opened={opened} onClose={close} title="Profile Management" >
             <TextInput

@@ -15,7 +15,7 @@ import UserLeaderboard from "./Module/Candidate/UserLeaderboard/UserLeaderboard"
 import UserSettings from "./Module/Candidate/UserSettings/UserSettings";
 import UserHelpcenter from "./Module/Candidate/UserHelpCenter/UserHelpCenter";
 import UserAssessment from "./Module/Candidate/UserAssessment/UserAssessment"
-import UserEvents from "./Module/Candidate/UserEvents/UserEvents"
+import UserEvents from "./Module/Candidate/UserEvents/UserEvents";
 import EnrolledCourse from "./Module/Candidate/EnrolledCourse/EnrolledCourse"
 
 import InstructorDashboard from "./Module/Instructor/InstructorDashboard/InstructorDashboard";
@@ -25,6 +25,8 @@ import InstructorLesson from './Module/Instructor/InstructorCourses/InstructorLe
 import InstructorSettings from "./Module/Instructor/InstructorSettings/InstructorSettings";
 import Trainee from "./Module/Instructor/Trainee/Trainee";
 import Assessment from './Module/Instructor/Assessment/Assessment';
+import ChatRoom from './Module/Chat/ChatRoom';
+
 
 
 import Navbar from './Navbar';
@@ -107,7 +109,7 @@ function App() {
           <Route path='/Video' element={<Video/>}/> 
           <Route path='/Home' element={<Home/>}/>
           <Route path='/Instructor' element={<Instructor/>}/>
-           <Route path='/ChatRoom' element={<ChatRoom/>}/>
+          <Route path='/ChatRoom' element={<ChatRoom/>}/>
           {/* <Route path="/instructordetails" element={<Admin/>} /> */}
           <Route path="/instructor/add" element={<AddAdmin />} />
           <Route path="/instructor/update/:adminid" element={<EditAdmin />} />

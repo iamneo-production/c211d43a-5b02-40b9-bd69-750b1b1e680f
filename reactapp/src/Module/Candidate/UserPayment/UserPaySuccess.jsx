@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import './Payment.css';
+import './UserPayments.css';
 import { Button } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
