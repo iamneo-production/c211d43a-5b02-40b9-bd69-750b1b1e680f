@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/users/settings")
-@CrossOrigin("*")
+@RequestMapping("/UserSettings")
+@CrossOrigin("https://8081-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io")
 public class UserSettingsController {
 
     private final UserSettingsService userService;

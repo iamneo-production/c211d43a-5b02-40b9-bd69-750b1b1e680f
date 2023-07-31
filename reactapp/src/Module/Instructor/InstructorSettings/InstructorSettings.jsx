@@ -11,7 +11,7 @@ function InstructorSettings() {
     // Function to fetch user data from the backend
   const fetchInstructorData = async () => {
     try {
-      const response = await axios.get('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/instructors/settings/${userId}');
+      const response = await axios.get('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/InstructorSettings/3');
       setInstructorData(response.data);
     } catch (error) {
       console.error('Error fetching instructor data:', error);
@@ -20,7 +20,7 @@ function InstructorSettings() {
 
   const updateInstructor = async (updatedData) => {
     try {
-      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/instructors/settings/${userId}', updatedData);
+      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/InstructorSettings/3', updatedData);
     } catch (error) {
       console.error('Error updating instructor data:', error);
     }
@@ -54,8 +54,8 @@ function InstructorSettings() {
           </div>
           <div className='username-settings' style={{display:Flex}}>
             <div className='mr-auto'>
-            {/* <h2 id='user-namesettings' style={{color:'black'}}>{InstructorData.firstName + ' ' + InstructorData.lastName}</h2> */}
-            <h2 id='user-namesettings' style={{color:'black'}}>Lakshmi Prasad Mylari</h2>
+            <h2 id='user-namesettings' style={{color:'black'}}>{InstructorData.firstName + ' ' + InstructorData.lastName}</h2>
+            {/* <h2 id='user-namesettings' style={{color:'black'}}>Lakshmi Prasad Mylari</h2> */}
             </div>
             <Modal opened={opened} onClose={close} title="Profile Management" >
             <TextInput
@@ -106,8 +106,8 @@ function InstructorSettings() {
                   <p>Email ID</p>
                   <p className='private-to-you'></p>
                 </div>
-                {/* <h4>{InstructorData.email}</h4> */}
-                <h4>lakshmiprasad12@gmail.com</h4>
+                <h4>{InstructorData.email}</h4>
+                {/* <h4>lakshmiprasad12@gmail.com</h4> */}
               </div>
             </div>
         </div>

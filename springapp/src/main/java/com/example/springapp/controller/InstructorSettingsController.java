@@ -12,8 +12,8 @@ import java.util.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/instructors/settings")
-@CrossOrigin("*")
+@RequestMapping("InstructorSettings")
+@CrossOrigin("https://8081-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io")
 public class InstructorSettingsController {
 
     private final InstructorSettingsService instructorService;

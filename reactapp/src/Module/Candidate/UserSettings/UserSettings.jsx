@@ -11,7 +11,7 @@ function UserSettings() {
   //Function to fetch user data from the backend
   const fetchUserData = async () => {
     try {
-      const response = await axios.get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/api/users/settings/2');
+      const response = await axios.get('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/UserSettings/3');
       setUserData(response.data);
     } catch (error) {
       console.error('Error fetching user data:', error);
@@ -20,7 +20,7 @@ function UserSettings() {
   
   const updateUser = async (updatedData) => {
     try {
-      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/users/settings/2', updatedData);
+      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/UserSettings/3', updatedData);
     } catch (error) {
       console.error('Error updating user data:', error);
     }
@@ -58,8 +58,8 @@ function UserSettings() {
           <div className='username-settings'>
             <div className='mr-auto'>
               {/* <h2 style={{color:'black'}}>Vignesh Chowdary</h2> */}
-            {/* <h2 id='user-namesettings' style={{color:'black'}}>{userData.firstName + ' ' + userData.lastName}</h2> */}
-            <h2 id='user-namesettings' style={{color:'black'}}>Haswanth Addanki</h2>
+            <h2 id='user-namesettings' style={{color:'black'}}>{userData.firstName + ' ' + userData.lastName}</h2>
+            {/* <h2 id='user-namesettings' style={{color:'black'}}>Haswanth Addanki</h2> */}
             </div>
             <Modal opened={opened} onClose={close} title="Profile Management" >
             <TextInput
@@ -110,8 +110,8 @@ function UserSettings() {
                   <p>Email ID</p>
                   <p className='private-to-you'></p>
                 </div>
-                {/* <h4>{userData.email}</h4> */}
-                <h4>haswanth18@gmail.com</h4>
+                <h4>{userData.email}</h4>
+                {/* <h4>haswanth18@gmail.com</h4> */}
               </div>
             </div>
         </div>
