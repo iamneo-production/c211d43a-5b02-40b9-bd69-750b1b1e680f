@@ -22,7 +22,7 @@ const Video = () => {
         <div className="video-content">
 
           <h1 className="video-title">A better learning starts here</h1>
-          <button className="btn btn-primary video-button">Get Started</button>
+          <button className="btn btn-primary video-button" onClick={handleclick}>Get Started</button>
 
         
         </div>

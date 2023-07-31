@@ -1,4 +1,4 @@
-import React, { Component, useState,useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import "./UserLesson.css"
 import { Accordion } from '@mantine/core';
 import axious from 'axios'
@@ -26,7 +26,7 @@ const [checkphoneNo,setcheckPhoneNo] =  useState(true)
 const handleEmailId = (e)=>
 {
   setEmailId(e.target.value)
-  if(e.target.value==0)
+  if(e.target.value===0)
   {
     setcheckEmailId(true)
   }
@@ -35,7 +35,7 @@ const handleEmailId = (e)=>
 const handlePhoneNo = (e) =>
 {
   setPhoneNo(e.target.value)
-  if(e.target.value==0)
+  if(e.target.value===0)
   {
     setcheckPhoneNo(true)
   }
@@ -80,18 +80,6 @@ const featuresArr = [
 
 
 ]
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
