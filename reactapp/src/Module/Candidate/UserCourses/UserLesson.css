@@ -18,6 +18,14 @@ body
     overflow-y:scroll;
     font-family: 'Courier New', Courier, monospace;
 }
+.AccordCustomizesd
+{
+    margin-top: 100px;
+    max-width:600px;
+    position: relative;
+    left:200px;
+}
+
 .CourseHeadBottomTable
 {
 display: flex;

@@ -1,112 +1,98 @@
 import NavCandidate from '../../../Components/NavCandidate';
+//import React, { useEffect, useState } from "react";
 import './UserLeaderboard.css';
-import React from 'react';
+//import axios from "axios";
+//import base_url from "./api";
+import cardData from './cardData';
+import tableData from './tableData';
 
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"></link>
-function Leaderboard() {
-    return (
+export default function Leaderboard() {
+  
+/*const [Leaderboard , setLeaderboard] = useState([]);
 
-        <div>
-            <NavCandidate/>
+  const LoadData = () =>{
+    axios.get(`${base_url}/userleaderboard`).then(
+      (respose)=>{
+        console.log(respose);
+          setLeaderboard(respose.data);
+      },
+      (error)=>{
+        console.log(error);
+      }
+    )
+  }
 
-    <div className="App">
-    <div className="page_wrape">
-        {/*  <!---main content--> */}
+  useEffect(()=>{
+    LoadData();
+  },[])
 
+  const cardData = leaderboard.slice(0,3);
+  const tableData = leaderboard.slice(3); */
+
+  return (
+    <div>
+      <NavCandidate/>
+      <div className="lApp">
+        <div className="lpage_wrape">
         <div className="lmain-content">
-            <div className="info-card">
-                <div className="card">
-                    <div className="card-icon">
-                      <span><i className="fa fa-trophy"></i></span>
-                    </div>
-                    <div className="card-detail">
-                        <h2>85,000</h2>
-                        <h4>Arun Kumar S</h4>
-
-                    </div>
-                    <p>Madurai</p>
+        <div className="linfo-lcard">
+                {cardData.map((e,index) => {
+                    return (
+                        <div className="lcard" key={index}>
+                <div className="lcard-icon">
+                  <span>
+                    <i className="fa fa-trophy"></i>
+                  </span>
                 </div>
-                <div className="card">
-                    <div className="card-icon">
-                      <span><i className="fa fa-trophy"></i></span>
-                    </div>
-                    <div className="card-detail">
-                        <h2>84,785</h2>
-                        <h4>Swatha R</h4>
-
-                    </div>
-                    <p>Bangalore</p>
+                <div className="lcard-detail">
+                  <h2>{e.score}</h2>
+                  <h4>{e.name}</h4>
                 </div>
-                <div className="card">
-                    <div className="card-icon">
-                      <span><i className="fa fa-trophy"></i></span>
-                    </div>
-                    <div className="card-detail">
-                        <h2>83,761</h2>
-                        <h4>Madhumitha S</h4>
+                <p>{e.location}</p>
+              </div>
 
-                    </div>
-                    <p>Chennai</p>
-                </div>
+                    );
+                })}
             </div>
-            <div className="lmain-table">
-                <div className="title">
-                    <h2>All Users</h2>
-                    <div className="user_table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Names</td>
-                                    <td>Score</td>
-                                    <td>Email</td>
-                                    <td>Location</td>
-                                    <td>Greetings</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Anusha adul</td>
-                                    <td>76,000</td>
-                                    <td>anusha@gmail.com</td>
-                                    <td>Vellur</td>
-                                    <td><a href="/#" className="btn">Congratulations</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Bharathi R</td>
-                                    <td>73,765</td>
-                                    <td>rbharathi12@gmail.com</td>
-                                    <td>Erode</td>
-                                    <td><a href="/#" className="btn">Congratulations</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Chandru M</td>
-                                    <td>69,653</td>
-                                    <td>chaan@gmail.com</td>
-                                    <td>Madurai</td>
-                                    <td><a href="/#" className="btn">Congratulations</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Ramesh R</td>
-                                    <td>65,987</td>
-                                    <td>ram01esh@gmail.com</td>
-                                    <td>Coimbatore</td>
-                                    <td><a href="/#" className="btn">Congratulations</a></td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
+        <div className="lmain-table">
+              <div className="title">
+                <h2>All Users</h2>
+                <div className="user_table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <td>Names</td>
+                        <td>Score </td>
+                        <td>Email</td>
+                        <td>Location</td>
+                        <td>Greetings</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {tableData.map((tabledata,j) =>{
+                                return (
+                                    <tr key={j}>
+                        <td>{tabledata.name}</td>
+                        <td>{tabledata.score}</td>
+                        <td>{tabledata.email}</td>
+                        <td>{tabledata.location}</td>
+                        <td>
+                          <a href="/#" className="btn">
+                            Congratulations
+                          </a>
+                        </td>
+                      </tr>
+                                );
+                        })}
+                    </tbody>
+                  </table>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-
-      
-    </div>
-
-    </div>
+      </div>
+      </div>
   );
 }
-
-export default Leaderboard;

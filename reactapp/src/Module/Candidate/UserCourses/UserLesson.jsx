@@ -1,5 +1,6 @@
-import React, { Component, useState,useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import "./UserLesson.css"
+import { Accordion } from '@mantine/core';
 
 import axious from 'axios'
 
@@ -26,7 +27,7 @@ const [checkphoneNo,setcheckPhoneNo] =  useState(true)
 const handleEmailId = (e)=>
 {
   setEmailId(e.target.value)
-  if(e.target.value==0)
+  if(e.target.value===0)
   {
     setcheckEmailId(true)
   }
@@ -35,7 +36,7 @@ const handleEmailId = (e)=>
 const handlePhoneNo = (e) =>
 {
   setPhoneNo(e.target.value)
-  if(e.target.value==0)
+  if(e.target.value===0)
   {
     setcheckPhoneNo(true)
   }
@@ -80,18 +81,6 @@ const featuresArr = [
 
 
 ]
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -416,22 +405,35 @@ console.log(lesson)
  <br></br>
    {/*//*/}
   
-   <div className='CourseDropDownList'>
-   <h2>CONTENT YOU WILL LEARN</h2>
- {CourseDetails[0].CourseLargerDescription.map( (ele,index) =>(<div key={index} className='eachdropbox' ><h3 onClick={()=>handleDropDownList(index)} className='CourseDropHead'  >
+ <div className='AccordCustomizesd'>
+    <label>LEARNING PATH</label>
+   <Accordion defaultValue="customization">
+      <Accordion.Item value="customization" >
+        <Accordion.Control>BEGINNER CONTENT</Accordion.Control>
+        <Accordion.Panel>welcome to the  course</Accordion.Panel>
+        <Accordion.Panel>description about the content</Accordion.Panel>
+        <Accordion.Panel>setting up the course dev environment</Accordion.Panel>
+   
+      </Accordion.Item>
+
+      <Accordion.Item value="flexibility">
+        <Accordion.Control>INTERMEDIATE CONTENT</Accordion.Control>
+        <Accordion.Panel>Arrow function</Accordion.Panel>
+        <Accordion.Panel>Exports and Imports</Accordion.Panel>
+        <Accordion.Panel> state and working with Events</Accordion.Panel>
+      </Accordion.Item>
+
+      <Accordion.Item value="focus-ring">
+        <Accordion.Control>ADVANCED CONTENT</Accordion.Control>
+        <Accordion.Panel>understanding error message</Accordion.Panel>
+        <Accordion.Panel>Analyzing code flow warnings</Accordion.Panel>
+        <Accordion.Panel>use the  dev tools</Accordion.Panel>
+      </Accordion.Item>
+    </Accordion>
  
-   <i className={ele.oldDropDownIcon}></i>{ele.headingName}</h3><div className={CourseDetails[0].CourseLargerDescription[index].condition?'DropDownTail-Visible':'DropDownTail-hidden'}>{ele.headingArr.map((cont,rollno) =><h4  key={rollno}><i className='fa fa-chevron-right'></i><i>{cont}</i></h4>)}</div></div>))}
- <br></br>
- <br></br>
-  
  
  
- 
- 
- 
- </div>
- 
- 
+    </div>
  
    
    {/*//*/}

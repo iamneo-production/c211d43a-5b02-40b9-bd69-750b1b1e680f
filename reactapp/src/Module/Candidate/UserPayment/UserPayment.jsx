@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./UserPayments.css"
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
@@ -11,9 +11,10 @@ const CourseDetail=[{id:1,CourseName:'react'}]
 const [orgCoursId,setorgCoursId] =useState(1)
 const [orgUserId,setorgUserId] =useState(202)
 
+const [pay,setPay]=useState([])
+
     function jsutdoit()
     {
-
 
     const b = pay.some( ele => ele.userId===orgUserId)
     console.log(b)
@@ -67,7 +68,7 @@ const [orgUserId,setorgUserId] =useState(202)
    
     
     }
- const [pay,setPay]=useState()
+
 
 
 
