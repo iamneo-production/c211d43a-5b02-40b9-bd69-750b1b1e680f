@@ -9,6 +9,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
 @Controller
+@CrossOrigin(origins = "https://8081-bccfefafdcbcbeaaeabaccffcffeaeaadbdbabf.project.examly.io/")
 public class ChatController {
 
     @Autowired
