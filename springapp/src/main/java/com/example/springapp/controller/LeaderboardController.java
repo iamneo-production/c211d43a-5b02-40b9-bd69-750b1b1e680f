@@ -13,8 +13,8 @@ import com.example.springapp.model.Leaderboard;
 import com.example.springapp.service.LeaderboardService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
-//@CrossOrigin(origins = "https://8081-eefedbbaeeaaeabaccffcffeaeaadbdbabf.project.examly.io")
+@CrossOrigin(origins = "https://8081-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io")
+
 public class LeaderboardController {
 
     @Autowired
