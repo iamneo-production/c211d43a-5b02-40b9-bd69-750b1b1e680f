@@ -7,9 +7,11 @@ import { TbHelpCircle } from 'react-icons/tb';
 function NavCandidate()
 {
 
-  
 const navigate=useNavigate()
 
+const handle=()=>{
+  navigate('/UserSettings');
+}
 const dashboard =()=>{
   navigate("/UserDashboard")
 }
@@ -28,6 +30,10 @@ const assessment =()=>{
 
 const helpCenter=()=>{
   navigate("/UserHelpCenter")
+}
+
+const profile=()=>{
+  navigate("/UserSettings")
 }
 
 
@@ -58,7 +64,7 @@ const helpCenter=()=>{
   {/* <Avatar size={40} color="blue">BH</Avatar> */}
   <div className="help-icon" ><TbHelpCircle size={20} onClick={helpCenter} /></div>
   <div>
-    <Text className="txt-head">Bob Handsome</Text>
+    <Text className="txt-head">Profile</Text>
     {/* <Text size="xs" color="dimmed">bob@handsome.inc</Text> */}
   </div>
 </Group>
@@ -67,7 +73,7 @@ const helpCenter=()=>{
 
 <Menu.Dropdown>
   {/* <Menu.Label>Application</Menu.Label> */}
-  <Menu.Item  >Profile</Menu.Item>
+  <Menu.Item onClick={handle}  >Profile</Menu.Item>
   <Menu.Item  >Logout</Menu.Item>
 </Menu.Dropdown>
 </Menu>

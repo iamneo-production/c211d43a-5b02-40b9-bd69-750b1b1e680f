@@ -1,17 +1,9 @@
 import React from 'react'
-import './InstructorDashboard.css'
-import  {BiSearchAlt} from 'react-icons/bi'
-import { MdNotifications} from 'react-icons/md'
-import{AiOutlineArrowRight} from 'react-icons/ai'
-import { Link } from 'react-router-dom';
-import { FaMedal, FaGraduationCap, FaBookReader } from 'react-icons/fa';
-
-import img from '../../../Assets/images/teacher1.png'
+import './InstructorDashboard.css';
 
 
 
-import { BsArrowRightShort } from 'react-icons/bs'
-import EventUpdateBanner from '../EventUpdateBanner'
+import EventUpdateBanner from './EventUpdateBanner';
 
 const Top = () => {
     const video='https://player.vimeo.com/external/437106982.sd.mp4?s=8431b9534b82d2419ffff68218a1ea7bb5168ba6&profile_id=164&oauth2_token_id=57447761';
@@ -36,48 +28,8 @@ const Top = () => {
     
     return(
         <div className='topSection'>
-            <div className="headerSection flex">
-                <div className="title">
-                    <h1>Welcome to EduSmart</h1>
-                    <p>Hello Abinath, Welcome back!</p>
-                </div>
-            <div className="searchBar flex">
-                <input type='text' placeholder='Search Courses'/>
-                <BiSearchAlt className='icon'/>
-            </div>
-
-            <div className="adminDiv flex">
-                <MdNotifications className='icon'/>
-                <div className="adminImage">
-                    <img src={img} alt="Admin Image"/>
-                </div>
-            </div>
-
-        </div>
-        <div className="statistics">
-         
-            <div className="box">
-              <FaGraduationCap className="iconn" />
-              <div className="content">
-                <h3>7</h3>
-                <Link className='link'><span>Courses Completed</span></Link>
-              </div>
-            </div>
-            <div className="box">
-              <FaMedal className="iconn" />
-              <div className="content">
-                <h3>456</h3>
-                <Link className='link'>Badges Earned</Link>
-              </div>
-            </div>
-            <div className="box">
-              <FaBookReader className="iconn" />
-              <div className="content">
-                <h3>8</h3>
-                <span><Link className='link'>Courses Enrolled</Link></span>
-              </div>
-            </div>
-          </div>
+            
+        
           <h2>New Launchers</h2>
             <div className="cardSection flex">
             

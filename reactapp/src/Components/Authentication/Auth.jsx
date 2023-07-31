@@ -112,7 +112,7 @@ function App() {
               />
             </div>
             <div className="input-field">
-              <i className="fas fa-lock"></i>
+              <i className="fas fa-user"></i>
               <input
                 type="password"
                 placeholder="Password"

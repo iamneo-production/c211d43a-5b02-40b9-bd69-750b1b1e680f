@@ -1,4 +1,5 @@
 
+import NavCandidate from "../../../Components/NavCandidate";
 import "./UserHelpCenter.css";
 import React, { useState } from 'react';
 
@@ -49,6 +50,8 @@ function HelpCenter() {
     item.header.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return (
+    <div>
+      <NavCandidate/>
     <div className='hApp'>
       <h1 id="help">FAQ</h1>
       <div className="hsearch-bar">
@@ -75,11 +78,13 @@ function HelpCenter() {
                   {item.content}
                 </div>
               </div>
+              
             )}
           </div>
         ))}
       </div>
     </div>
+  </div>
   )
 }
 

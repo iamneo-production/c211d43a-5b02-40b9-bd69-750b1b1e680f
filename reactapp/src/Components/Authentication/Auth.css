@@ -96,6 +96,7 @@ form.sign-in-form {
 .input-field input::placeholder {
   color: #aaa;
   font-weight: 500;
+ text-align:left;
 }
 
 .social-text {

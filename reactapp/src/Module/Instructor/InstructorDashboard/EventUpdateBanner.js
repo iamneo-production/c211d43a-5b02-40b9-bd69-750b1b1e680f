@@ -7,7 +7,7 @@ const EventUpdateBanner = ({ updates }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % updates.length);
-    }, 5000); // Change the interval duration (in milliseconds) as desired
+    }, 5000); 
 
     return () => clearInterval(timer);
   }, [updates.length]);
