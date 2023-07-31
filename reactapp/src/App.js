@@ -110,12 +110,12 @@ function App() {
           <Route path='/Video' element={<Video/>}/> 
           <Route path='/Home' element={<Home/>}/>
           <Route path='/Instructor' element={<Instructor/>}/>
-          <Route path='/ChatRoom' element={<ChatRoom/>}/>
+          {/* <Route path='/ChatRoom' element={<ChatRoom/>}/> */}
           {/* <Route path="/instructordetails" element={<Admin/>} /> */}
           <Route path="/instructor/add" element={<AddAdmin />} />
           <Route path="/instructor/update/:adminid" element={<EditAdmin />} />
           <Route path='/lesson' element={<Main/>}/>
-          <Route path='/Chat' element={<Chat/>}/>
+          {/* <Route path='/Chat' element={<Chat/>}/> */}
         </Routes>
       </Router>
     </>
