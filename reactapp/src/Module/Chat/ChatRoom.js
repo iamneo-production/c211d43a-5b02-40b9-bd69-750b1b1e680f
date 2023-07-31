@@ -132,7 +132,7 @@ const ChatRoom = () => {
   );
 
   return (
-    <div className="Containerrr">
+    <div className="Container">
       {userData.connected ? (
         <div className="chat-box">
           <div className="member-list">
@@ -146,19 +146,25 @@ const ChatRoom = () => {
               onChange={handleSearchInputChange}
             />
               <li onClick={() => setTab("CHATROOM")} className={`member ${tab === "CHATROOM" && "active"}`}>
-                <img
-                  src="URL_OF_MEMBER_PROFILE_PICTURE"
+                <div className='memberpic'>
+                <img 
+                    src="https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?w=740&t=st=1689345912~exp=1689346512~hmac=7ace809ed21bb2e94386545fceccbd8ac28b948f13e0b8c2b5f943ea1bd02631"
                   alt="Pic"
                 />
-                Mentor
+                 <h4>Academia</h4>
+                </div>
+               
               </li>
               {filteredMembers.map((name, index) => (
                 <li onClick={() => setTab(name)} className={`member ${tab === name && "active"}`} key={index}>
+                  <div className='memberpicc'>
                   <img
-                    src="URL_OF_MEMBER_PROFILE_PICTURE"
-                    alt="Profile"
+                    src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1690739281~exp=1690739881~hmac=926324271b1ee6ee4a09113aa53c957155ed47f222dba49a3b6cc372e0ccb2fb"
+                    alt=""
                   />
-                  {name}
+                   <h4>{name}</h4>
+                  </div>
+                  
                 </li>
               ))}
             </ul>
@@ -166,16 +172,16 @@ const ChatRoom = () => {
           {tab === "CHATROOM" && (
             <div className="chat-content">
               <div className="profile">
-                <img src="" alt="Profile" />
-                <h2>Instructor</h2>
+                <img src="https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?w=740&t=st=1689345912~exp=1689346512~hmac=7ace809ed21bb2e94386545fceccbd8ac28b948f13e0b8c2b5f943ea1bd02631" alt="Profile" />
+                <h2>Academia</h2>
               </div>
               <ul className="chat-messages">
-                <div className="message-Containerrr">
+                <div className="message-container">
                   {publicChats.map((chat, index) => (
                     <li className={`message ${chat.senderName === userData.username && "self"}`} key={index}>
                       {chat.senderName !== userData.username && (
                         <div className="avatar">
-                          <img src={chat.senderImage} alt="Avatar" />
+                          <img src=/*{chat.senderImage} */"https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1690739281~exp=1690739881~hmac=926324271b1ee6ee4a09113aa53c957155ed47f222dba49a3b6cc372e0ccb2fb"alt="Avatar" />
                         </div>
                       )}
                       <div className="message-data">
@@ -202,7 +208,7 @@ const ChatRoom = () => {
           {tab !== "CHATROOM" && (
             <div className="chat-content">
               <div className="profile">
-                <img src="" alt="Profile" />
+                <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1690739281~exp=1690739881~hmac=926324271b1ee6ee4a09113aa53c957155ed47f222dba49a3b6cc372e0ccb2fb" alt="Profile" />
                 <h2>{userData.username}</h2>
               </div>
               <div className="message-box">
@@ -211,13 +217,13 @@ const ChatRoom = () => {
                     <li className={`message ${chat.senderName === userData.username && "self"}`} key={index}>
                       {chat.senderName !== userData.username && (
                         <div className="avatar">
-                          <img src={chat.senderImage} alt="User Avatar" />
+                          <img src=/*{chat.senderImage}*/ "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1690739281~exp=1690739881~hmac=926324271b1ee6ee4a09113aa53c957155ed47f222dba49a3b6cc372e0ccb2fb"alt="User Avatar" />
                         </div>
                       )}
                       <div className="message-data">{chat.message}</div>
                       {chat.senderName === userData.username && (
                         <div className="avatar self">
-                          <img src={chat.senderImage} alt="User Avatar" />
+                          <img src=/*{chat.senderImage} */ "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1690739281~exp=1690739881~hmac=926324271b1ee6ee4a09113aa53c957155ed47f222dba49a3b6cc372e0ccb2fb"alt="User Avatar" />
                         </div>
                       )}
                     </li>
