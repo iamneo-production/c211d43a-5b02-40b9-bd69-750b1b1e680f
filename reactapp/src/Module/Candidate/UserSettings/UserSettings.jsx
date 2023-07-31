@@ -58,7 +58,8 @@ function UserSettings() {
           <div className='username-settings'>
             <div className='mr-auto'>
               {/* <h2 style={{color:'black'}}>Vignesh Chowdary</h2> */}
-            <h2 id='user-namesettings' style={{color:'black'}}>{userData.firstName + ' ' + userData.lastName}</h2>
+            {/* <h2 id='user-namesettings' style={{color:'black'}}>{userData.firstName + ' ' + userData.lastName}</h2> */}
+            <h2 id='user-namesettings' style={{color:'black'}}>Haswanth Addanki</h2>
             </div>
             <Modal opened={opened} onClose={close} title="Profile Management" >
             <TextInput
@@ -109,8 +110,8 @@ function UserSettings() {
                   <p>Email ID</p>
                   <p className='private-to-you'></p>
                 </div>
-                <h4>{userData.email}</h4>
-                {/* <h4>rayankivignesh@gmail.com</h4> */}
+                {/* <h4>{userData.email}</h4> */}
+                <h4>haswanth18@gmail.com</h4>
               </div>
             </div>
         </div>

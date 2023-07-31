@@ -3,8 +3,9 @@ import NavCandidate from "../../../Components/NavCandidate";
 import "./UserHelpCenter.css";
 import React, { useState } from 'react';
 
+
 function HelpCenter() {
-  const accordionData = [
+  const faqData = [
     {
       header: 'How do I sign up for an account on the online learning portal?',
       content: 'To sign up for an account, click on the "Sign Up" button on the homepage, fill in your details, and follow the on-screen instructions.',
@@ -41,11 +42,11 @@ function HelpCenter() {
   ];
 
 
-  const [activeAccordionIndex, setActiveAccordionIndex] = useState(null);
+  const [activeFaqIndex, setActiveFaqIndex] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filter accordion data based on the search term
-  const filteredAccordionData = accordionData.filter((item) =>
+  // Filter Faq data based on the search term
+  const filteredFaqData = faqData.filter((item) =>
     item.header.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return (
@@ -61,19 +62,19 @@ function HelpCenter() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
-      <div className="accordion">
-        {filteredAccordionData.map((item, index) => (
+      <div className="Faq">
+        {filteredFaqData.map((item, index) => (
           <div
-            className={`accordion-item ${index === activeAccordionIndex ? 'active' : ''}`}
+            className={`Faq-item ${index === activeFaqIndex ? 'active' : ''}`}
             key={index}
-            onClick={() => setActiveAccordionIndex(index)}
+            onClick={() => setActiveFaqIndex(index)}
           >
-            <div className="accordion-item-header">
+            <div className="Faq-item-header">
               {item.header}
             </div>
-            {index === activeAccordionIndex && (
-              <div className="accordion-item-body" style={{ maxHeight: '1000px' }}>
-                <div className="accordion-item-body-content">
+            {index === activeFaqIndex && (
+              <div className="Faq-item-body" style={{ maxHeight: '1000px' }}>
+                <div className="Faq-item-body-content">
                   {item.content}
                 </div>
               </div>
