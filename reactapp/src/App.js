@@ -25,7 +25,7 @@ import InstructorLesson from './Module/Instructor/InstructorCourses/InstructorLe
 import InstructorSettings from "./Module/Instructor/InstructorSettings/InstructorSettings";
 import Trainee from "./Module/Instructor/Trainee/Trainee";
 import Assessment from './Module/Instructor/Assessment/Assessment';
-
+import ChatRoom from './Module/Chat/Chat';
 
 
 

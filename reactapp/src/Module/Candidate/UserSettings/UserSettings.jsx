@@ -11,7 +11,7 @@ function UserSettings() {
   //Function to fetch user data from the backend
   const fetchUserData = async () => {
     try {
-      const response = await axios.get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/users/login/api/users/settings/${userId}');
+      const response = await axios.get('https://8080-bbcbbfdbbaaeabaccffcffeaeaadbdbabf.project.examly.io/api/users/settings/2');
       setUserData(response.data);
     } catch (error) {
       console.error('Error fetching user data:', error);
@@ -20,7 +20,7 @@ function UserSettings() {
   
   const updateUser = async (updatedData) => {
     try {
-      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/users/login/api/users/settings/${userId}', updatedData);
+      const response = await axios.put('https://8080-eebedaabaacaaeabaccffcffeaeaadbdbabf.project.examly.io/api/users/settings/2', updatedData);
     } catch (error) {
       console.error('Error updating user data:', error);
     }
