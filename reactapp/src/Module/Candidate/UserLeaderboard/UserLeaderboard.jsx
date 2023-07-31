@@ -1,6 +1,6 @@
 import NavCandidate from '../../../Components/NavCandidate';
-//import React, { useEffect, useState } from "react";
-import './UserLeaderboard.css'
+import React, { useEffect, useState } from "react";
+import './UserLeaderboard.css';
 //import axios from "axios";
 //import base_url from "./api";
 import cardData from './cardData';
